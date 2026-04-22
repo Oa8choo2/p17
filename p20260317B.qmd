@@ -1,0 +1,561 @@
+---
+title: "docs.hpc"
+author: "Godfried Borremans"
+date: 17 March 2026
+format: revealjs
+editor: visual
+embed-resources: true
+self-contained: true
+lang: en-GB
+editor_options: 
+  chunk_output_type: console
+slide-number: "c/t"
+---
+
+## \~
+
+::: r-fit-text
+docs.hpc
+:::
+
+::: notes
+notes:
+
+-   https://github.com/Oa8choo2/p17
+-   https://oa8choo2.github.io/p17/p20260317B.html#/title-slide
+:::
+
+## Documentation on the UGent HPC infrastructure needs some updates.
+
+Why?
+
+::: notes
+:::
+
+## Agenda (1)
+
+-   Status of docs.hpc
+
+    -   Markdown
+
+    -   Analytics
+
+-   Technical aspects
+
+    -   Pre-build
+
+        -   rumdl, Jinja, readability
+
+    -   Build
+
+    -   Post-build
+
+## Agenda (2)
+
+-   SWOT
+
+-   Options
+
+-   KPIs
+
+-   Milestones
+
+    -   A house style
+
+-   More resources
+
+## 
+
+::: r-fit-text
+status
+:::
+
+## What kind of docs
+
+All docs that **customers** of our services could need to use the
+**UGent** HPC infrastructure
+
+::: notes
+notes:
+
+we need more demographics on our customers
+:::
+
+## Docs on a lot of places
+
+-   <https://docs.hpc.ugent.be> aka
+    <https://hpcugent.github.io/vsc_user_docs/> i.e. hosted at github
+    pages
+-   <https://www.ugent.be/hpc/>
+-   <https://docs.vscentrum.be/>
+
+Others sources: youtube channels, otrs, sharepoint, confluence, slack,
+teams
+
+::: notes
+notes:
+
+similar problem - <https://www.ugent.be/hpc/en/infrastructure/status> -
+<https://status.vscentrum.be>
+:::
+
+## A lot of documentation
+
+-   markdown (see next slide) files in docs.hpc repo: 1511
+-   non-script generated: 85
+-   after build: 15K directories, 24K files of which 3800+ html files
+-   some are very long, up to 17 pages when printed
+
+::: notes
+notes:
+
+For this very long page, see [running batch
+jobs](https://docs.hpc.ugent.be/Windows/running_batch_jobs)
+:::
+
+## On markdown
+
+Markdown was created by John Gruber in 2004 (with help from Aaron
+Swartz) to solve the problem of writing for the web without the
+complexity of HTML.
+
+It looks like this:
+
+```         
+a piece of **markdown** found at [docs.hpc](docs.hpc.ugent.be)
+```
+
+which is rendered like this:
+
+a piece of **markdown** found at [docs.hpc](docs.hpc.ugent.be)
+
+## Who is using docs.hpc
+
+-   Limited statistics
+-   Google analytics since Feb. 1, 2026
+-   user feedback?
+
+::: notes
+notes:
+
+in the past there was another GA trial and Bing, results unclear
+:::
+
+## Visitor analytics, statistics
+
+-   site is hosted at Github pages ergo no access to server logs
+-   we need a third party
+-   now Google Analytics (GA), but some concerns as GDPR
+-   unclear impact on support tickets (otrs)
+
+## Google Analytics results
+
+-   see <https://analytics.google.com/analytics/>
+-   [top 3 countries](google_analytics.png): China, Singapore, Belgium
+-   most visited: "Please select your operating system"
+-   most visitors are using windows 10 + chrome on a desktop
+-   language used: English (79%), Chinese (13%), Dutch
+
+::: notes
+notes:
+
+Chinese visitors could be AI related
+:::
+
+## Analytics alternatives
+
+-   Europe based GA alternative, see
+    <https://european-alternatives.eu/category/web-analytics-services>
+-   UGent based solution
+
+If we have access to server logs tools such as <https://goaccess.io/>
+become possible, see [goaccess sample
+report](goaccess_server_statistics_aelmoezeneiebos.png)
+
+::: notes
+notes:
+
+![goaccess sample
+report](goaccess_server_statistics_aelmoezeneiebos.png)
+:::
+
+## 
+
+::: r-fit-text
+technical aspects
+:::
+
+## Technical, pre-build
+
+Before the markdown documents are converted to html we can check the
+technical qualities of the docs with some tools (linters):
+
+::: incremental
+-   [codespell](https://github.com/codespell-project/codespell), check
+    spelling (129)
+-   [rumdl](https://rumdl.dev/), check markdown (7884) (see slide)
+-   [Jinja2 Linter CLI](https://github.com/aristanetworks/j2lint) check
+    Jinja2 code in markdown (1862) (see slide)
+-   [detox](https://github.com/dharple/detox/) check file names (0)
+-   [vale](https://docs.vale.sh/) check for compliance with a
+    third-party style sheet, readability etc or an own style sheet.
+    (example follows)
+-   [linkchecker lychee](https://github.com/lycheeverse/lychee), [check
+    broken
+    URLs](link_checker_report_issue_1250_hpcugent_vsc_user_docs.png)
+    ([199](https://github.com/hpcugent/vsc_user_docs/issues/1250))
+:::
+
+::: notes
+notes:
+
+number between brackets indicates number of found issues
+:::
+
+## rumdl
+
+A markdown linter written in **ru**st by **Ru**ben J. Jongejan
+
+Sample of the problems found
+
+```         
+[MD040] Code block (```) missing language [*]
+[MD003] Heading style should be # Heading, found Heading (underlined with =) [*]
+[MD025] Multiple top-level headings (level 1) in the same document [*]
+[MD041] First line in file should be a level 1 heading
+[MD013] Line length 100 exceeds 80 characters
+```
+
+Problems marked with \[\*\] can be fixed automatically
+
+## Jinja
+
+In the markdown code we can use variables which are translated during
+the build process.
+
+Example
+
+```         
+After you log in using your {{ university }} login and password
+```
+
+becomes
+
+After you log in using your **UGent** login and password
+
+## Readability via vale plugin
+
+Vale can be used to measure [readability of
+texts](https://readable.com/readability). Tests are
+
+-   *Automated Readability Index* (see next slide)
+-   Coleman–Liau Index grade
+-   Flesch reading ease score
+-   Flesch–Kincaid grade level
+-   Gunning-Fog index
+-   LIX score
+-   SMOG grade
+
+## Automated Readability Index with *vale*
+
+This is a test advised for technical texts. A high score indicates a
+complex text. Range is 5-22.
+
+Our texts score below 12. This should be ok for *our* customers.
+
+See
+
+-   [Automated readability index -
+    Wikipedia](https://en.wikipedia.org/wiki/Automated_readability_index)
+-   [Teksten op B1-niveau? Liever direct duidelijk! – Gebruiker
+    Centraal](https://www.gebruikercentraal.nl/teksten-op-b1-niveau-liever-direct-duidelijk/)
+
+::: notes
+notes:
+
+For general public and for SEO a score of 8 is recommended. We do not
+have such texts.
+:::
+
+## Current build process
+
+::: incremental
+1.  markdown (md) files stored in git repo at github
+2.  some config files
+3.  some bash
+4.  some python (mainly to create OS and site versions)
+5.  some Jinja2
+6.  **mkdocs** to convert md files to html
+7.  some mkdocs plugins
+8.  mkdocs-material for theming and some extras
+9.  build on github, result in github pages
+:::
+
+## Issues with the build
+
+-   [mkdocs 1.x is
+    unmaintained](https://github.com/mkdocs/mkdocs/discussions/4010)
+-   [mkdocs 2.0 is
+    problematic](https://squidfunk.github.io/mkdocs-material/blog/2026/02/18/mkdocs-2.0/)
+-   [mkdocs_material is
+    eol](https://github.com/squidfunk/mkdocs-material/issues/8523)
+-   [zensical](https://zensical.org/) is the proposed solution but is
+    immature
+
+How to proceed with this?
+
+::: notes
+notes:
+
+Plenty of alternatives exist.
+
+Plain vanilla github pages (i.e. Jekyll), github wiki, other static
+website generators (SSGs) etc.
+
+Example: https://github.com/Oa8choo2/testzens/wiki
+
+Other options:
+
+-   [mod_markdown, Apache module to serve
+    Markdown](https://github.com/hamano/apache-mod-markdown)
+-   [md-serve, HTTP server that serves Markdown
+    files](https://github.com/nikolassv/md-serve)
+-   [Cimbali/markdown-viewer: Markdown (.md) file viewer WebExtension
+    for your browser.](https://github.com/Cimbali/markdown-viewer)
+:::
+
+## Site check after build
+
+Post-build, code and errors generated by mkdocs
+
+::: incremental
+-   [W3C CSS Validator on:
+    https://docs.hpc.ugent.be/Windows/connecting/?h=manual+linux (CSS
+    versie
+    3)](https://jigsaw.w3.org/css-validator/validator?profile=css3&warning=0&uri=https%3A%2F%2Fdocs.hpc.ugent.be%2FWindows%2Fconnecting%2F%3Fh%3Dmanual%2Blinux)
+    128 issues on this specific page
+-   [w3.org NU html
+    validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdocs.hpc.ugent.be%2FWindows%2Fconnecting%2F%3Fh%3Dmanual%2Blinux)
+    7 issues on this specific page
+-   [WAVE Report -
+    Accessibility](https://wave.webaim.org/report#/https%3A%2F%2Fdocs.hpc.ugent.be%2FWindows%2Fconnecting%2F%3Fh%3Dmanual%2Blinux)
+    [18 errors](wave_report.png), note: we need to comply to
+    legislation, see ["Is jouw onderwijsinstelling klaar voor de
+    European Accessibility Act?" \| SURF
+    Communities](https://communities.surf.nl/vraagbaak-online-onderwijs/artikel/is-jouw-onderwijsinstelling-klaar-voor-de-european-accessibility)
+:::
+
+## SWOT
+
+Strengths, Weaknesses (internal)
+
+vs.
+
+Opportunities, Threats (external)
+
+## SWOT: Strengths
+
+-   markdown: easy to edit, maintain and process
+-   version control
+-   uptime and archive
+-   performance
+-   security (checked by [github dependency
+    bot](https://github.com/hpcugent/vsc_user_docs/security/dependabot))
+-   one language (English)
+-   software used is open source and free
+-   hosting at github is free
+-   search engine offered by markdown ([lunr](https://lunrjs.com/))
+
+::: notes
+notes:
+
+An archive of the site exists since 2003 at
+[archive.org](https://web.archive.org/details/domain:docs.hpc.ugent.be)
+Versions of the site also exist at github.com.
+:::
+
+## SWOT: Weaknesses
+
+-   GA as analytics solution
+-   no agreed house style guide
+-   too many locations for docs
+-   slow review cycle
+-   poor information architecture
+-   too long texts
+-   technical complexity build process
+-   security: fix needed of issues reported by github dependabot
+-   security: fix needed in search engine of mkdocs
+    [EUVD-2021-1042](https://euvd.enisa.europa.eu/vulnerability/CVE-2021-23358)
+
+::: notes
+notes:
+
+"What you require you must also retire" can be used to lint your code
+for security problems <https://retirejs.github.io/retire.js/>
+:::
+
+## SWOT: Opportunities
+
+-   make a house style
+-   consolidate locations
+-   implement review cycle
+-   split long texts
+-   move to better build
+
+## SWOT: Threats
+
+-   eol of mkdocs
+-   immature state of zensical
+-   better documentation elsewhere or AI could reduce use and relevance
+    of ours
+-   [lack of standard for markdown](https://ddbeck.com/fosdem2026/), a
+    lot of variants exist
+
+::: notes
+notes:
+
+Following a strict own standard markdown format will make it easier to
+switch to an other variant when needed. E.g. zensical is planning to
+switch to CommonMark.
+:::
+
+## Options, way to go
+
+-   make a house style guide
+-   make all docs compliant to the house style
+-   create config files for the linters
+-   add the linters to pre-commit and build
+-   remove duplicate content
+-   remove content we can find elsewhere, refer to it
+-   add a glossary
+-   create a common search engine which unlocks all docs sites
+
+::: notes
+notes:
+
+a multi-site search is possible with [Google
+gcse](https://programmablesearchengine.google.com/about/), but again
+GDPR?
+:::
+
+## Key Performance Indicators (KPI)
+
+How can we measure that the site is improving?
+
+-   more visitors
+-   less support tickets
+-   less linter errors (see numbers on slide about linters)
+
+See [Academic Excellence, Website Quality, SEO Performance: Is there a
+Correlation?](https://www.mdpi.com/1999-5903/11/11/242)
+
+::: notes
+notes:
+
+we need a baseline
+:::
+
+## Milestones
+
+What to improve first and why (goal)
+
+::: incremental
+-   remove OS and site choice, because it is no longer relevant, makes
+    the build complex and creates redundant texts
+-   fix the results of the linters, because having less of these errors
+    allows to focus more on content changes and allows the use of more
+    strict parsers (such as rust-based minijinja that comes with
+    zensical)
+-   make sure that the docs which are most wanted (by customers, by
+    support people) exist and are up-to-date
+-   make a list of those docs
+-   reduce the post-build errors (by choosing a better SSG?)
+:::
+
+## A house style guide
+
+What? A list of rules to make sure all docs are consistent in look,
+content and technical aspects
+
+How?
+
+-   using linters and a specific config file and using these in
+    pre-commits and builds
+-   advise authors to follow the style guide
+
+## Some style guide examples
+
+-   all text in markdown
+-   all text should be British English
+-   encoding should be utf-8
+-   markdown should be in mkdocs variant
+-   all file names must be in lower-case
+-   abbreviations without dots
+-   use [semantic line breaks](https://sembr.org/)
+
+Start with what is done implicitly today
+
+::: notes
+notes:
+
+sembr has it origins in Hints for Preparing Documents by Brian W.
+Kernighan, 1974
+:::
+
+## 
+
+::: r-fit-text
+thank you
+
+questions
+:::
+
+## More resources (1)
+
+-   [How to make sense of any mess, Abby
+    Covert](https://www.howtomakesenseofanymess.com/)
+-   [Stuck? Diagrams help, Abby Covert](https://abbycovert.com/stuck/)
+-   [Taal EHBO, Reinier
+    Sonneveld](https://www.reiniersonneveld.nl/advies/taal-ehbo-de-schrijfgids-voor-duidelijke-en-overtuigende-teksten)
+-   [Functioneel webdesign, Jakob
+    Nielsen](https://www.nngroup.com/books/designing-web-usability/)
+-   [Interviewing Users, Steve
+    Portugal](https://rosenfeldmedia.com/books/interviewing-users-second-edition/)
+-   [Information Architecture for the World Wide Web, Peter Morville,
+    Louis
+    Rosenfeld](https://www.oreilly.com/library/view/information-architecture-for/0596527349/)
+
+## More resources (2)
+
+-   [Docs for Developers, J. Batthi
+    e.a.](https://docsfordevelopers.com/)
+-   [Style guide GOV.UK](https://www.gov.uk/guidance/style-guide/a-to-z)
+-   [Guardian style
+    guide](https://www.theguardian.com/guardian-style-guide-a)
+-   [IEEE Editorial Style
+    Manual](https://www.computer.org/publications/computer-society-style-guide)
+-   [Agconsult course "Basisopleiding
+    webredactie"](https://ufora.ugent.be/d2l/le/content/620781/Home)
+-   [R for data science, Wickham and Grolemund](https://r4ds.hadley.nz/)
+-   <https://en.wikipedia.org/wiki/Markdown>
+
+::: notes
+notes:
+
+Other options
+
+-   remove ugent docs, join docs.vscentrum 100%
+-   calculate payload, see SEO
+-   generate a workshaat like the one for otrs tickets, one line per doc
+-   enable user feedback on each page
+-   ask 'was this page useful' on each page
+-   swot: who are our customers
+-   swot: who are our 'competitors'
+-   do we have stats on what software is used
+-   and how many times
+-   do we have docs on the most used software
+-   user days: do the questions asked there have an answer on the docs
+    site
+-   add info on 1000+ software from easybuild source
+-   do similar evaluation on docs.vscentrum
+:::
