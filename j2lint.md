@@ -48,3 +48,15 @@ find . \
      ${myexec} '{}' \;
 ```
 
+## Results
+
+* +- 1800 errors found
+* A lot of these are in markdown files, they are fixable with a sed script
+* Some bash (or pbs) files are also reported, most of the time these are false
+  positives. They can be fixed with an exception rule for j2lint.
+  Example:
+
+  ```bash
+  {# j2lint: disable=S6}
+  ```
+* Python files are also reported, for this pylint or ruff are better tools  
