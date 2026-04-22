@@ -1,0 +1,22 @@
+# Table of contents
+
+* [Docs on a lot of places ](a_lot_of_places.md)
+* [A lot of documentation ](a_lot_of_documentation.md)
+* [A lot of authors ](a_lot_of_authors.md)
+* [On markdown ](on_markdown.md)
+* [Who is using docs.hpc ](who_is_using_docs.hpc.md)
+* [Technical, pre-build technical_aspects.md ](technical_aspects.md)
+* [rumdl ](rumdl.md)
+* [Jinja ](jinja.md)
+* [J2lint](j2lint.md)
+* [Detox](detox.md)
+* [Readability via vale ](readability.md)
+* [Current build process ](build.md)
+* [Site check after build ](site_check_after_build.md)
+* [SWOT: Strengths, Weaknesses, Opportunities, Threats ](swot.md)
+* [Options, way to go ](options.md)
+* [Key Performance Indicators (KPI) ](key_performance_indicators.md)
+* [Milestones ](milestones.md)
+* [A  style guide ](style_guide.md)
+* [More resources ](more_resources.md)
+
