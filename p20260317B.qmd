@@ -546,7 +546,7 @@ Other options
 
 -   remove ugent docs, join docs.vscentrum 100%
 -   calculate payload, see SEO
--   generate a workshaat like the one for otrs tickets, one line per doc
+-   generate a worksheet like the one for otrs tickets, one line per doc
 -   enable user feedback on each page
 -   ask 'was this page useful' on each page
 -   swot: who are our customers
