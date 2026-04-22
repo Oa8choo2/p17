@@ -2,6 +2,8 @@
 
 Linter for Jinja code
 
+See https://github.com/aristanetworks/j2lint
+
 ## How to use
 
 Check one file of the type markdown, with the extension md.
