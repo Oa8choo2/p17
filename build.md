@@ -1,7 +1,20 @@
 # build
 
 
-## Current build process
+## Current (20260422) build process
+
+1. markdown files
+1. one config file (gent.yml)
+1. github action takes care of the rest
+   see <https://github.com/Oa8choo2/anaction/blob/main/.github/workflows/blank.yml>
+1. steps in the github action 
+    * install needed software
+    * use minijinja to fill in the variables
+    * use zensical to build the site
+    * host the site at github pages:
+      <https://oa8choo2.github.io/anaction/zdocs/site/connecting/> 
+
+## Build process on hpcugent/vscdocs
 
 ::: incremental
 1.  markdown (md) files stored in git repo at github
