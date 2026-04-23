@@ -20,7 +20,9 @@ in the past there was another GA trial and Bing, results unclear
 ## Google Analytics results
 
 -   see <https://analytics.google.com/analytics/>
--   [top 3 countries](google_analytics.png): China, Singapore, Belgium
+-   top 3 countries: China, Singapore, Belgium
+    - [status March 16](google_analytics_2026-03-16.png)
+    - [status April 22](google_analytics_2026-04-22.png)
 -   most visited: "Please select your operating system"
 -   most visitors are using windows 10 + chrome on a desktop
 -   language used: English (79%), Chinese (13%), Dutch
