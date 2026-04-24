@@ -15,4 +15,8 @@ or
 
 <https://security.snyk.io/vuln/?search=zensical>
 
+## other components
 
+* python
+* minijinja
+* github actions

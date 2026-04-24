@@ -8,11 +8,14 @@
 1. github action takes care of the rest
    see <https://github.com/Oa8choo2/anaction/blob/main/.github/workflows/blank.yml>
 1. steps in the github action 
-    * install needed software
+    * install needed and newest software
+       * no obsolete software
+       * if it breaks we will know
     * use minijinja to fill in the variables
     * use zensical to build the site
     * host the site at github pages:
       <https://oa8choo2.github.io/anaction/zdocs/site/connecting/> 
+    => uploading a markdown file should be enough
 
 ## Build process on hpcugent/vscdocs
 
