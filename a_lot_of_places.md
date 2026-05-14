@@ -5,6 +5,7 @@
     pages
 -   <https://www.ugent.be/hpc/>
 -   <https://docs.vscentrum.be/>
+-   <https://boegel-vsc-docs.readthedocs.io/en/latest/index.html>
 
 Others sources: youtube channels, otrs, sharepoint, confluence, slack,
 teams
