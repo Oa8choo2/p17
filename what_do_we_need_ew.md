@@ -1,11 +1,24 @@
-Ik probeerde mij te verplaatsen naar het standpunt van een newbie gebruiker zonder domeinkennis die toch taken op HPC wil doen.
-Vanuit dat standpunt zijn deze topics belangrijk:
+---
+author: Ewald.Pauwels@UGent.be
+date: 20260430
+title: HPC docs website - homework
+description: |
+  Think about which texts the user really needs (and why).
+  Please try and think 'from scratch’ what the beginning user would need.
+---
 
-1/ Hoe te connecteren met de HPC via OOD
-2/ Hoe lanceer ik een interactieve taak op de debugcluster
-Bv. Een Jupyter notebook (via pull-down menu)
-3/ Waar bewaar ik mijn bestanden.
-Hoeveel storage heb ik ter beschikking.
-4/ Hoe submit ik een taak op een andere cluster (met wachtrij)
-5/ Hoe kan ik meer storage aanvragen (VO joinen)
+# Which texts the user really needs (and why)
 
+I tried to put myself in the shoes of
+**a novice user with no prior knowledge of the domain**
+who wants to run tasks on the high performance computing (HPC) infrastructure.
+
+From that perspective, these topics are important:
+
+1. How to connect to the HPC via Open On Demand (OOD)?
+1. How to launch an interactive task on the debug cluster?
+   E.g. a Jupyter notebook (via the pull-down menu)
+1. Where to store my files?
+   How much storage room is available?
+1. How to submit a job on another cluster (with a queue)?
+1. How to request more storage (join Virtual Organisation)?
