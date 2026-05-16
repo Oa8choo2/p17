@@ -1,0 +1,21 @@
+# a lot of authors
+
+```text
+admin6, andy georges, arnedecadt, arthur vercruysse, balazs hajgato, bart
+verheyde, dependabot[bot], ewald pauwels, ewan higgs, ewda291, ewout danneels,
+geert borstlap, geert jan bex, github, hpc core facility calcua, ivo de decker,
+jasper, jens timmerman, kenneth hoste, kenneth waegeman, kurt lust, lara, lara
+peeters, lukas barragan torres, mag selwa, michiel, michiel lachaert, redfast00,
+sam, stefan becuwe, stijn de weirdt, thomas danckaert, toon willems, vsc45336
+vscuser, ward poelmans, wouter depypere, wpoely86, xander bil, álvaro simón
+garcia, ...
+```
+
+Not really a problem if we have a common stylesheet and
+if everyone is informed about that.
+
+These are only those [authors that committed something on
+docs.hpc](https://github.com/hpcugent/vsc_user_docs/graphs/contributors).
+
+It does not include what these or other people did on one of the other locations
+(see [a lot of places](a_lot_of_places.md]))
