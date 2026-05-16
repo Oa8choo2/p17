@@ -1,0 +1,8 @@
+---
+layout: none
+permalink: .well-known/security.txt
+---
+Contact: mailto:Oa8choo2@users.noreply.github.com
+Expires: 2028-05-01T12:00:00.000Z
+Preferred-Languages: en,es,fr,nl,de
+Canonical: https://oa8choo2.github.io/p17/.well-known/security.txt
