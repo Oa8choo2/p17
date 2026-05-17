@@ -34,5 +34,8 @@ tags
 # Persistent undo
 [._]*.un~
 
+# geany
+*~
+
 # End of https://www.toptal.com/developers/gitignore/api/kate,vim,backup
 
