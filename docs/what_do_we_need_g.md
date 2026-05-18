@@ -35,7 +35,8 @@ description: |
     * rm
     * -r
 * git
-   <https://swcarpentry.github.io/git-novice/>
+  - <https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Version_control>
+  - <https://swcarpentry.github.io/git-novice/>
 * getting data in and out
 * running programs with a graphical interface
 * running jobs
