@@ -2,11 +2,21 @@
 
 Github pages complains about node.js version
 
-```
+```bash
 Annotations
 1 warning
 build
-Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/upload-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Node.js 20 actions are deprecated. The following actions are running on Node.js
+20 and may not work as expected: actions/checkout@v4,
+actions/upload-artifact@v4. Actions will be forced to run with Node.js 24 by
+default starting June 2nd, 2026. Node.js 20 will be removed from the runner on
+September 16th, 2026. Please check if updated versions of these actions are
+available that support Node.js 24. To opt into Node.js 24 now, set the
+FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or
+in your workflow file. Once Node.js 24 becomes the default, you can temporarily
+opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more
+information see:
+https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
 ```
 
 
@@ -17,7 +27,16 @@ sudo npm install n -g
 sudo n latest 
 ```
 
+Node version can be set via environment variable and via .nvmrc and .node-version
+
+See 
+
+<https://answers.netlify.com/t/specifying-node-version-isnt-working/78614>
+
+But
+
+<https://github.com/actions/runner/issues/4295>
 
 Clean
 
-https://oneuptime.com/blog/post/2026-01-22-nodejs-uninstall-completely/view 
+<https://oneuptime.com/blog/post/2026-01-22-nodejs-uninstall-completely/view> 
