@@ -1,0 +1,31 @@
+#!/bin/bash
+
+if [[ $# -lt 1 ]]; then
+	echo -e "Usage:\n\n"
+	cat $0
+	exit
+fi
+
+echo $1
+detox $1*
+# find is wildcard, so some chars are sufficient (if they point to one file)
+myfile=$(find -type f -iname "$1*" | head -n 1)
+# sample ticketnumber is 2025033160001026, 16 chars
+# find result adds 2 more chars in front
+mysource="${myfile}" 
+mytarget="out_${myfile:2:16}"
+echo "- ${mysource} - ${mytarget} -" 
+
+grep 'https://docs.hpc' \
+    "${mysource}" \
+   | sed -e 's/<[^>]*>//g' \
+   | sort \
+   | uniq -c \
+   | tee "${mytarget}"
+
+echo -e "\nSummary till now:\n"
+echo -e "Tickets processed: $(ls out_* | wc -l)\n"
+cat out_* \
+	| gawk -f consolidate.awk \
+        | sort -n 
+

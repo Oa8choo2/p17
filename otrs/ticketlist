@@ -1,0 +1,27 @@
+$ cat ticket_search_2026-05-19_13-51.csv | head -n 1 | gawk53 --csv '{ for (i=1; i<=NF; i++) print i, $i   }'
+1 Ticket Number
+2 Age
+3 Created
+4 Closed
+5 FirstLock
+6 FirstResponse
+7 State
+8 Priority
+9 Queue
+10 Lock
+11 Owner
+12 UserFirstname
+13 UserLastname
+14 CustomerID
+15 Customer Name
+16 From
+17 Subject
+18 AccountedTime
+19 ArticleTree
+20 SolutionInMin
+21 SolutionDiffInMin
+22 FirstResponseInMin
+23 FirstResponseDiffInMin
+
+cat ticket_search_2026-05-19_13-51.csv | gawk53 --csv 'BEGIN { OFS=";"} { print $1, $11, $17 , $12, $13, $14, $15  }'
+
