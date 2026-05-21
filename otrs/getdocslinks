@@ -14,14 +14,49 @@ myfile=$(find -type f -iname "$1*" | head -n 1)
 # find result adds 2 more chars in front
 mysource="${myfile}" 
 mytarget="out_${myfile:2:16}"
-echo "- ${mysource} - ${mytarget} -" 
+echo "# - ${mysource} - ${mytarget} -" \
+  | tee -a 'getdocslinks.log'
 
+# https://docs.hpc.ugent.be/
+# https://github.com/hpcugent/vsc_user_docs
+# https://www.ugent.be/hpc
+# sed trims all tags
+# dsl-linux-amd64: normalize/decode) 
+#   office 365 safe links url 
+#   https://github.com/atc0005/safelinks
+
+function onlydocs() {   
 grep 'https://docs.hpc' \
     "${mysource}" \
    | sed -e 's/<[^>]*>//g' \
    | sort \
    | uniq -c \
    | tee "${mytarget}"
+}
+
+# sites to skip are in file skipsites
+# otrsdict.ugent.be mailadm.ugent.be usradm.ugent.be ldapinfo.ugent.be
+# chrispederick.com
+
+# TODO filter or adjust links with vsc accounts
+ 
+# with printf we force the output to be consistent
+   
+function full() {
+  xq -m  "${mysource}" \
+   | tr '&' '+' \
+   | xq -x "//a/@href" \
+   | grep -i 'http' \
+   | grep -vf skipsites \
+   | sort \
+   | dsl-linux-amd64 \
+   | cut -d ' '  -f 1 \
+   | uniq -c \
+   | xargs printf "%7d %-s\n" \
+   | tee "${mytarget}" 
+}
+
+full  
 
 echo -e "\nSummary till now:\n"
 echo -e "Tickets processed: $(ls out_* | wc -l)\n"

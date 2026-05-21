@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# https://stackoverflow.com/a/32894198/906489
+# git log - how to git log with date-time and file names in one line
+# https://stackoverflow.com/questions/32893773/how-to-git-log-with-date-time-and-file-names-in-one-line
+
+if [[ $# -lt 1 ]]; then 
+  mygrep='[[:print:]]*'
+else
+  mygrep="$*" 
+fi
+
+git log \
+    --pretty=%x0a%ci \
+    --name-only \
+| awk '
+     /^$/        { dateline=!dateline; next }
+     dateline    { date=$0; next }
+     !seen[$0]++ { print date,$0 }
+' \
+| grep -i "${mygrep}"
+

@@ -6,6 +6,7 @@
 -   <https://www.ugent.be/hpc/>
 -   <https://docs.vscentrum.be/>
 -   <https://boegel-vsc-docs.readthedocs.io/en/latest/index.html>
+-   <https://users.ugent.be/~kehoste/>
 
 Others sources: youtube channels, otrs, sharepoint, confluence, slack,
 teams
