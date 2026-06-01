@@ -1,6 +1,10 @@
-      2     https://docs.hpc.ugent.be/
-      2     https://docs.hpc.ugent.be/jupyter/
-      1     https://docs.hpc.ugent.be/jupyter/#using-extra-python-packages
-      1     https://docs.hpc.ugent.be/running_batch_jobs/#modules
-      3     https://docs.hpc.ugent.be/software_installation_requests
-      1     https://docs.hpc.ugent.be/troubleshooting/#module-conflicts
+      1 https://docs.hpc.ugent.be/
+      1 https://docs.hpc.ugent.be/jupyter/
+      1 https://docs.hpc.ugent.be/jupyter/#using-extra-python-packages
+      1 https://docs.hpc.ugent.be/running_batch_jobs/#modules
+      1 https://docs.hpc.ugent.be/software_installation_requests
+      1 https://docs.hpc.ugent.be/troubleshooting/#module-conflicts
+      1 https://www.ugent.be/hpc/en
+      1 https://www.ugent.be/hpc/en/infrastructure
+      1 https://www.ugent.be/hpc/en/support/documentation.htm
+      1 https://www.ugent.be/hpc/en/training/introhpcugent-recording
