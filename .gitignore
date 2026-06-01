@@ -1,6 +1,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/kate,vim,backup
 # Edit at https://www.toptal.com/developers/gitignore?templates=kate,vim,backup
 
+/otrs/*
+
 ### Backup ###
 *.bak
 *.gho
