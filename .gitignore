@@ -2,6 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=kate,vim,backup
 
 /otrs/*
+/site/*
 
 ### Backup ###
 *.bak
