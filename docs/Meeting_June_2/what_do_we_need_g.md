@@ -1,7 +1,7 @@
 ---
 author: Oa8choo2@users.noreply.github.com
 date: 20260430
-title: HPC docs website - homework
+title: GO HPC docs website - homework
 description: |
   Think about which texts the user really needs (and why).
   Please try and think 'from scratch’ what the beginning user would need.
@@ -45,9 +45,21 @@ description: |
 * how to run a specific version of a software program
 * (past) training / workshop material
 * video's
-<<<<<<< HEAD
 * security issues
-=======
+* how to get help 
+  * Using hpc is not complex but you have to understand what is going on. The
+    best way to start is to ask a friend to show you the way.
+  * how does the hpc helpdesk operate, see https://www.maths.cam.ac.uk/computing/computing-and-it
+    * opening hours, response time
+    * what to expect
+  * how and where to find info on internet
+  * how to ask for help to our helpdesk
+  * how to make a **useful** screenshot
+  * how to describe your problem
+  * what to include? 
+*  kan je eens proberen om die pagina te bezoeken in een "incognito" browser
+   venster, of eventueel een andere internet browser (Firefox, Chrome, ...) dan
+   je gewoon bent om te gebruiken?
 
 ---
 

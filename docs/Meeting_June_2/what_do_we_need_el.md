@@ -1,7 +1,7 @@
 ---
 author: Eliza.Depoorter@UGent.be
 date: 20260430
-title: HPC docs website - homework
+title: EL HPC docs website - homework
 description: |
   Think about which texts we really need (and why).
   Please try and think 'from scratch’ what the beginning user would need.

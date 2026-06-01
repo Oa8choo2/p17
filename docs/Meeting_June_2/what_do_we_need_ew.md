@@ -1,7 +1,7 @@
 ---
 author: Ewald.Pauwels@UGent.be
 date: 20260430
-title: HPC docs website - homework
+title: EW HPC docs website - homework
 description: |
   Think about which texts the user really needs (and why).
   Please try and think 'from scratch’ what the beginning user would need.
