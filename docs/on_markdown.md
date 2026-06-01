@@ -29,4 +29,5 @@ a piece of **markdown** found at [docs.hpc](docs.hpc.ugent.be)
   ```
 - cheat sheet:
   <https://www.markdownguide.org/cheat-sheet/>
-
+- why markdown? The Quiet Revolution of Plain Text
+<https://share.jotbird.com/essay>
