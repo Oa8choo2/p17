@@ -1,4 +1,4 @@
-name: Documentation
+name: Documentation workflow zensical
 on:
   push:
     branches:
