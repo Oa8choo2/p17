@@ -6,9 +6,9 @@ title: "Agenda Meeting June 2, 2026"
 
 ## Topics
 
-### [abbreviations, glossary and acronyms](abbreviations.md)
+### \1. [Abbreviations, glossary and acronyms](abbreviations.md)
 
-### "homework": which docs are needed
+### \2. "Homework": which docs are needed?
 
 Some external experts give advice on documentation:
 
@@ -21,9 +21,9 @@ Results of the homework:
 - [EL](what_do_we_need_el.md)
 - [GO](what_do_we_need_g.md)
 
-### [use of url’s in otrs tickets](otrs.md)
+### \3. [Use of url’s in otrs tickets](otrs.md)
 
-### new in zensical
+### \4. New in zensical
 
 - [lightbox demo](whisper_en.md)
 - <https://zensical.org/docs/authoring/images/?h=light#lightbox-and-zoom>
@@ -35,4 +35,3 @@ Results of the homework:
     [project.markdown_extensions.zensical.extensions.glightbox]
 ```
 
-### [ai](ai.md)
