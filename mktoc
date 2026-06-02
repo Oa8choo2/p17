@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -e
+
+tocfile=table_of_contents.md
+
+# add new files at end of file
+# delimiter is colon
+while IFS=: read -r filename header
+  do
+#    echo "# $filename -- $header"
+    # trim octothorp
+    header="${header:2}"
+    # grep exits with 1 if nothing is found
+    if ! grep --silent "$filename" "${tocfile}" ; then
+      #  * [Docs on a lot of places](a_lot_of_places.md)
+      echo "* [${header}](${filename})" \
+        | tee -a "${tocfile}"
+    fi  
+  done < <( \
+  # grep the first H1 header
+  grep '^# ' -m 1 *.md \
+    | grep -v "${tocfile}"
+  )
+

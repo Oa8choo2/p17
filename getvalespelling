@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# find all unknown words with vale
+
+vale \
+  --no-global \
+  --output line \
+  $PWD \
+  | grep Spelling \
+  | cut -d \' -f 2 \
+  | sort \
+  | uniq 
+
+echo "you could add these words to" \
+ ".vale/styles/config/vocabularies/vscvocab/"
