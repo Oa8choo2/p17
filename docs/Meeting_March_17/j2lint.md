@@ -2,7 +2,7 @@
 
 Linter for Jinja code
 
-See https://github.com/aristanetworks/j2lint
+See <https://github.com/aristanetworks/j2lint>
 
 ## How to use
 
@@ -12,7 +12,6 @@ Without the correct file extension j2lint will silently do nothing.
 ```bash
 j2lint --extensions=md file.md
 ```
-
 
 ```bash
 #!/bin/bash
@@ -59,4 +58,5 @@ find . \
   ```bash
   {# j2lint: disable=S6}
   ```
+
 * Python files are also reported, for this pylint or ruff are better tools  

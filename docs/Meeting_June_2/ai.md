@@ -1,4 +1,4 @@
-# AI 
+# AI
 
 A.k.a. KI (kunstmatige intelligentie)
 
@@ -7,28 +7,28 @@ A.k.a. KI (kunstmatige intelligentie)
 - Why?
 - WIIFM
   - what's in it for us?
-  - what's in it for them? 
+  - what's in it for them?
 
-# Which AI is harvesting our site?
+## Which AI is harvesting our site?
 
 This should be visible via Google Analytics (GA).
 
 Note: site is hosted at github, Microsoft can harvest these data in another way.
 
-## How can we block AI agents?
+### How can we block AI agents?
 
 - robots.txt -> not always respected
 - <https://anubis.techaro.lol/>  
 ![anubis](anubis.webp)
 
-## How can we optimize, facilitate AI bot access?
+### How can we optimize, facilitate AI bot access?
 
-See detailed instructions at 
+See detailed instructions at
 
 - <https://vercel.com/kb/guide/agent-readability-spec>
 - <https://presenc.ai/guides/how-to-optimize-for-mistral>
 - <https://github.com/amplifying-ai/awesome-generative-engine-optimization>
 
-## See also
+### See also
 
 - [ZAP009](https://zensical.org/spark/proposals/zap-009-structured-docs-for-the-agentic-era/)

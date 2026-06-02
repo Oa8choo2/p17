@@ -79,4 +79,3 @@ Tickets processed: 28
 0      22     https://docs.hpc.ugent.be/
 0      74     https://docs.hpc.ugent.be/software_installation_requests
 ```
- 

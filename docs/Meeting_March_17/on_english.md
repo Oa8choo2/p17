@@ -1,7 +1,7 @@
 # On English
 
 Please be aware that this documentation is written in English and maintained by
-non-native English speakers who are not able or expected to translate it for you. 
+non-native English speakers who are not able or expected to translate it for you.
 
 As you
 develop into a hpc user, you will find that the world you are entering into

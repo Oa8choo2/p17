@@ -50,7 +50,7 @@ def greet(name):
 greet("Python")
 ```
 
-1.  > Go to [documentation](https://zensical.org/docs/authoring/code-blocks/#code-annotations)
+1. > Go to [documentation](https://zensical.org/docs/authoring/code-blocks/#code-annotations)
 
     Code annotations allow to attach notes to lines of code.
 
@@ -95,17 +95,16 @@ Hover it, to see a tooltip.
 
 [^1]: This is the footnote.
 
-
 ## Formatting
 
 > Go to [documentation](https://zensical.org/docs/authoring/formatting/)
 
-- ==This was marked (highlight)==
-- ^^This was inserted (underline)^^
-- ~~This was deleted (strikethrough)~~
-- H~2~O
-- A^T^A
-- ++ctrl+alt+del++
+* ==This was marked (highlight)==
+* ^^This was inserted (underline)^^
+* ~~This was deleted (strikethrough)~~
+* H~2~O
+* A^T^A
+* ++ctrl+alt+del++
 
 ## Icons, Emojis
 

@@ -19,7 +19,6 @@ information see:
 https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
 ```
 
-
 Locally one can upgrade to latest version
 
 ```bash
@@ -29,7 +28,7 @@ sudo n latest
 
 Node version can be set via environment variable and via .nvmrc and .node-version
 
-See 
+See
 
 <https://answers.netlify.com/t/specifying-node-version-isnt-working/78614>
 
@@ -39,4 +38,4 @@ But
 
 Clean
 
-<https://oneuptime.com/blog/post/2026-01-22-nodejs-uninstall-completely/view> 
+<https://oneuptime.com/blog/post/2026-01-22-nodejs-uninstall-completely/view>

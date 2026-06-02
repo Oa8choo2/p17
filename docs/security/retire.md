@@ -4,18 +4,18 @@ tags: security, javascript
 title: Retire
 ---
 
-# Retire
+## Retire
 
 > What you require you must also retire
 
 There is a plethora of JavaScript libraries for use on the Web and in Node.JS
 apps out there. This greatly simplifies development,but we need to stay
-up-to-date on security fixes. 
+up-to-date on security fixes.
 
 See <https://retirejs.github.io/retire.js/>
 and <https://github.com/retirejs/retire.js/>
 
-## How to use 
+### How to use
 
 1. build the site
 1. run retire on the 'site'-dir, i.e. the dir where the build result is stored
@@ -23,7 +23,7 @@ and <https://github.com/retirejs/retire.js/>
 On a zensical site:
 
 ```bash
-$ retire --nocache --verbose --deep --path **zdocs**/site/assets/javascripts
+retire --nocache --verbose --deep --path **zdocs**/site/assets/javascripts
 ```
 
 :-) => no output
@@ -48,11 +48,9 @@ A proof of concept (PoC) for this type of attack with `_.isEqual`:
 
 :-( => clearly not ok
 
-## Watch out
+### Watch out
 
 Retire is looking for known libraries a.k.a. libraries with a name, such as jquery.
 
 For the moment zensical is using it's own made javascript.
 Maybe retire does not find any problem because of that.
-
-  

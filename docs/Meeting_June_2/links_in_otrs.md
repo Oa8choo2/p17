@@ -1,6 +1,6 @@
 ---
 author: Oa8choo2
-created: 20260520 
+created: 20260520
 ---
 
 # Links in OTRS tickets
@@ -16,7 +16,7 @@ When using a query in OTRS that shows us
 
 we have 13096 tickets (at Wed May 20 08:11:05 CEST 2026)
 
-When adding 
+When adding
 
 fulltext contains "docs.hpc.ugent.be"
 
@@ -31,5 +31,3 @@ Getting data out of OTRS is not easy.
 Ideal would be: a dump of the database (asked but no respons yet)
 
 Scraping a webpage with multiple iframes?
-
- 

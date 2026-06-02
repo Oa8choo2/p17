@@ -1,12 +1,12 @@
 # Docs on a lot of places
 
--   <https://docs.hpc.ugent.be> aka
+- <https://docs.hpc.ugent.be> aka
     <https://hpcugent.github.io/vsc_user_docs/> i.e. hosted at github
     pages
--   <https://www.ugent.be/hpc/>
--   <https://docs.vscentrum.be/>
--   <https://boegel-vsc-docs.readthedocs.io/en/latest/index.html>
--   <https://users.ugent.be/~kehoste/>
+- <https://www.ugent.be/hpc/>
+- <https://docs.vscentrum.be/>
+- <https://boegel-vsc-docs.readthedocs.io/en/latest/index.html>
+- <https://users.ugent.be/~kehoste/>
 
 Others sources: youtube channels, otrs, sharepoint, confluence, slack,
 teams

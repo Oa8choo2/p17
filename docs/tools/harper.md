@@ -1,8 +1,6 @@
 # Harper
 
-
-[The Free Grammar Checker That Respects Your Privacy](
-https://writewithharper.com/docs/integrations/language-server)
+[The Free Grammar Checker That Respects Your Privacy](https://writewithharper.com/docs/integrations/language-server)
 
 ```bash
 harper-cli --dialect=british __file__
@@ -25,5 +23,3 @@ Options:
   -c, --count
           Whether to merely print out the number of errors encountered, without further details. Only valid with the default output format
 ```
-
-

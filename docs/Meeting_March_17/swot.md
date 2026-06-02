@@ -8,16 +8,16 @@ Opportunities, Threats (external)
 
 ## SWOT: Strengths
 
--   markdown: easy to edit, maintain and process
--   version control
--   uptime and archive
--   performance
--   security (checked by [github dependency
+- markdown: easy to edit, maintain and process
+- version control
+- uptime and archive
+- performance
+- security (checked by [github dependency
     bot](https://github.com/hpcugent/vsc_user_docs/security/dependabot))
--   one language (English)
--   software used is open source and free
--   hosting at github is free
--   search engine offered by markdown ([lunr](https://lunrjs.com/))
+- one language (English)
+- software used is open source and free
+- hosting at github is free
+- search engine offered by markdown ([lunr](https://lunrjs.com/))
 
 ::: notes
 notes:
@@ -29,15 +29,15 @@ Versions of the site also exist at github.com.
 
 ## SWOT: Weaknesses
 
--   GA as analytics solution
--   no agreed house style guide
--   too many locations for docs
--   slow review cycle
--   poor information architecture
--   too long texts
--   technical complexity build process
--   security: fix needed of issues reported by github dependabot
--   security: fix needed in search engine of mkdocs
+- GA as analytics solution
+- no agreed house style guide
+- too many locations for docs
+- slow review cycle
+- poor information architecture
+- too long texts
+- technical complexity build process
+- security: fix needed of issues reported by github dependabot
+- security: fix needed in search engine of mkdocs
     [EUVD-2021-1042](https://euvd.enisa.europa.eu/vulnerability/CVE-2021-23358)
 
 ::: notes
@@ -49,19 +49,19 @@ for security problems <https://retirejs.github.io/retire.js/>
 
 ## SWOT: Opportunities
 
--   make a house style
--   consolidate locations
--   implement review cycle
--   split long texts
--   move to better build
+- make a house style
+- consolidate locations
+- implement review cycle
+- split long texts
+- move to better build
 
 ## SWOT: Threats
 
--   eol of mkdocs
--   immature state of zensical
--   better documentation elsewhere or AI could reduce use and relevance
+- eol of mkdocs
+- immature state of zensical
+- better documentation elsewhere or AI could reduce use and relevance
     of ours
--   [lack of standard for markdown](https://ddbeck.com/fosdem2026/), a
+- [lack of standard for markdown](https://ddbeck.com/fosdem2026/), a
     lot of variants exist
 
 ::: notes

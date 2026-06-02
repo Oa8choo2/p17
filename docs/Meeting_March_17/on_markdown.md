@@ -6,7 +6,7 @@ complexity of HTML.
 
 It looks like this:
 
-```
+```text
 a piece of **markdown** found at [docs.hpc](docs.hpc.ugent.be)
 ```
 
@@ -23,10 +23,12 @@ a piece of **markdown** found at [docs.hpc](docs.hpc.ugent.be)
   <https://pypi.org/search/?q=markdown>,
   +10K
 - apt packages:
+
   ```bash 
   aptitude search markdown | wc 
     111
   ```
+
 - cheat sheet:
   <https://www.markdownguide.org/cheat-sheet/>
 - why markdown? The Quiet Revolution of Plain Text

@@ -13,9 +13,8 @@ $ fdupes -Str .
 
 This 'examples' map has a lot of duplicates. This should be fixed.
 
-Note: 
+Note:
 
 It seems that the degree of duplication is not configurable with this tool.
 Other tools might be better at this: diff, czkawka, krokiet
 or tools realated to plagiarism detection.
-

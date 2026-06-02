@@ -2,7 +2,7 @@
 
 [homepage](https://bphogan.com/)
 
-## Audience for our docs:
+## Audience for our docs
 
 - People who know the feature they need but **can’t remember** how to use it.
 - People who have a problem but **don’t know how to use your product** to solve it.

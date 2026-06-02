@@ -5,7 +5,7 @@ the build process.
 
 Example
 
-```
+```text
 After you log in using your {{ university }} login and password
 ```
 

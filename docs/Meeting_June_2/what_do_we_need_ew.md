@@ -7,7 +7,7 @@ description: |
   Please try and think 'from scratch’ what the beginning user would need.
 ---
 
-# Which texts the user really needs (and why) (EW)
+## Which texts the user really needs (and why) (EW)
 
 I tried to put myself in the shoes of
 **a novice user with no prior knowledge of the domain**

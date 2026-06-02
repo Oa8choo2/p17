@@ -4,7 +4,7 @@ A markdown linter written in **ru**st by **Ru**ben J. Jongejan
 
 Sample of the problems found
 
-```
+```text
 [MD040] Code block (```) missing language [*]
 [MD003] Heading style should be # Heading, found Heading (underlined with =) [*]
 [MD025] Multiple top-level headings (level 1) in the same document [*]
@@ -13,4 +13,3 @@ Sample of the problems found
 ```
 
 Problems marked with \[\*\] can be fixed automatically
-

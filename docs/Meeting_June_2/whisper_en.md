@@ -15,21 +15,20 @@ Please do not hesitate to send any queries regarding this to
 ## Connecting
 
 1. In a web browser, navigate to <https://login.hpc.ugent.be>
-    - Initially this will show you
+   - Initially this will show you
 
-    ```text
-    You need to connect to the firewall app in new tab and wait up to 30s.
+     ```text
+     You need to connect to the firewall app in new tab and wait up to 30s.
 
-    Keep the tab open while you are connected.
-    ```
+     Keep the tab open while you are connected.
 
-    - Connect to the VSC firewall at <https://firewall.hpc.kuleuven.be/>
+     ```text
+
+   - Connect to the VSC firewall at <https://firewall.hpc.kuleuven.be/>
 
 2. Select “Ghent University” and then log in using your Ghent University
     account details (in the background, this will be linked to your vsc12345[^1]
     HPC account)
-
-
 
     ![Select](screenshot_2026-05-20_at_10-43-34_select_your_home_organization-vsc.png)
 
@@ -57,7 +56,7 @@ Please do not hesitate to send any queries regarding this to
 
     ![HPC Dashboard](screenshot_dashboard-hpc_ugent.png){ data-title="This the caption for the HPC dashboard image" }
 
-    ## Uploading files
+## Uploading files
 
 4. In the blue bar, click on “Files” and then $VSC_DATA
    FIX: add screenshot
@@ -65,55 +64,55 @@ Please do not hesitate to send any queries regarding this to
     the top)
 6. You can easily upload a file from File Explorer to the website using
     drag-and-drop:
-    - Simply drag the file onto the HPC web browser page
-    - Click the green ‘Upload 1 file’ button.
+   - Simply drag the file onto the HPC web browser page
+   - Click the green ‘Upload 1 file’ button.
       Fix: add screenshot
 
-    ## Starting Whisper
+## Starting Whisper
 
 7. In the blue bar at the top,
-    - click on ‘Interactive Apps’ and
-    - then ‘Transcribe’ (bottom menu option)
+   - click on ‘Interactive Apps’ and
+   - then ‘Transcribe’ (bottom menu option)
     Fix: add screenshot
 8. Select the input file you uploaded in steps 4–6:
-    - Click the ‘Select Path’ button
-    - In the favourites on the left, select the folder ‘/data/gent/123/vsc12345’
+   - Click the ‘Select Path’ button
+   - In the favourites on the left, select the folder ‘/data/gent/123/vsc12345’
       [^1]
-    - If necessary, navigate in the right-hand column to the separate folder you
+   - If necessary, navigate in the right-hand column to the separate folder you
       created in step 5
-      FIX: add link as described in https://stackoverflow.com/questions/2822089/how-to-link-to-part-of-the-same-document-in-markdown?noredirect=1&lq=1
-    - Highlight the file you uploaded in blue
-    - Then click on “Select Path” at the bottom
+      FIX: add link as described in <https://stackoverflow.com/questions/2822089/how-to-link-to-part-of-the-same-document-in-markdown?noredirect=1&lq=1>
+   - Highlight the file you uploaded in blue
+   - Then click on “Select Path” at the bottom
 9. Select “Dutch” as the “Whisper language” (or another language if the
     conversation was not conducted in Dutch)
 10. Select the “Show advanced options” button
-     - Set “Translation target languages” to “Dutch”
-     - Under “Advanced Whisper Flavour”, select “WhisperX”
-     - Select the “WhisperX speaker diarisation” button
-     - Further down, under “Time (hours)”, select ‘6 hours (1/4 day)’
+    - Set “Translation target languages” to “Dutch”
+    - Under “Advanced Whisper Flavour”, select “WhisperX”
+    - Select the “WhisperX speaker diarisation” button
+    - Further down, under “Time (hours)”, select ‘6 hours (1/4 day)’
 11. Click on “Launch” at the very bottom
-     - Your transcription with diarisation will now start.
-     - You will receive emails when the calculations begin and when they are
+    - Your transcription with diarisation will now start.
+    - You will receive emails when the calculations begin and when they are
        complete.
 
-    ## Viewing the transcription with [diarisation]
+## Viewing the transcription with [diarisation]
 
    [diarisation]: https://en.wikipedia.org/wiki/Speaker_diarisation
 
 12. The final email contains a link that takes you directly to the files (under
      “Result”)
-     - The .txt file contains the text with \[SPEAKER_00,01,02,...\] labels
-     - The .vtt file also contains time codes
+    - The .txt file contains the text with \[SPEAKER_00,01,02,...\] labels
+    - The .vtt file also contains time codes
 
 ---
 
 ## Colophon
 
 - this page is based on an OTRS ticket on this topic, compare to
-  https://docs.hpc.ugent.be/transcribe/
+  <https://docs.hpc.ugent.be/transcribe/>
 - the screenshots can be shown in a lightbox overlay, available as an zensical extension
-    - see the zensical.toml of this site
-    - see also https://www.nngroup.com/articles/overuse-of-overlays/
+  - see the zensical.toml of this site
+  - see also <https://www.nngroup.com/articles/overuse-of-overlays/>
 - to continue the numbering of a list in markdown see
   <https://stackoverflow.com/a/18089124/906489>
   You need to indent with 4 spaces.

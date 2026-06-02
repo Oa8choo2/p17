@@ -6,10 +6,9 @@ Also: why is it useful to have this footers anyway in otrs?
 
 * open otrs
 * run query docs.hpc
-  fulltext = "see https://docs.hpc.ugent.be"
+  fulltext = "see <https://docs.hpc.ugent.be>"
 * open ticket
-* use Firefox extension [Web Developer](
-https://chrispederick.com/work/web-developer/)
+* use Firefox extension [Web Developer](https://chrispederick.com/work/web-developer/)
 to view the link information
 * save that page locally
 * grep the links with
@@ -30,4 +29,3 @@ $ grep 'https://docs.hpc'  2026041360000558\ —\ Navragen\ HPC-infrastructuur\ 
       5     https://docs.hpc.ugent.be/software_installation_requests
       2     https://docs.hpc.ugent.be/web_portal/
 ```
-

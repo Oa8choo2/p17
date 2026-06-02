@@ -9,4 +9,3 @@ rewrite exotic filenames
     ```bash
     detox -s lower <files>
     ```
-
