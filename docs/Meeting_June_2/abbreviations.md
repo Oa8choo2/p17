@@ -4,8 +4,8 @@
         - inline (defined in one document)
         - by using a central file  
           e.g. includes/abbreviations
-  - see documentation
-  - see sample
+  - see [documentation](https://zensical.org/docs/authoring/tooltips/?h=abb#add-abbreviations)
+  - see sample, look for HPC on this page
 
 ## Glossary
 
@@ -45,14 +45,14 @@ How?
 
 - Where?
   - The glossary can be one separate page which can be consulted
-  - or a separate file per topic **about\__topic__.md**
-  - as a complement to the script generated
-       available_software/detail/topic.md file
-  - both files shold link to each other
+  - or a separate file per topic **`about\__topic__.md`**
+  - as a complement to the script generated  
+       `available_software/detail/topic.md` file
+  - both files should link to each other
   - this page(s) will give results via the search option
   - when used as an include, the `<abbr>` tag will be included
       and the title will be shown as a pop-up
-      (see tool-tip)
+      (see also [tool-tips](https://zensical.org/docs/authoring/tooltips/))
 
       ```html
       <abbr title="High Performance Computing">HPC</abbr>
@@ -68,7 +68,7 @@ How?
 - longer info can be used via instant or automatic preview
   - included in zensical
   - some browsers have also this functionality
-        ([screenshot](preview_link_in_firefox.png))
+        ([screenshot](abbreviations.preview_link_in_firefox.png))
 
 ## Example APOST3D aka APOST-3D
 
@@ -79,13 +79,20 @@ Source:
 Glossary term
 
 ```markdown
-*[APOST3D]: Open-source APOST-3D software features a large number of wavefunction analysis tools developed over the past 20 years, aiming at connecting classical chemical concepts with the electronic structure of molecules. APOST-3D relies on the identification of the atom in the molecule (AIM), and several analysis tools are implemented in the most general way so that they can be used in combination with any chosen AIM. A Fortran-based code developed at the Universitat de Girona (UdG) by P. Salvador and collaborators.
+*[APOST3D]: Open-source APOST-3D software features a large number of  
+wavefunction analysis tools developed over the past 20 years, aiming at  
+connecting classical chemical concepts with the electronic structure of  
+molecules. APOST-3D relies on the identification of the atom in the molecule  
+(AIM), and several analysis tools are implemented in the most general way so  
+that they can be used in combination with any chosen AIM. A Fortran-based code  
+developed at the Universitat de Girona (UdG) by P. Salvador and collaborators.
 ```
 
 Abbreviation
 
 ```markdown
-*[APOST3D]: wavefunction analysis tools connecting classical chemical concepts with the electronic structure of molecules.
+*[APOST3D]: wavefunction analysis tools connecting classical chemical concepts  
+with the electronic structure of molecules.
 ```
 
 Acronym
@@ -103,7 +110,7 @@ widely used "Gaussian" system (G92, G94, G98).
 
 <http://occam.ttk.hu/programs/readme.html>
 
-Not really an acronym
+=> Not really an acronym
 
 ## Conversion of an easybuild **eb** file
 

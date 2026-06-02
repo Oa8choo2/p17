@@ -7,7 +7,7 @@ description: |
   Please try and think 'from scratch’ what the beginning user would need.
 ---
 
-## Which texts the user really needs (and why) (GB)
+## Which texts the user really needs (and why) (GO)
 
 ### Which documents should be on the site?
 
@@ -57,12 +57,9 @@ description: |
   * how to make a **useful** screenshot
   * how to describe your problem
   * what to include?
-* kan je eens proberen om die pagina te bezoeken in een "incognito" browser
-   venster, of eventueel een andere internet browser (Firefox, Chrome, ...) dan
-   je gewoon bent om te gebruiken?
-
----
-
+* 
+   > _kan je eens proberen om die pagina te bezoeken in een "incognito" browser  
+     venster, of eventueel een andere internet browser (Firefox, Chrome, ...) dan  
+     je gewoon bent om te gebruiken?_
 * privacy
 * terms of service
->>>>>>> c33c020 (add ticketlist.ods)

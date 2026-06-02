@@ -7,7 +7,7 @@ description: |
   Please try and think 'from scratch’ what the beginning user would need.
 ---
 
-## Which texts we really need (and why)
+## Which texts we really need (and why) (EL)
 
 TOC
 
@@ -27,14 +27,14 @@ This about <https://docs.vscentrum.be/accounts/vsc_account.html>
 Short description of what **the VSC accountpage** is and what users can
 do there:
 
-- request a VSC account
-  (link to 'Request a VSC account' page - can be the one of vscentrum
-<https://docs.vscentrum.be/accounts/vsc_account.html#new-vsc-account>
-  but watch out, the UGent tab there refers to
+- request a VSC account  
+  (link to 'Request a VSC account' page - can be the one of vscentrum  
+<https://docs.vscentrum.be/accounts/vsc_account.html#new-vsc-account>  
+  but watch out, the UGent tab there refers to  
   <https://www.ugent.be/hpc/en/access>)
 - monitor their quota
   (link to 'Quota' page)
-- request group/Virtual Organisation (VO) membership
+- request group/Virtual Organisation (VO) membership  
   (link to 'VO' page or <https://docs.vscentrum.be/accounts/vo.html>)
 - request new VO
   (link to 'VO' page or <https://docs.vscentrum.be/accounts/vo.html>)

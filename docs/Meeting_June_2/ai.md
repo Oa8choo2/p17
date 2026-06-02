@@ -19,7 +19,7 @@ Note: site is hosted at github, Microsoft can harvest these data in another way.
 
 - robots.txt -> not always respected
 - <https://anubis.techaro.lol/>  
-![anubis](anubis.webp)
+![anubis](ai.anubis.webp)
 
 ### How can we optimize, facilitate AI bot access?
 

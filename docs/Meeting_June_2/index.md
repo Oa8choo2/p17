@@ -1,14 +1,13 @@
 ---
 title: "Agenda Meeting June 2, 2026"
 ---
+## Meeting June 2, 2026
 
-# Meeting June 2, 2026
+### Topics
 
-## Topics
+#### 1. [Abbreviations, glossary and acronyms](abbreviations.md)
 
-### \1. [Abbreviations, glossary and acronyms](abbreviations.md)
-
-### \2. "Homework": which docs are needed?
+#### 2. “Homework”: which docs are needed?
 
 Some external experts give advice on documentation:
 
@@ -21,17 +20,16 @@ Results of the homework:
 - [EL](what_do_we_need_el.md)
 - [GO](what_do_we_need_g.md)
 
-### \3. [Use of url’s in otrs tickets](otrs.md)
+#### 3. [Use of url’s in otrs tickets](otrs.md)
 
-### \4. New in zensical
+#### 4. New in zensical
 
 - [lightbox demo](whisper_en.md)
 - <https://zensical.org/docs/authoring/images/?h=light#lightbox-and-zoom>
 
-```toml 
+```toml
     [project.markdown_extensions.attr_list]
     [project.markdown_extensions.md_in_html]
     [project.markdown_extensions.pymdownx.blocks.caption]
     [project.markdown_extensions.zensical.extensions.glightbox]
 ```
-

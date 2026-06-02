@@ -5,12 +5,14 @@ Maybe we can find the docs we use most for helpdesk tickets?
 ## What url's are in HPC tickets?
 
 - a lot of noise from mail footers  
-  (are those links useful in otrs?)
+  (are those footers and those links useful in otrs?)
 - [not that many links to docs.hpc](links_in_otrs.md)
 - no access to database, ergo: some kind of scraping to collect the data  
   [method](get_links_out_otrs.md)
 
 ## Per domain
+
+(second colum indicates number of times a link to that domain is used in a ticket)
 
 ```text
 2       1     arts.kuleuven.be
