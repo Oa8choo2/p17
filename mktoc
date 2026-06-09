@@ -3,6 +3,11 @@
 set -e
 
 tocfile=table_of_contents.md
+touch "${tocfile}"
+
+# find out create date of file in git repotcreate
+# of alias?
+mygitcreates=/mnt/data/repos/github.com/Oa8choo2/p17/gitcreates
 
 # add new files at end of file
 # delimiter is colon
@@ -14,12 +19,33 @@ while IFS=: read -r filename header
     # grep exits with 1 if nothing is found
     if ! grep --silent "$filename" "${tocfile}" ; then
       #  * [Docs on a lot of places](a_lot_of_places.md)
-      echo "* [${header}](${filename})" \
+      createdate=$("${mygitcreates}" $(basename "${filename}") \
+	    | sort -n -r \
+	    | cut -d ' ' -f 1-2 \
+	    | tail -n 1)  
+      daysago=$(( ($(date +%s) - $(date +%s -ud "${createdate}")) / 3600 / 24 ))
+      echo "* [${header}](${filename} \"Created on ${createdate}\"), ${daysago} days old." \
         | tee -a "${tocfile}"
     fi  
   done < <( \
   # grep the first H1 header
-  grep '^# ' -m 1 *.md \
+  grep --include='*.md' \
+	  -R \
+	  -s \
+	  -m 1  \
+	  '^# ' \
     | grep -v "${tocfile}"
   )
+
+  sort "${tocfile}" \
+  | sponge "${tocfile}" \
+	  
+
+
+# TODO sort the toc
+# TODO indicate freshness
+# this should be addded to cron or similar and run daily
+  # bash ../gitcreates tools/detox
+  # 2026-06-02 06:37:10 +0200 docs/tools/detox.md
+
 
