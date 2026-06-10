@@ -1,0 +1,86 @@
+fg/saaze-core		public, fork	2023-03-19T22:3;3:55Z
+fg/workerman	An asynchronous event driven P;HP socket framework. Supports HTTP, Websocket, SSL and other custom protocols. PHP>=7.0.	public, fork	2022-;09-22T13:02:03Z
+fg/mimey	PHP package for converting file ex;tensions to MIME types and vice versa.	public, fork	2022-09-06T20:28:35Z
+fg/RiseOfKingdoms		public, fork	2022-04-20T;13:15:55Z
+fg/laravel-activitylog	Log activity inside;your Laravel app	public, fork	2021-12-29T18:19:20Z
+fg/tr-nat-id-num-validator	Validation of Tu;rkish Identification Number (TC Kimlik Numarası Kontrolü ve Doğrulaması)	public, fork	2021-12-07T08:55:;36Z
+fg/temporary-access	Abandoned. Use erdemker;en/laravel-otp instead.	public, fork	2021-11-25T11:15:29Z
+fg/laravel-excel	🚀 Supercharged Excel ex;ports and imports in Laravel	public, fork	2021-07-28T07:50:16Z
+fg/saaze	An all-inclusive, flat-file CMS fo;r simple websites and blogs.	public, fork	2020-11-23T17:10:28Z
+fg/sequelpro	MySQL/MariaDB database managem;ent for macOS	public, fork	2019-12-20T20:18:56Z
+fg/laravel-react	Laravel 5.8 and React 16.8;boilerplate	public, fork	2019-08-07T14:25:38Z
+fg/PHPExcel	ARCHIVED	public, fork	2019-05-2;7T15:17:06Z
+fg/LootTable.json	Full edited loot table	pu;blic, fork	2019-02-15T15:45:10Z
+fg/pdox	useful query builder class that wor;ks with PHP PDO class for simple access your data.	public, fork	2019-01-09T20:24:03Z
+fg/laracom	Laravel FREE E-Commerce Software;	public, fork	2018-04-12T14:01:22Z
+fg/YiiCMS		public	2018-01-23T12:26:41Z
+fg/payuclient	Payment client for Payu Turke;y.	public, fork	2017-08-20T20:10:47Z
+fg/BuyukGoc.github.io		public, fork	2016-12;-07T22:28:24Z
+fg/yii2-core	Yii2 Core project template	pub;lic, fork	2016-06-24T10:17:24Z
+fg/yii2-bootstrap-AdminLTE	The Bootstrap te;mplate AdminLTE widgets for yii2 framework.	public, fork	2016-06-19T19:12:58Z
+fg/nvi	NVI T.C. Kimlik No Doğrulama Servis;i	public, fork	2016-06-08T14:09:17Z
+fg/yii2-file-processor	Upload and process f;iles and images for YII2	public, fork	2016-05-20T12:03:02Z
+fg/magento2-1	t-appz - Mobile Commerce&Shop;ping App for Magento 2	public, fork	2016-04-19T13:59:55Z
+fg/faruk-sengun-kinama	Cinsiyetçi ve iş a;hlakına aykırı konuşmalarından ötürü, Argede Bilişim sahibi Faruk Şengün için kınama mektubu y;azıyoruz.	public,;fork	2016-04-16T15:3
+fg/active_record.cr	Active Record pattern i;mplementation for Crystal.	public, fork	2016-03-16T17:38:12Z
+fg/gravatar.cr		public	2016-03-14T17:18:22Z
+fg/spotify.cr	A Crystal wrapper for the Spo;tify API	public, fork	2016-03-13T01:39:57Z
+fg/crystalshards	A listing of all crystal s;hards	public, fork	2016-03-12T17:52:09Z
+fg/Core-1	The core module. This is a depend;ency for all my other modules	public, fork	2016-03-03T09:31:07Z
+fg/Page	Page management for AsgardCMS	publi;c, fork	2016-02-25T13:57:27Z
+fg/Blog	A Blog module	public, fork	2016-02-;23T18:30:51Z
+fg/yii2-seo-i18n		public, fork	2016-02-09T1;5:00:50Z
+fg/scabbia2-config	Scabbia2 Config Componen;t	public, fork	2016-01-02T23:12:28Z
+fg/shortcode	Really simple shortcode parser;without regex	public, fork	2015-12-11T18:30:03Z
+fg/PHPloy	PHPloy - Incremental Git FTP/SFTP;deployment tool that supports multiple servers, submodules and rollbacks.	public, fork	2015-12-07T06:17:04;Z
+fg/simpleim	Simple Instant Messanger over T;CP with nodejs	public, fork	2015-11-18T09:24:06Z
+fg/ark-yii2-cart	Ark Cart - Yet Another Car;t Bundle For Yii2 Framework	public	2015-11-16T11:14:58Z
+fg/yii2-modular	Yii2 modular skeleton	publi;c, fork	2015-11-14T22:32:43Z
+fg/framework		public, fork	2015-11-13T15:21;:12Z
+fg/laravel	A PHP Framework For Web Artisans;	public, fork	2015-11-13T02:36:25Z
+fg/Readme-Helper	Snippets to help you creat;e Readme files	public, fork	2015-10-14T08:50:37Z
+fg/magento2	All Submissions you make to Mag;ento, an eBay Inc. company (“Magento”) through GitHub are subject to the following terms and conditions;: (1)You grant Mage;nto a perpetual, wor
+fg/FgConfigBundle	Database stored settings	;public	2015-08-15T11:16:44Z
+fg/yii2-url-alias		public	2015-08-07T13:26:;54Z
+fg/yii2-giix	Yii2 Extended Generator	public;, fork	2015-08-03T16:06:43Z
+fg/bambam-core	Bambam Blog & CMS Core	publi;c	2015-08-03T04:43:37Z
+fg/bambam.fatihgursoy.com	Bambam Blog & CMS;system - Demo: http://bambam.fatihgursoy.com	public	2015-07-31T14:46:23Z
+fg/hazarartuner.com		public	2015-07-21T07:0;4:00Z
+fg/JustWriting	markdown blog system	public,;fork	2015-07-09T10:08:41Z
+fg/SncRedisBundle	A Redis bundle for Symfon;y2 supporting Predis and PhpRedis	public, fork	2015-07-08T11:47:19Z
+fg/DoctrineExtensions	Doctrine2 behavioral;extensions, Translatable, Sluggable, Tree-NestedSet, Timestampable, Loggable, Sortable	public, fork	2015-07;-02T13:31:49Z
+fg/TextPress	Simple flat-file blog engine i;n PHP	public, fork	2015-06-05T05:44:49Z
+fg/badgerbadgerbadger	Generate Github proje;ct badges like a boss	public, fork	2015-06-05T00:14:34Z
+fg/apio	Apio , consolidates all API request;s	public	2015-04-27T11:12:43Z
+fg/XmlImport		public, fork	2015-04-24T10:25;:42Z
+fg/PhalconHMVCSkeletonApplication	Phalcon H;MVC Skeleton Application with Mustache Template Engine	public, fork	2014-12-31T13:48:32Z
+fg/hello-world	Hello world app with all lan;gs. http://www.roesler-ac.de/wolfram/hello.htm	public, fork	2014-12-31T06:52:39Z
+fg/paranoia	Paranoia is generic payment cli;ent for populer virtual pos api(s) of Turkey.	public, fork	2014-12-24T17:03:56Z
+fg/core	Beautiful open-source forum softwar;e built for the modern web.	public, fork	2014-12-23T12:29:23Z
+fg/backbone.validation	A validation plugin;for Backbone.js that validates both your model as well as form input	public, fork	2014-11-20T16:27:26Z
+fg/scabbia2-fw	Scabbia2 PHP Framework Code	;public, fork	2014-11-14T11:12:16Z
+fg/arguman.org	Argüman analiz & haritalama;platformu	public, fork	2014-11-13T07:44:47Z
+fg/Image-Thumbnailer		public, fork	2014-10-;25T20:43:16Z
+fg/php-mongo	MongoDB ODM for PHP	public, fo;rk	2014-07-24T19:34:53Z
+fg/yamop	Yet another MongoDB ODM for PHP	pu;blic, fork	2014-07-23T13:05:57Z
+fg/yii2-widgets	Collection of useful widget;s for Yii Framework 2.0	public, fork	2014-07-10T08:51:33Z
+fg/yii2	Yii 2 framework main development re;po	public, fork	2014-06-17T12:49:15Z
+fg/Insight.Database.Schema	Automatic databa;se schema installation and upgrade toolkit	public, fork	2014-05-19T16:44:19Z
+fg/php-markdown	Parser for Markdown and Mar;kdown Extra derived from the original Markdown.pl by John Gruber.	public, fork	2014-05-15T19:49:30Z
+fg/yii2-builder	Build forms (single or tabu;lar) easily for Yii Framework 2.0.	public, fork	2014-04-29T20:44:35Z
+fg/yii-ecommerce	eCommerce platform built u;sing Yii Framework. WIP.	public, fork	2014-02-13T19:37:38Z
+fg/knockout.mapping	Object mapping plugin f;or KnockoutJS	public, fork	2014-01-10T11:18:26Z
+fg/phpist-html		public	2014-01-02T23:07:03Z
+fg/Cobol_Catalog		public	2013-12-12T23:50:2;8Z
+fg/markup	The code we use to render README.;your_favorite_markup	public, fork	2013-12-04T03:08:48Z
+fg/workshop-eylul-2013	solr workshop eylül;2013	public, fork	2013-09-25T19:44:55Z
+fg/Laravel-4-Bootstrap-Starter-Site	Laravel;4 Starter Site is a basic blog application using several nice community packages.	public, fork	2013-07-15T;00:12:14Z
+fg/etkinlik-2013	symfony2 ile olusturulmus;etkinlik sitesi	public, fork	2013-07-08T08:36:48Z
+fg/yii.TodoMVC	Yii TodoMvc	public	2013-06-2;1T06:05:05Z
+fg/yii-user	Yii PHP Framework extension for;registration and management users accounts.	public, fork	2013-05-25T17:31:26Z
+fg/muhafiz	Guard your codebase from bad cod;es!	public, fork	2013-04-29T06:55:13Z
+fg/normalize.css	A modern, HTML5-ready alte;rnative to CSS resets	public, fork	2012-11-26T17:38:51Z
+fg/mockup-designer	The mockup tool that use;s your local storage as backend.	public, fork	2012-11-19T15:17:48Z
+fg/selectToAutocomplete	Turns any select ta;g into an autocomplete field with weighted options, synonyms and loose matching	public, fork	2012-09-11T14:;07:12Z
+fg/shouldDo	shouldDo is an Emacs Org-Mode ";spreadsheet" to help you focus on your ShouldDOs, activities you should be doing to achieve results/outcome;s/impact. shouldDo;tracks your weekly p
+fg/node-ssh	A hookable ssh server for node.;js using libssh	public, fork	2011-05-10T19:56:18Z

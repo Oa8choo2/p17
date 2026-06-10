@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# grab footer
+# https://www.qq.com/
+# rewrite text
+
+cat footer \
+| gawk -f rnum.awk \
+| sed -e 's/tencent/P17/gi' \
+| sed -e 's/Shenzhen/Brussel/gi' \
+| sed -e 's/Guangdong/Leuven/gi' \
+| sed -e 's/Beijing/Schaarbeek/gi' \
+| sed -e 's/Kantonees/Nederlands/gi' 
+
+exit
+
+Over Tencent| |Over Tencent
+Serviceovereenkomst| |Privacybeleid
+Het Open Platform| |Onderhandelingen
+Tencent Werving| |Tencent Openbaar Welzijn| |Tencent Kanaal
+Klantenservice Centrum
+Download de klant
+Shenzhen Internet Illegale en Adverse Information Reporting Center
+Bureau voor openbare veiligheid van Shenzhen
+Guangdong Provincial Communications Administratie
+Richtlijnen voor inbreukklachten
+Anti-Ulunder Reclame Toezegging
+Beijing Internet Court Juridische Dienst Werkstation
+Het netwerk van Guangdong [2023] nr. 2882-203
+Online Certificaat (Kantonees) Nr. 054
+Netwerk Audiovisuele Licentie nr. 1904073
+Waarde-toegevoegde telecommunicatie bedrijfslicentie:Kantonees B2-20090059B2-20090028
+Internet Religieuze Informatiedienst Licentie: Guangdong (2025) 0000023
+Kantonees B2-20090059-5
+Informatie Service Licentie
+Illegaal en slecht informatie rapport telefoon: 0755-83765566-4
+Guangdong Openbare Netwerkbeveiligingsnr. 44030002000001
+De kwalificatie van de Internet Drug Information Service: (Guangdong) - Niet-Zakelijk - 2023-0186

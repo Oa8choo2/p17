@@ -1,0 +1,11 @@
+[project]
+name = "p17"
+version = "0.0.1"
+description = "p17 description"
+readme = "README.md"
+requires-python = ">=3.14"
+# latest zensical at 20260609 is 0.0.43
+dependencies = [
+    "zensical>=0.0.33",
+]
+

@@ -1,0 +1,14 @@
+# flowmark.toml (or .flowmark.toml)
+
+[formatting]
+width = 80
+semantic = true
+smartquotes = true
+ellipses = true
+list-spacing = "preserve"
+
+[file-discovery]
+extend-include = ["*.mdx", "*.markdown"]
+extend-exclude = ["drafts/", "archive/", "site/"]
+files-max-size = 2097152  # 2 MiB
+

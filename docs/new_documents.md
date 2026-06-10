@@ -30,11 +30,40 @@ Consult the workflow text TODO
 
 *[KARMA]: Knowledge-based Augmented Reality for Maintenance Assistance     
 
+* file and folder names:
+   - all lowercase
+   - no 'weird' characters
+   - use underscores to delimit words
+   - use _detox_ to fix this
+   - limit length
+   - try to make it explaining itself (not: doc.md)
+   - try to make it uniq over the whole site, use these command's to find them:
+
+   ```bash
+   cd docs # avoid searching in .git dir and in build dir (= site)
+   find -type f -printf '%f\n' | sort | uniq  -d
+   find -type d -printf '%f\n' | sort | uniq  -d
+   ```
+
 
 * read your text aloud before commit
 * test your document,  
   follow the instructions and  
-  confirm, assert that you obtain the expected result  
+  confirm, assert that you obtain the expected result
+* let your text test by a collegue  
+* let your text test by a customer, a newbie, your aunt, mother-in-law, ...
+
+* add meta-information (frontmatter)   
+
+  ```yaml
+  ---
+  title: A more elaborate title (optional)
+  reviewers: Dr Marcus Baw
+  audience: all, could be beginner, guru, ... 
+  last_updated: 2026 Jul 5
+  --- 
+  ```
+
 
 * add labels, categories: 
   jobs, language model, dynamics, finance, ... 

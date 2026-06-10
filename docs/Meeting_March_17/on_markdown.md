@@ -33,3 +33,6 @@ a piece of **markdown** found at [docs.hpc](docs.hpc.ugent.be)
   <https://www.markdownguide.org/cheat-sheet/>
 - why markdown? The Quiet Revolution of Plain Text
 <https://share.jotbird.com/essay>
+- where is markdown used?
+    - <https://github.com/search?q=org%3Ahpcugent%20language%3AMarkdown&type=code>
+
