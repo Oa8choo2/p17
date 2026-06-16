@@ -56,7 +56,7 @@ adres volgen we met meerdere mensen op)
 
 12. De laatste mail bevat een link waarmee je rechtstreeks bij de bestanden
     uitkomt (na 'Result')
-    - .txt bestand bevat de tekst met [SPEAKER_00,01,02,...] labels
+    - .txt bestand bevat de tekst met \[SPEAKER_00,01,02,...\] labels
     - .vtt bestand bevat eveneens timecodes
 
 Als je tijd vindt, probeer gerust en contacteer ons zeker als je tegen

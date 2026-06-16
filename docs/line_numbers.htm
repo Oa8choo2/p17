@@ -1,0 +1,119 @@
+<html>
+<style>  
+div {
+    counter-reset: line;
+}
+p {
+    counter-increment: line;
+}
+
+/* Then we display the number at the beginning of each line: */
+
+p:before{
+    content: counter(line);
+}
+
+</style>
+<body>
+  <div>
+  <p> uae pater ut summa vidit Saturnius arce,
+ingemit et, facto nondum vulgata recenti,
+<p>
+165foeda Lycaoniae referens convivia mensae,
+ingentes animo et dignas Iove concipit iras,
+<p>conciliumque vocat: tenuit mora nulla vocatos.
+
+<p>Est via sublimis, caelo manifesta sereno:
+lactea nomen habet, candore notabilis ipso.
+<p>170Hac iter est superis ad magni tecta Tonantis
+regalemque domum. Dextra laevaque deorum
+atria nobilium valvis celebrantur apertis
+<p>(plebs habitat diversa locis): hac parte potentes
+caelicolae clarique suos posuere penates.
+<p>175Hic locus est, quem, si verbis audacia detur,
+haud timeam magni dixisse Palatia caeli.
+
+<p>Ergo ubi marmoreo superi sedere recessu,
+celsior ipse loco sceptroque innixus eburno
+terrificam capitis concussit terque quaterque
+<p>180caesariem, cum qua terram, mare, sidera movit.
+Talibus inde modis ora indignantia solvit:
+  </p>
+
+  <h2>Another solution</h2>
+
+<style>
+div.poem-container { 
+    width: 90%; 
+    text-align: left; 
+    margin: 0 auto; }
+div.poem { 
+    margin: 0 auto; 
+    display: table;  }
+.poem h1{ 
+    padding-bottom: 1em; 
+    text-align: center; }
+
+/* VERSE STYLES */
+menu.verse { 
+    counter-reset: line; 
+    width: auto; 
+    margin: 0 auto; 
+    font-size: 0.75em; 
+    line-height: 1.5; 
+}
+
+menu.verse li { display: block; }
+
+menu.verse > li { counter-increment: line 1;}
+
+menu.verse > li:nth-of-type(5n):before {
+    content: counter(line); 
+    width: 2em; 
+    display: block; 
+    float: left; 
+    margin-left: -2em;  
+}
+
+menu.verse li.stanza:not(:first-child) {
+  padding-top: 1.5em;
+}    
+
+menu.verse li.fallback {
+  color: red;
+}
+
+menu.verse li.nocount:before {
+  visibility: hidden;
+}
+
+menu.verse li.nocount {
+  color: blue;
+  font-style: italic; 
+  padding-top: 1.5em;    
+}</style>
+
+<div class="poem-container">
+    <div class="poem">
+        <h1>Sonnet 18</h1>
+        <menu class="verse">
+            <li class="stanza">Shall I compare thee to a summer's day?</li>
+            <li>Thou art more lovely and more temperate.</li>
+            <li>Rough winds do shake the darling buds of May,</li>
+            <li>And summer's lease hath all too short a date.</li>
+            <li class="fallback" value="5">Sometime too hot the eye of heaven shines, (real line 5)</li>
+            <li>And often is his gold complexion dimmed;</li>
+            <li>And every fair from fair sometime declines,</li>
+            <li>By chance, or nature's changing course, untrimmed;</li>
+                <ol><li class="nocount stage-dir">Hypothetical Line that Should not be Counted by<br />the Browser (a subheading, stage directions, etc.)</li></ol>
+            <li class="stanza">But thy eternal summer shall not fade,</li>
+            <li class="fallback" value="10">Nor lose possession of that fair thou ow'st, (real line 10)</li>
+            <li>Nor shall death brag thou wand'rest in his shade,</li>
+            <li>When in eternal lines to Time thou grow'st.</li>
+            <li>So long as men can breathe, or eyes can see,</li>
+            <li>So long lives this, and this gives life to thee.</li>
+        </menu>
+    </div>
+</div>
+
+https://jsfiddle.net/gaby/qpsGv/7/

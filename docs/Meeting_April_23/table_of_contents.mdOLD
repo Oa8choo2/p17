@@ -7,7 +7,7 @@
   * [A lot of documentation](a_lot_of_documentation.md)
   * [A lot of authors](a_lot_of_authors.md) 🆕
   * [On markdown](on_markdown.md)
-  * [Who is using docs.hpc](who_is_using_docs.hpc.md) \*
+  * [Who is using docs.hpc](who_is_using_docs.hpc.md) 
 * [Technical, pre-build technical_aspects.md](technical_aspects.md)
   * [Duplicates](duplicates.md) 🆕
   * [rumdl](rumdl.md)
@@ -27,7 +27,7 @@
   * [A style guide](style_guide.md)
   * [Top 10 jargon](top_10_jargon.md) 🆕
 * Build
-  * [Current build process](build.md) \*
+  * [Current build process](build.md) 
   * [Site check after build](site_check_after_build.md)
 * [SWOT: Strengths, Weaknesses, Opportunities, Threats](swot.md)
 * Next

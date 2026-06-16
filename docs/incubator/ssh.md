@@ -4,7 +4,37 @@ title: ssh
 
 ## Secure Shell (SSH)
 
-*[SSH]: Secure Shell
+[list of abbreviations, used in this text]:: 
+
+*[SSH]: Secure SHell
+*[HPC]: High Performance Computing
+*[UGent]: University of Gent
+*[linux]: Unix-like operating system made by Lunis Torvalds
+*[sftp]: Secure FTP
+*[ftp]: File Transfer Protocol  
+*[scp]: Secure CoPy
+*[WSL]: Windows Subsystem for Linux
+*[man]: An interface to the system reference manuals on Linux
+ 
+## Connecting to HPC UGent with SSH
+
+You can connect to HPC UGent using the Secure Shell Protocol (SSH), which
+provides a secure channel over an unsecured network.
+
+!!! note
+
+    The recommended way to connect to HPC UGent is by using the web portal.  
+    For most applications you do not need to use SSH.  
+    If you want to use SSH you need to have some basic linux knowledge. 
+
+## SSH as a Linux command
+
+SSH is standard available on all Linux installations.
+You can use the standard ways on Linux to get more information on SSH:
+
+- man page: `man ssh`
+- help parameter: ssh has no -h or --help parameter, just start ssh without any parameter to get a short explanation 
+
 
 ### Why do you need this
 
@@ -42,5 +72,18 @@ title: ssh
   ssh-keyscan login.hpc.ugent.be | ssh-keygen -lf -
   ```
 
-Why - for users that want shell access via SSH, we should try to cover only our
+## Why do we need this page?
+
+For users that want shell access via SSH, we should try to cover only our
 UGent-specific stuff
+
+## See also
+
+- [Github and SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
+- Man pages on SSH
+    - [BSD April 14, 2013](https://linux.die.net/man/1/ssh)
+    - [GNU July 18, 2024](https://man7.org/linux/man-pages/man1/ssh.1.html)
+
+- <https://www.brandonchecketts.com/archives/ssh-ed25519-key-best-practices-for-2025>
+- <https://richard-sebos.github.io/sebostechnology/posts/SSH-Auth-Key-Rotation/>
+- <https://grahamhelton.com/blog/ssh-cheatsheet>

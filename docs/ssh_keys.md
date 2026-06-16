@@ -1,6 +1,6 @@
 # SSH Fingerprints
 
-# TODO [TODO] best practice key rotation?
+# TODO best practice key rotation?
 
 At 20260519, after
 <https://github.com/0xdeadbeefnetwork/ssh-keysign-pwn>
