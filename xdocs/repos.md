@@ -1,0 +1,98 @@
+# Github Repos
+
+## Overview of all hpcugent repo's
+
+gh repo list hpcugent --limit 999
+
+Showing 87 of 87 repositories in @hpcugent
+
+NAME                                       DESCRIPTION                                                                                                INFO               UPDATED            
+hpcugent/vsc_user_docs                     VSC user training material and documentation                                                               public             about 1 hour ago
+hpcugent/vsc-accountpage                   VSC account page                                                                                           private            about 22 hours ago
+hpcugent/jobcli                            Resource manager agnostic tool for submitting & managing jobs on HPC clusters                              private            about 2 days ago
+hpcugent/slurm                             Slurm: A Highly Scalable Workload Manager                                                                  public, fork       about 2 days ago
+hpcugent/vsc-install                       Shared setuptools functions and classes for python libraries developed by UGent's HPC group                public             about 3 days ago
+hpcugent/openstack-templates               OpenStack contextualisation scripts and heat templates to deploy VMs and virtual clusters                  public             about 7 days ago
+hpcugent/vsc-config                        Basic configuration settings and defaults, constants for the VSC (VSC-wide, Tier-1-specific, ...)          private            about 8 days ago
+hpcugent/vsc-filesystems-quota             Tools to get and upload the quota usage to the VSC account page                                            public             about 28 days ago
+hpcugent/vsc-jobs                          Tools for working with Torque, Moab, and Slurm                                                             private            about 1 month ago
+hpcugent/vsc-accountpage-clients           Clients for the vsc-accountpage rest api's                                                                 private            about 1 month ago
+hpcugent/django-wayf                       This is a clone from the django wayf code at https://code.grnet.gr/projects/wayf which has been refact...  public             about 1 month ago
+hpcugent/slurm-prepilogue                  Prologue and epilogue code for slurm                                                                       public             about 1 month ago
+hpcugent/vsc-administration                Admin libs to sync the VSC users to the systems                                                            public             about 2 months ago
+hpcugent/vsc-mympirun                      mympirun is a tool to facilitate running MPI programs on an HPC cluster                                    public             about 2 months ago
+hpcugent/vsc-base                          Basic Python libraries used by UGent's HPC group                                                           public             about 3 months ago
+hpcugent/client_python                     Prometheus instrumentation library for Python applications                                                 public, fork       about 3 months ago
+hpcugent/munge                             MUNGE (MUNGE Uid 'N' Gid Emporium) is an authentication service for creating and validating user crede...  public, fork       about 3 months ago
+hpcugent/nhc                               LBNL Node Health Check                                                                                     public, fork       about 4 months ago
+hpcugent/hpc-user-docs-zensical            HPC-UGent user documentation (with Zensical)                                                               public             about 4 months ago
+hpcugent/terraform-vsc-opennebula          OpenNebula contextualisation scripts and templates to deploy VMs and virtual clusters for Tier1 VSC Cloud  public             about 4 months ago
+hpcugent/pyslurm                           Python Interface to Slurm                                                                                  public, fork       about 6 months ago
+hpcugent/vsc-modules                       Python repository with (Lmod) modules related tools                                                        public             about 7 months ago
+hpcugent/vsc-kafka                         Tools to chat with Kafka                                                                                   public             about 7 months ago
+hpcugent/vsc-utils                         vsc-utils                                                                                                  public             about 7 months ago
+hpcugent/vsc-filesystems                   Code to deal with the filesystems used in our clusters                                                     public             about 9 months ago
+hpcugent/django-health-check               a pluggable app that runs a full check on the deployment, using a number of plugins to check e.g. data...  public, fork       about 11 months ago
+hpcugent/django-select2                    This is a Django integration for Select2                                                                   public, fork       about 11 months ago
+hpcugent/vsc-user-monitoring               Scripts to monitor user behaviour and activity                                                             internal           about 11 months ago
+hpcugent/Lmod-UGent                        spec files of Lmod for UGent-HPC                                                                           public             about 1 year ago
+hpcugent/slurm-spank-talamini              All things for Slurm Spank plugins developed by HPCUGent                                                   public             about 1 year ago
+hpcugent/Burrow                            Kafka Consumer Lag Checking                                                                                public, fork       about 1 year ago
+hpcugent/openstack-public-images           Scripts to publish public OS images for VSC Tier-1 Cloud infrastructure                                    public             about 1 year ago
+hpcugent/django-csp                        Content Security Policy for Django.                                                                        public, fork       about 1 year ago
+hpcugent/dataclasses-json                  Easily serialize Data Classes to and from JSON                                                             public, fork       about 1 year ago
+hpcugent/drf-yasg                          Automated generation of real Swagger/OpenAPI 2.0 schemas from Django REST Framework code.                  public, fork       about 1 year ago
+hpcugent/django-compressor                 Compresses linked and inline javascript or CSS into a single cached file.                                  public, fork       about 1 year ago
+hpcugent/django-bootstrap4                 Bootstrap 4 integration with Django.                                                                       public, fork       about 1 year ago
+hpcugent/sarchive                          Slurm job script archival                                                                                  public, fork       about 2 years ago
+hpcugent/logstash-patterns                 Grok patterns for parsing and structuring log messages with logstash                                       public             about 2 years ago
+hpcugent/django-bootstrap-datepicker-plus  Bootstrap3/Bootstrap4/Bootstrap5 DatePickerInput, TimePickerInput, DateTimePickerInput, MonthPickerInp...  public, fork       about 2 years ago
+hpcugent/pakiti-server                     Pakiti provides a monitoring mechanism to check the patching status of Linux systems.                      public, fork       about 2 years ago
+hpcugent/ansi2html                         Convert text with ansi color codes to HTML                                                                 public, fork       about 2 years ago
+hpcugent/gpfsbeat                          Beat to upload GPFS related metrics                                                                        public             about 2 years ago
+hpcugent/python-diskcache                  Python disk-backed cache (Django-compatible). Faster than Redis and Memcached. Pure-Python.                public, fork       about 2 years ago
+hpcugent/zookeeper-rpm                     A set of scripts to package Apache Zookeeper into an rpm (CentOS/RedHat 7 and 9)                           public, fork       about 2 years ago
+hpcugent/marshmallow                       A lightweight library for converting complex objects to and from simple Python datatypes.                  public, fork       about 2 years ago
+hpcugent/typing_extensions                 Backported and experimental type hints for Python                                                          public, fork       about 2 years ago
+hpcugent/mypy_extensions                   Extensions for mypy                                                                                        public, fork       about 2 years ago
+hpcugent/vsc-ldap                          Python modules for LDAP-related operations.                                                                public             about 2 years ago
+hpcugent/vsc-zk                            vsc-zk contains scripts to build zookeeper trees and tools using zookeeper.                                public             about 2 years ago
+hpcugent/typing_inspect                    Runtime inspection utilities for Python typing module                                                      public, fork       about 2 years ago
+hpcugent/VSC-XDMoD                                                                                                                                    public, fork       about 2 years ago
+hpcugent/django-iprestrict-redux           Django app + middleware to restrict access to all/sections of app by client IP ranges                      public, fork       about 2 years ago
+hpcugent/openstack-auto-scaling            OpenStack compute node auto-scaling scripts                                                                public             about 3 years ago
+hpcugent/vsc_user_docs_mkdocs_inuits       Porting of HPC-UGent user manual to mkdocs                                                                 public             about 3 years ago
+hpcugent/openstack-image-fixes             OpenStack TripleO Image fixes                                                                              public             about 3 years ago
+hpcugent/xpmem                             Linux Cross-Memory Attach                                                                                  public, fork       about 3 years ago
+hpcugent/spank-private-tmp                 Slurm spank plugin to give each job private /tmp (and/or other dirs)                                       public, fork       about 3 years ago
+hpcugent/openstack-dashboard-ugent         UGent files required to customize the OpenStack Horizon dashboard                                          public             about 3 years ago
+hpcugent/pakiti-client                     Client for Pakiti patching status monitoring system                                                        public, fork       about 4 years ago
+hpcugent/slurm-spank-lua                   Slurm Lua SPANK plugin                                                                                     public, fork       about 4 years ago
+hpcugent/slurm-torque-wrappers             A fork of the wrapper scripts supporting torque 6 commands                                                 public, fork       about 5 years ago
+hpcugent/hnormalise                        Log normalisation tool/library                                                                             public             about 5 years ago
+hpcugent/openstack-dashboard-vsc           VSC files required to customize the OpenStack Horizon dashboard                                            public             about 5 years ago
+hpcugent/mympingpong                       A mpi4py based random pair pingpong network stress test                                                    public             about 5 years ago
+hpcugent/csub                              Generate a wrapper script around DMTCP and the job submission system to auto checkpoint certain jobs.      public             about 5 years ago
+hpcugent/quattor                           Configuration for the HPC infrastructure                                                                   private, archived  about 5 years ago
+hpcugent/kafka-python                      Python client for Apache Kafka                                                                             public, fork       about 6 years ago
+hpcugent/yoda-packages                     Packaging for YoDa                                                                                         public             about 6 years ago
+hpcugent/hanythingondemand                 hanythingondemand provides a set of scripts to easily set up an ad-hoc Hadoop cluster through PBS jobs     public             about 6 years ago
+hpcugent/irods-ruleset-i-lab               policies related to the i-lab Yoda instance                                                                public             about 7 years ago
+hpcugent/irods-php                         PHP API for iRODS                                                                                          public, fork       about 7 years ago
+hpcugent/yoda-portal                       Yoda Webapplication                                                                                        public, fork       about 7 years ago
+hpcugent/PyInotify                         An efficient and elegant inotify (Linux filesystem activity monitor) library for Python. Python 2 and ...  public, fork       about 7 years ago
+hpcugent/tier1-cloud                       VSC Tier1 Cloud repo                                                                                       public             about 7 years ago
+hpcugent/hpcugent.github.com                                                                                                                          public             about 8 years ago
+hpcugent/rsyslog-rulebase                  Rues for the HPCUgent rsyslog-mmnormalize plugin                                                           public, archived   about 9 years ago
+hpcugent/vsc-mympirun-scoop                SCOOP extensions for mympirun                                                                              public, archived   about 10 years ago
+hpcugent/environment-modules               Provides dynamic modification of a user's environment                                                      public             about 10 years ago
+hpcugent/nested-dict                       nested_dict provides python dictionaries with multiple levels of nested-ness                               public, fork       about 10 years ago
+hpcugent/config-templates                  TT files for the metaconfig NCM component                                                                  public, archived   about 11 years ago
+hpcugent/vsc-processcontrol                Process control Python modules                                                                             public, archived   about 12 years ago
+hpcugent/optcomplete-deps                  Bash functions required for optcomplete                                                                    public, archived   about 12 years ago
+hpcugent/aquilon-build-xmls                Collection of build.xml files for using different versions of Panc with Aquilon                            public, archived   about 12 years ago
+hpcugent/jsonpickle                        Python library for serializing any arbitrary object graph into JSON. It can take almost any Python obj...  public, fork       about 12 years ago
+hpcugent/VSC-tools                         Website for VSC-tools, common tools used within our organization.                                          public, archived   about 13 years ago
+hpcugent/django-cas                        Fork of Django-CAS: Please note, the official repo is now up to date at https://bitbucket.org/cpcc/dja...  public, fork       about 14 years ago
+:wq
+

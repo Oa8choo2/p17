@@ -87,3 +87,4 @@ UGent-specific stuff
 - <https://www.brandonchecketts.com/archives/ssh-ed25519-key-best-practices-for-2025>
 - <https://richard-sebos.github.io/sebostechnology/posts/SSH-Auth-Key-Rotation/>
 - <https://grahamhelton.com/blog/ssh-cheatsheet>
+- <https://wiki.archlinux.org/title/SSH_keys>

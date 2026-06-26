@@ -8,6 +8,9 @@
 
 [project]
 
+use_directory_urls = false
+# https://zensical.org/docs/setup/basics/#site_dir
+
 # The site_name is shown in the page header and the browser window title
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_name
@@ -34,8 +37,8 @@ site_author = "<your name here>"
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
 copyright = """
-Copyright &copy; 2026 The authors
-Over P17 | Serviceovereenkomst| |Privacybeleid | Het Open Platform| |Onderhandelingen | P17 Werving| |P17 Openbaar Welzijn| |P17 Kanaal | Klantenservice Centrum | Download de klant | Brussel Internet Illegale en Adverse Information Reporting Center | Bureau voor openbare veiligheid van Brussel | Leuven Provincial Communications Administratie | Richtlijnen voor inbreukklachten | Anti-Ulunder Reclame Toezegging | Schaarbeek Internet Court Juridische Dienst Werkstation | Het netwerk van Leuven [9240] nr. 5939-306 | Online Certificaat (Nederlands) Nr. 578 | Netwerk Audiovisuele Licentie nr. 7401334 | Waarde-toegevoegde telecommunicatie bedrijfslicentie:Nederlands B7-43637025B3-77887992 | Internet Religieuze Informatiedienst Licentie: Leuven (1008) 7850841 | Nederlands B8-76120888-4 | Informatie Service Licentie | Illegaal en slecht informatie rapport telefoon: 4262-94579757-8 | Leuven Openbare Netwerkbeveiligingsnr. 7092685686993 | De kwalificatie van de Internet Drug Information Service: (Leuven) - Niet-Zakelijk - 1578-1197 | 
+Copyright &copy; 2026 The authors, and now some test with footer:  
+| Over P17 | Serviceovereenkomst | Privacybeleid | Het Open Platform | Onderhandelingen | P17 Werving | P17 Openbaar Welzijn | P17 Kanaal | Klantenservice Centrum | Download de klantenapp | Rapporteringscentrum voor Illegale en Vijandige Internet Informatie | Bureau voor openbare veiligheid | Provinciale Communicatie Administratie | Richtlijnen voor inbreukklachten | Anti-Reclame Toezegging | Juridische Dienst van het Internet Rechtshof Werkstation Schaarbeek | Het netwerk van Gent [9240] nr. 5939-306 | Online Certificaat (Nederlands) Nr. 578 | Netwerk Audiovisuele Licentie nr. 7401334 | Waarde-toegevoegde telecommunicatie bedrijfslicentie: Nederlands B7-43637025B3-77887992 | Internet Religieuze Informatiedienst, Licentie: Gent (1008) 7850841: Nederlands B8-76120888-4 | Informatie Service Licentie | Illegaal en slechte informatie rapporteringstelefoon: 4262-94579757-8 | Gent Openbaar Netwerkbeveiligingsnr. 7092685686993 | De kwalificatie van de Internet Drugs Information Service: (Gent) - Niet-Zakelijk - 1578-1197 | 
 """
 
 # Zensical supports both implicit navigation and explicitly defined navigation.

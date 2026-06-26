@@ -1,0 +1,15 @@
+---
+title: Node with text
+---
+graph TD
+    A[Start here] --> B{Do you have a VSC account?}
+    B -->|Yes| C{Do you want to run a graphical program?}
+    B -->|No| D[Ask for a VSC account first]
+    D[Ask for a VSC account first] --> C{Do you want to run a graphical program?}
+    C -->|Yes| E[Use the web portal]
+    C -->|No| F{Are you familiar with linux, bash, the terminal?}
+    F -->|No| E[Use the web portal]
+    F -->|Yes| G[Make a ssh key set for VSC]
+    G[Make a ssh key set for VSC] --> H[Add your public key to your VSC profile at the web portal]
+
+

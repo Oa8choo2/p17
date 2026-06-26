@@ -1,8 +1,15 @@
 #!/bin/bash
 
-# grab footer
+# make a complicated footer à la tencent
+
+# other possibility, see https://www.nameisdaniel.com/
+# and https://github.com/Itsnotaka/v7/blob/4d8b234e7df5ba1363b5a9c654cad039f31f01d7/apps/web/src/components/footer-sign-button.tsx#L73
+
+# # grab footer
 # https://www.qq.com/
 # rewrite text
+
+echo "see https://zensical.org/docs/setup/footer/?h=footer"
 
 cat footer \
 | gawk -f rnum.awk \
@@ -13,6 +20,8 @@ cat footer \
 | sed -e 's/Kantonees/Nederlands/gi' 
 
 exit
+
+samplefooter:
 
 Over Tencent| |Over Tencent
 Serviceovereenkomst| |Privacybeleid
