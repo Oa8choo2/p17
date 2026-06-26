@@ -1,4 +1,4 @@
-# ALE
+# Asynchronous Lint Engine (ALE)
 
 <https://github.com/dense-analysis/ale>
 
