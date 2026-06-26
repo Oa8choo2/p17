@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en" style="--wm-toolbar-height: 107px;"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="Constant%20Backup%20Using%20Gitwatch_files/shim.latest_92n4.js"></script><script async="" src="Constant%20Backup%20Using%20Gitwatch_files/profitwell_92n4.js"></script><script async="" src="Constant%20Backup%20Using%20Gitwatch_files/gtm_92n4.js"></script><script src="Constant%20Backup%20Using%20Gitwatch_files/athena_92n4.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app233.us.archive.org';v.server_ms=277;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="Constant%20Backup%20Using%20Gitwatch_files/bundle-playback_92n4.js" charset="utf-8"></script>
+<script type="text/javascript" src="Constant%20Backup%20Using%20Gitwatch_files/wombat_92n4.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="Constant%20Backup%20Using%20Gitwatch_files/ruffle_92n4.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://backhub.co/blog/constant-backup-using-gitwatch/","20190723054907","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1563860947");
+</script>
+<style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 7 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 7 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 7 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 7 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 7 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-slab-regular: normal 400 1em/1 "Font Awesome 7 Slab";
+  --fa-font-slab-press-regular: normal 400 1em/1 "Font Awesome 7 Slab Press";
+  --fa-font-whiteboard-semibold: normal 600 1em/1 "Font Awesome 7 Whiteboard";
+  --fa-font-thumbprint-light: normal 300 1em/1 "Font Awesome 7 Thumbprint";
+  --fa-font-notdog-solid: normal 900 1em/1 "Font Awesome 7 Notdog";
+  --fa-font-notdog-duo-solid: normal 900 1em/1 "Font Awesome 7 Notdog Duo";
+  --fa-font-etch-solid: normal 900 1em/1 "Font Awesome 7 Etch";
+  --fa-font-jelly-regular: normal 400 1em/1 "Font Awesome 7 Jelly";
+  --fa-font-jelly-fill-regular: normal 400 1em/1 "Font Awesome 7 Jelly Fill";
+  --fa-font-jelly-duo-regular: normal 400 1em/1 "Font Awesome 7 Jelly Duo";
+  --fa-font-chisel-regular: normal 400 1em/1 "Font Awesome 7 Chisel";
+  --fa-font-utility-semibold: normal 600 1em/1 "Font Awesome 7 Utility";
+  --fa-font-utility-duo-semibold: normal 600 1em/1 "Font Awesome 7 Utility Duo";
+  --fa-font-utility-fill-semibold: normal 600 1em/1 "Font Awesome 7 Utility Fill";
+}
+
+.svg-inline--fa {
+  box-sizing: content-box;
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285714em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left,
+.svg-inline--fa .fa-pull-start {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, 0.3em);
+}
+.svg-inline--fa.fa-pull-right,
+.svg-inline--fa .fa-pull-end {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, 0.3em);
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+  inset-block-start: 0.25em; /* syncing vertical alignment with Web Font rendering */
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
+}
+.fa-layers .svg-inline--fa {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: calc(10 / 16 * 1em); /* converts a 10px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 10 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 10 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-xs {
+  font-size: calc(12 / 16 * 1em); /* converts a 12px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 12 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 12 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-sm {
+  font-size: calc(14 / 16 * 1em); /* converts a 14px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 14 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 14 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-lg {
+  font-size: calc(20 / 16 * 1em); /* converts a 20px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 20 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 20 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-xl {
+  font-size: calc(24 / 16 * 1em); /* converts a 24px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 24 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 24 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-2xl {
+  font-size: calc(32 / 16 * 1em); /* converts a 32px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 32 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 32 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-width-auto {
+  --fa-width: auto;
+}
+
+.fa-fw,
+.fa-width-fixed {
+  --fa-width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-inline-start: var(--fa-li-margin, 2.5em);
+  padding-inline-start: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+/* Heads Up: Bordered Icons will not be supported in the future!
+  - This feature will be deprecated in the next major release of Font Awesome (v8)!
+  - You may continue to use it in this version *v7), but it will not be supported in Font Awesome v8.
+*/
+/* Notes:
+* --@{v.$css-prefix}-border-width = 1/16 by default (to render as ~1px based on a 16px default font-size)
+* --@{v.$css-prefix}-border-padding =
+  ** 3/16 for vertical padding (to give ~2px of vertical whitespace around an icon considering it's vertical alignment)
+  ** 4/16 for horizontal padding (to give ~4px of horizontal whitespace around an icon)
+*/
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.0625em);
+  box-sizing: var(--fa-border-box-sizing, content-box);
+  padding: var(--fa-border-padding, 0.1875em 0.25em);
+}
+
+.fa-pull-left,
+.fa-pull-start {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right,
+.fa-pull-end {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+  .fa-bounce,
+  .fa-fade,
+  .fa-beat-fade,
+  .fa-flip,
+  .fa-pulse,
+  .fa-shake,
+  .fa-spin,
+  .fa-spin-pulse {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.svg-inline--fa.fa-inverse {
+  fill: var(--fa-inverse, #fff);
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  --fa-width: 1.25em;
+  height: 1em;
+  width: var(--fa-width);
+}
+.svg-inline--fa.fa-stack-2x {
+  --fa-width: 2.5em;
+  height: 2em;
+  width: var(--fa-width);
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  z-index: var(--fa-stack-z-index, auto);
+}</style><link rel="stylesheet" type="text/css" href="Constant%20Backup%20Using%20Gitwatch_files/banner-styles_92n4.css">
+<link rel="stylesheet" type="text/css" href="Constant%20Backup%20Using%20Gitwatch_files/iconochive_92n4.css">
+<!-- End Wayback Rewrite JS Include -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Jekyll">
+  <title>Constant Backup Using Gitwatch</title>
+  <meta name="description" content="Have you ever felt that software seems to have a mind of its own, is sometimes stubborn, and works a bit against you? Unfortunately, this behaviour happens -...">
+
+  <link rel="canonical" href="Constant%20Backup%20Using%20Gitwatch_files/a_002_92n4.html">
+  <link rel="next" href="https://web.archive.org/web/20190723054907/https://backhub.co/blog/constant-backup-using-gitwatch-copy/" title="How does BackHub secure my GitHub repositories?">
+  <link rel="prev" href="https://web.archive.org/web/20190723054907/https://backhub.co/blog/sync-github-repository-backups-to-amazon-s3/" title="NEW! Sync GitHub repository backups to Amazon S3">
+  <!-- Facebook -->
+  <meta property="og:url" content="https://web.archive.org/web/20190723054907/https://backhub.co/blog/constant-backup-using-gitwatch/">
+  <meta property="og:title" content="Constant Backup Using Gitwatch">
+  <meta property="og:description" content="Have you ever felt that software seems to have a mind of its own, is sometimes stubborn, and works a bit against you? Unfortunately, this behaviour happens -...">
+  <meta property="og:image" content="https://web.archive.org/web/20190723054907im_/https://backhub.co/assets/images/og-image.png">
+
+
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="Constant%20Backup%20Using%20Gitwatch_files/main_92n4.css">
+  <link rel="alternate" type="application/atom+xml" title="BackHub - Backup your GitHub Repositories&nbsp;" href="https://web.archive.org/web/20190723054907/https://backhub.co/feed.xml">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <link rel="icon" href="https://web.archive.org/web/20190723054907im_/https://backhub.co/assets/images/favicon.png">
+  <!--[if IE]><link rel="shortcut icon" href="/assets/images/favicon.ico"><![endif]-->
+  <meta name="msapplication-TileColor" content="#FFF">
+  <meta name="msapplication-TileImage" content="/assets/images/tileicon.png">
+  <link rel="apple-touch-icon-precomposed" href="https://web.archive.org/web/20190723054907im_/https://backhub.co/assets/images/apple-touch-icon-152x152-precomposed.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://web.archive.org/web/20190723054907/http://schema.org",
+    "@type": "Organization",
+    "name": "BackHub",
+    "url": "https://web.archive.org/web/20190723054907/https://backhub.co",
+    "logo": "https://web.archive.org/web/20190723054907/http://backhub.co/assets/images/logo.png",
+    "sameAs": [
+      "https://web.archive.org/web/20190723054907/https://twitter.com/back_hub",
+      "https://web.archive.org/web/20190723054907/https://facebook.com/backhub.co"
+    ]
+  }
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://web.archive.org/web/20190723054907/https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5FR9JDT');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+  <body class=" cookiebanner"><div id="cookiebanner"><p>This website uses cookies to ensure you get the best experience. <a <a="" class="cookiebanner__more" href="https://web.archive.org/web/20190723054907/https://backhub.co/privacy/">Learn more</a>. <a class="cookiebanner__close btn btn-default btn-sm" href="javascript:void(0);" onclick="removeMe();"><span>Ok</span></a></p></div><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr; height: 107px;" toolbar-mode="auto">
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20190723054907/https://backhub.co/blog/constant-backup-using-gitwatch/</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(775,27,25,2,"web","https://backhub.co/blog/constant-backup-using-gitwatch/","20190723054907",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3","https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+
+    <header class="site-header">
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="https://web.archive.org/web/20190723054907/https://backhub.co/"><div class="navbar__logo text-hide">BackHub</div></a>
+        <div class="navbar__slogan hidden-sm">Backup your GitHub Repositories</div>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="nav navbar-nav navbar-right">
+          <a href="https://web.archive.org/web/20190723054907/https://github.com/marketplace/backhub" role="button" class="btn btn-primary hidden-xs tracking" rel="nofollow" data-tracking-event="try" data-tracking-label="head"><svg height="20" class="octicon octicon-mark-github octicon octicon--white" aria-label="Login" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg> Try free for 14 days</a>
+          <li><a href="https://web.archive.org/web/20190723054907/https://github.com/login/oauth/authorize?client_id=Iv1.d9dfc9a26f09f4fc" class="tracking" data-tracking-event="login" data-tracking-label="head">Sign in</a></li>
+        </div>
+        <div class="nav navbar-nav navbar-right">
+          <a id="login_head" href="" role="button" class="btn btn-secondary hidden-xs " rel="nofollow"> </a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://web.archive.org/web/20190723054907/https://backhub.co/">Start</a></li>
+          <li><a href="https://web.archive.org/web/20190723054907/https://backhub.co/features/">Features</a></li>
+          <li><a href="https://web.archive.org/web/20190723054907/https://backhub.co/faq/">FAQ</a></li>
+          <li><a href="https://web.archive.org/web/20190723054907/https://backhub.co/pricing/">Pricing</a></li>
+          <li><a href="https://web.archive.org/web/20190723054907/https://backhub.co/blog/">Blog</a></li>
+          <!-- <li><a href="/jobs/">Jobs</a></li> -->
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+  </nav>
+
+</header>
+
+
+    <div class="blog">
+
+	<div class="section__blog">
+	  <div class="container">
+
+		  <div class="article" vocab="http://schema.org/" typeof="BlogPosting" resource="https://backhub.co/blog/constant-backup-using-gitwatch/">
+
+			<div class="article__meta">
+				<div class="row">
+				<div class="col-md-12">
+				  	<div class="media">
+
+						<div class="media-left">
+					  		<div class="article__meta-avatar">
+					    		<img class="media-object" src="Constant%20Backup%20Using%20Gitwatch_files/frank_92n4.jpg" alt="Frank Hoffmann, Guest Author">
+					    	</div>
+						</div>
+						<div class="media-body">
+					  		<div class="article__meta-info">
+					  			 Frank Hoffmann, Guest Author wrote this on <time property="datePublished" content="2019-05-01T14:00:00+02:00">May 1, 2019
+				  			</time></div>
+						</div>
+
+					</div>
+				</div><!-- /.col -->
+				</div><!-- /.row -->
+
+			</div><!-- /.article__meta -->
+
+			  <div class="article__head">
+			    <div class="row">
+			      <div class="col-md-12">
+			      <h1 class="article__title" property="headline">Constant Backup Using Gitwatch</h1>
+			      </div>
+			    </div><!-- /.row -->
+			  </div><!-- /.article__head -->
+
+
+			  <div class="article__excerpt">
+			    <div class="row">
+			      <div class="col-md-12" property="articleBody">
+			      	<p>Have you ever felt that software seems to have a mind of 
+its own, is sometimes stubborn, and works a bit against you? 
+Unfortunately, this behaviour happens - and can lead to losing 
+intermediate steps of our work, or even losing the entire results that 
+we have computed so far.</p>
+
+<!--more-->
+
+<p>To prevent this situation from happening we need to set up mechanisms
+ that store the data properly, that let us go back to a previous step in
+ our work process, and also let us compare differences between 
+individual steps. The way to achieve this is to combine reliable 
+hardware equipped with a file system like Ext3/Ext4, BTRFS or 
+ZFS/OpenZFS, with a revision control system like Git on top, and a 
+compatible remote backup service such as BackHub on GitHub Marketplace.</p>
+
+<p>Let us assume that the issues of the file system and the remote 
+backup service are answered. What’s left to consider is the revision 
+control system in which we keep our data. An experienced user with 
+technical background knows how to work with Git, how to commit the data,
+ and how to see and revert the changes. In contrast, a less experienced 
+user without technical background may concentrate on the individual 
+project steps or the results themselves, and may have never have even 
+heard the term revision or version control system. His greatest fear is 
+losing the work on which he spent lots of time and energy, or the 
+research results – whether by accident, software errors, or a malicious 
+act.</p>
+
+<p>The task of a system administrator for a work/research group is to 
+set up and to maintain a reliable working environment, and to provide 
+technology that supports the work/research group. The question still 
+remains as to how to set up a mechanism that automatically saves file 
+changes  – either as soon as a change of file content is noticed (data 
+is written to storage), or periodically, such as every ten minutes. 
+Furthermore, no interaction of the end user should be required. It must 
+be possible to run the service as a background job without any user 
+attention required.</p>
+
+<p>Technically, there are a few options available. For example:</p>
+
+<ul>
+  <li>to combine a Host-based Intrusion Detection System (HIDS) like Audit [1] or Integrit [2] with cron,</li>
+  <li>to directly use the Inotify kernel interface [3] in order to see 
+changes on the filesystem by running tools like Inotifywait, incron, or 
+fswatch [4],</li>
+  <li>to write and run a shell script based on find, xargs, and git, or</li>
+  <li>to work with a tool like gitwatch [5] or Flashbake [6] in order to automatically register changes in a revision control system</li>
+</ul>
+
+<p>See [7,8,9] for more details about the other solutions and tools 
+mentioned above. The tool etckeeper [10] is not part of the list because
+ it is meant to solely focus on configuration files.</p>
+
+<p>Let’s now examine gitwatch, since it provides a more general solution.</p>
+
+<h2 id="introducing-gitwatch">Introducing Gitwatch</h2>
+
+<p>Gitwatch describes itself as “[a] Bash script to watch a file or 
+folder and commit changes to a git repo”. It is released under GPLv3, 
+and uses the Inotify kernel subsystem in order to see content changes 
+written to storage.</p>
+
+<p>Prior to using Gitwatch make sure that the corresponding inotify 
+software package is installed on your system – for Debian GNU/Linux the 
+package is named ‘inotify-tools’ [11], and available for the Debian 
+releases Jessie, Stretch, and Buster.</p>
+
+<p>Gitwatch also requires that the data to be versioned is held in a 
+local Git repository in which it can store observed changes to files. 
+See the according Git commands to setup a Git repository [12].</p>
+
+<p>At this time, gitwatch has not yet been packaged for Debian or 
+Ubuntu. The software is available from Github, and does not require any 
+compilation to use. Therefore, the initial step is retrieval of the 
+script from the project website on Github (see listing 1):</p>
+
+<h4 id="listing-1-cloning-the-gitwatch-archive-from-github">Listing 1: Cloning the Gitwatch archive from Github</h4>
+<pre><code>$ git clone https://github.com/gitwatch/gitwatch.git
+</code></pre>
+
+<p>The package contains the bash script <code>gitwatch.sh</code> as well as the file
+<code>gitwatch.service</code> to set up an appropriate service for systemd. The
+remaining files are of no big interest to end-users; besides a
+machine-readable package description in the JSON format there are a
+number of tests scripts included. To use Gitwatch as a regular
+user it suffices to simply call the script <code>gitwatch.sh</code> from the
+command line (see the listings 3 and 4 below).</p>
+
+<p>In order to make the script available system-wide, run the following command as a prior
+step from inside the retrieved git archive:</p>
+
+<h4 id="listing-2-installing-gitwatch-from-the-sources">Listing 2: Installing Gitwatch from the sources</h4>
+<pre><code># install -b gitwatch.sh /usr/local/bin/gitwatch</code></pre>
+
+<p>As an administrative action, the command <code>install</code>copies the file
+<code class="highlighter-rouge">gitwatch.sh&lt;/code&gt;to the directory &lt;code&gt;/usr/local/bin</code>. Using the switch <code>-b`
+(short for <code>--backup`) a potentially existing file with exactly the same
+name is automatically archived. Thereafter, the command <code>gitwatch</code>is
+available system-wide, and can be run by regular users as well.</code></code></p>
+
+<h2 id="tracking-changes-with-gitwatch">Tracking changes with Gitwatch</h2>
+
+<p>You can use Gitwatch in two ways – to observe either a single file, or an
+entire directory. Listing 3 shows how to take care of a single file that
+resides inside a Git repository. The <code>&amp;</code>at the end of the command is
+required, and sends the Gitwatch process to the background.</p>
+
+<h4 id="listing-3-taking-care-of-a-file">Listing 3: Taking care of a file</h4>
+<pre><code>$ gitwatch.sh dataset1 &amp;</code></pre>
+
+<p>As soon as you have saved changes in the referred file <code>dataset1</code>
+ Gitwatch is notified about it, and it commits the changes to your local
+ Git repository. Luckily, tracking an entire directory works in the same
+ way.</p>
+
+<p>To take care of the current directory the command is as follows.</p>
+
+<h4 id="listing-4-taking-care-of-the-current-directory">Listing 4: Taking care of the current directory</h4>
+<pre><code>$ gitwatch.sh . &amp;</code></pre>
+
+<p>Figure 1 shows the output of Gitwatch that runs in the background while
+I am writing this article. The commit messages from Git are sent to stdout as
+soon as the content of a file changes, or when a file is added,
+deleted, or moved to a different place.</p>
+
+<h4 id="figure-1-using-gitwatch-while-preparing-this-article">Figure 1: Using Gitwatch while preparing this article</h4>
+
+<p><img class="img-responsive img-border" src="Constant%20Backup%20Using%20Gitwatch_files/2019-05-01_gitwatch-output_92n4.png" alt="Using Gitwatch while preparing this article"></p>
+
+<h2 id="adjusting-gitwatch">Adjusting Gitwatch</h2>
+
+<p>Gitwatch comes with a number of useful switches:</p>
+
+<p><code>-s sec</code>:: amount of time to wait for a commit after a change was
+noticed. Value in seconds. The default value is two seconds.</p>
+
+<p><code>-d format</code>:: the format string used for the timestamp in the commit.
+The default value is +%Y-%m-%d %H:%M:%S. See the manual page of the
+UNIX/Linux <code>date</code>command for other formats [13,14].</p>
+
+<p><code>-r name</code>:: name of a remote directory the content is pushed to. The
+default value is ‘no push’. Deposit your SSH keys to prevent being asked
+for your password every time you do a push.</p>
+
+<p><code>-b branchname</code>:: the name of the branch. The default value is ‘no
+branch’, and refers to the current one.</p>
+
+<p><code>-g path</code>:: the path to the <code>.git</code>directory. If not specified any
+further, the local directory is used.</p>
+
+<p><code>-l lines</code>:: the number of lines being logged. The default value is set
+to 0, and means ‘no limit’.</p>
+
+<p><code>-L lines</code>:: the same as <code>-l</code>but without coloured formatting.</p>
+
+<p><code>-m message</code>:: the commit message. The default message is: “Scripted
+auto-commit on change (%d) by gitwatch.sh”. “%d” refers to the date (see
+above).</p>
+
+<p><code>-e events</code>:: specifies the events to be watched. This includes
+‘close_write’, ‘move’. ‘delete’, and ‘create’ for closing, moving,
+deleting, and creating files. ‘events’ contains a comma-separated list
+of these values, and the default case consists of all four events.</p>
+
+<p>Figure 2 shows Gitk [15] – a graphical tool to inspect the changes of
+the local Git repository. The commit messages are similar, and the only
+difference between them is the logging date. As stated above, you an
+change the commit message using the switch <code>-m</code>.</p>
+
+<h4 id="figure-2-gitk-shows-the-automatically-generated-commits">Figure 2: Gitk shows the automatically generated commits</h4>
+
+<p><img class="img-responsive img-border" src="Constant%20Backup%20Using%20Gitwatch_files/2019-05-01_gitk_92n4.png" alt="Gitk shows the automatically generated commits"></p>
+
+<h2 id="excluding-unwanted-files">Excluding unwanted files</h2>
+
+<p>The default behaviour of Git covers all the files from your directory.
+Many programs create temporary files, for example Vim, which uses filenames
+that end with <code>.swp</code>. Usually, it does not make sense to record them. In
+order to exclude such files add the <code>.gitignore</code>file to your
+Git repository:</p>
+
+<p>Listing 5: An example .gitignore file</p>
+<pre><code>*.swp</code></pre>
+
+<h2 id="caveats">Caveats</h2>
+
+<p>Be aware that Gitwatch may not be the right tool for programmers. 
+Programmers typically want to commit only code that works, i.e.,compiles
+ and runs properly, and hence needs to be tested before committing.</p>
+
+<p>Git commit hooks might help in this case to abort an automatic commit if the
+code doesn’t compile or if it fails the test suite, but this scenario is
+more involved, and therefore outside the scope of this article.</p>
+
+<p>Gitwatch is configured with a delay of two seconds to wait for a commit.
+This works well for SSDs and smaller files. For conventional storage
+media and distributed file systems this value might be a bit too small.
+Changing large files may lead to the same effect, and therefore we recommend
+increasing the value. These cases need further experimentation in order to
+give correct advice on which delay works best.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Gitwatch is quite useful to automatically keep track of changes in your
+repository. It works well for pure data files, preferably plain text
+documents and configuration files. In order to effectively store binary data, as well
+as entire operating systems, the two Git extensions git-annex
+[16] and git-lfs [17] are quite useful.</p>
+
+<p>Gitwatch helps by providing notification as soon as a change happens – whether
+planned, accidental, or malicious. This mechanism
+allows you to see what has changed and the exact time of the change, as well as to
+initiate a rollback. You can use gitwatch to set up your own document platform
+combined with a revision control system.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>[1] <a href="https://web.archive.org/web/20190723054907/http://people.redhat.com/sgrubb/audit/">Audit</a></li>
+  <li>[2] <a href="https://web.archive.org/web/20190723054907/https://github.com/integrit/integrit">Integrit</a></li>
+  <li>[3] <a href="https://web.archive.org/web/20190723054907/https://en.wikipedia.org/wiki/Inotify">Inotify, Wikipedia</a></li>
+  <li>[4] <a href="https://web.archive.org/web/20190723054907/http://emcrisostomo.github.io/fswatch/">fswatch</a></li>
+  <li>[5] <a href="https://web.archive.org/web/20190723054907/https://github.com/gitwatch/gitwatch">Gitwatch</a></li>
+  <li>[6] <a href="https://web.archive.org/web/20190723054907/https://pypi.org/project/flashbake/">Flashbake</a></li>
+  <li>[7] <a href="https://web.archive.org/web/20190723054907/https://stackabuse.com/monitoring-data-changes-using-a-hids/">Frank Hofmann: Monitoring Data Changes Using a HIDS</a></li>
+  <li>[8] <a href="https://web.archive.org/web/20190723054907/https://stackabuse.com/automating-version-control-commits/">Frank Hofmann: Automating Version Control Commits</a></li>
+  <li>[9] <a href="https://web.archive.org/web/20190723054907/http://www.linux-community.de/ausgaben/linuxuser/2016/09/erbsenzaehlerei/">Frank Hofmann: Erbsenzählerei. Datenbestände auf Veränderungen oder Manipulationen prüfen, LinuxUser 09/2016</a></li>
+  <li>[10] <a href="https://web.archive.org/web/20190723054907/http://etckeeper.branchable.com/">etckeeper</a></li>
+  <li>[11] <a href="https://web.archive.org/web/20190723054907/https://packages.debian.org/stretch/inotify-tools">Debian package inotify-tools</a></li>
+  <li>[12] <a href="https://web.archive.org/web/20190723054907/https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet">Git cheat sheet</a></li>
+  <li>[13] <a href="https://web.archive.org/web/20190723054907/http://man7.org/linux/man-pages/man1/date.1.html">Linux date command, manpage</a></li>
+  <li>[14] <a href="https://web.archive.org/web/20190723054907/https://www.computerhope.com/unix/udate.htm">Linux date command</a></li>
+  <li>[15] <a href="https://web.archive.org/web/20190723054907/https://git-scm.com/docs/gitk">Gitk</a></li>
+  <li>[16] <a href="https://web.archive.org/web/20190723054907/https://git-annex.branchable.com/">git-annex</a></li>
+  <li>[17] <a href="https://web.archive.org/web/20190723054907/https://git-lfs.github.com/">git-lfs</a></li>
+</ul>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+
+<p>The author would like to thank Axel Beckert, Veit Schiele, Gerold
+Rupprecht, and Zoleka Hofmann for their help and critical remarks while
+preparing this article.</p>
+
+
+			      </div>
+			    </div><!-- /.row -->
+			  </div><!-- /.article__excerpt -->
+
+			</div><!-- /.article -->
+
+
+		</div> <!-- /.container -->
+	</div><!-- /.section__blog -->
+
+</div>
+
+
+
+    
+      <div class="section__breadcrumb">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+
+        <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+          <a property="item" typeof="WebPage" href="https://web.archive.org/web/20190723054907/https://backhub.co/">
+          <span property="name">Home</span></a>
+          <meta property="position" content="1">
+        </li>
+
+
+        <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+          <a property="item" typeof="WebPage" href="https://web.archive.org/web/20190723054907/https://backhub.co/blog/">
+          <span property="name">Blog</span></a>
+          <meta property="position" content="2">
+        </li>
+
+
+        <li class="breadcrumb-item active" aria-current="page">
+          Constant Backup Using Gitwatch
+        </li>
+
+      </ol>
+    </nav>
+  </div>
+</div>
+    
+    <footer class="site-footer">
+
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="footer__credits">
+            <div class="footer__logo text-hide">BackHub</div>
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="footer__links">
+            <ul class="list-unstyled">
+              <li><a href="https://web.archive.org/web/20190723054907/https://backhub.co/legal-notice/">Legal Notice</a></li>
+              <li><a href="https://web.archive.org/web/20190723054907/https://backhub.co/terms/">Terms of Use</a></li>
+              <li><a href="https://web.archive.org/web/20190723054907/https://backhub.co/privacy/">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="footer__links">
+            <ul class="list-unstyled">
+              <li><a href="https://web.archive.org/web/20190723054907/https://backhub.co/features/">Features</a></li>
+              <li><a href="https://web.archive.org/web/20190723054907/https://backhub.co/faq/">FAQ</a></li>
+              <li><a href="https://web.archive.org/web/20190723054907/https://backhub.co/pricing/">Pricing</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="footer__links">
+            <ul class="list-unstyled">
+              <li><a href="https://web.archive.org/web/20190723054907/https://backhub.co/blog/the-backhub-roadmap-for-2019/">Roadmap</a></li>
+              <li><a href="https://web.archive.org/web/20190723054907/https://backhub.co/blog/">Blog</a></li>
+              <li><a href="https://web.archive.org/web/20190723054907/https://backhub.co/about/">About</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="footer__service">
+            <ul class="list-unstyled">
+              <li><a href="https://web.archive.org/web/20190723054907/https://backhub.co/security/"><svg height="20" class="octicon octicon-lock octicon octicon--footer" aria-label="GitHub" viewBox="0 0 12 16" version="1.1" width="15" role="img"><path fill-rule="evenodd" d="M4 13H3v-1h1v1zm8-6v7c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h1V4c0-2.2 1.8-4 4-4s4 1.8 4 4v2h1c.55 0 1 .45 1 1zM3.8 6h4.41V4c0-1.22-.98-2.2-2.2-2.2-1.22 0-2.2.98-2.2 2.2v2H3.8zM11 7H2v7h9V7zM4 8H3v1h1V8zm0 2H3v1h1v-1z"></path></svg> Security</a></li>
+              <li><a href="https://web.archive.org/web/20190723054907/https://950d301c-accf-4eaa-b253-da2cf6e7f638.site.hbuptime.com/" target="_blank"><svg height="20" class="octicon octicon-pulse octicon octicon--footer" aria-label="GitHub" viewBox="0 0 14 16" version="1.1" width="17" role="img"><path fill-rule="evenodd" d="M11.5 8L8.8 5.4 6.6 8.5 5.5 1.6 2.38 8H0v2h3.6l.9-1.8.9 5.4L9 8.5l1.6 1.5H14V8h-2.5z"></path></svg> Status</a></li>
+            </ul>
+          </div>
+          <div class="footer__contact">
+            <ul class="list-unstyled">
+              <li><a href="https://web.archive.org/web/20190723054907/https://twitter.com/back_hub" target="_blank"><span class="twitter"><!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="18px" height="15px" viewBox="0 0 18 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>twitter</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="twitter" fill="#888888" fill-rule="nonzero">
+            <path d="M17.9446988,1.72518072 C17.4444932,2.45915701 16.8207954,3.10083204 16.1013253,3.62168675 C16.1089157,3.73012048 16.113253,3.88626506 16.113253,4.09771084 C16.1104208,5.09545619 15.9643523,6.08762674 15.6795181,7.04385542 C15.383206,8.04283945 14.9414854,8.99277638 14.3685542,9.86313253 C13.7882833,10.7546846 13.0827399,11.5580984 12.2736145,12.2486747 C11.4064971,12.9742765 10.4143784,13.5357422 9.34590361,13.9055422 C8.17137659,14.3254455 6.93249289,14.536819 5.68518072,14.5301205 C3.68770326,14.5456952 1.72978517,13.9732531 0.0553012048,12.8840964 C0.349141108,12.9160137 0.64455643,12.9312189 0.940120482,12.9296386 C2.59334978,12.9474872 4.2020471,12.3940187 5.49433735,11.3627711 C3.92362671,11.3368527 2.54331716,10.3148047 2.06024096,8.82 C2.2890799,8.85644506 2.5203324,8.87565569 2.75204819,8.87746988 C3.07780789,8.87725363 3.40217628,8.8349764 3.71710843,8.75168675 C2.88950961,8.58767495 2.14577103,8.13828492 1.61566265,7.48192771 C1.06610237,6.83012721 0.770039416,6.00199793 0.781807229,5.14951807 L0.781807229,5.1039759 C1.28856024,5.3908297 1.85676826,5.55184676 2.4386747,5.57349398 C1.94063947,5.24384852 1.53107943,4.79705574 1.24590361,4.27228916 C0.951649387,3.73695351 0.799344406,3.13519952 0.803493976,2.52433735 C0.798003037,1.87254429 0.970058583,1.23155304 1.30120482,0.670120482 C2.21402884,1.79725263 3.35281565,2.72069311 4.64421687,3.38096386 C5.95301498,4.05592165 7.3922919,4.43987679 8.86337349,4.50650602 C8.80470909,4.23020121 8.77455115,3.94860604 8.77337349,3.66614458 C8.75732698,2.69056991 9.14547291,1.75179835 9.84578313,1.07240964 C10.5494614,0.371047985 11.5070745,-0.0156082615 12.500458,0.000529369101 C13.4938415,0.0166669997 14.4383901,0.434224084 15.1189157,1.15807229 C15.9401224,1.00008636 16.7275464,0.700307518 17.4459036,0.272168675 C17.1802111,1.12453338 16.6039343,1.84594364 15.8313253,2.29337349 C16.5602769,2.21095565 17.272696,2.01941762 17.9446988,1.72518072 Z" id="Path"></path>
+        </g>
+    </g>
+</svg></span>  back_hub</a></li>
+              <li><a href="https://web.archive.org/web/20190723054907/mailto:support@backhub.co"><svg height="20" class="octicon octicon-mail octicon octicon--footer" aria-label="GitHub" viewBox="0 0 14 16" version="1.1" width="17" role="img"><path fill-rule="evenodd" d="M0 4v8c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H1c-.55 0-1 .45-1 1zm13 0L7 9 1 4h12zM1 5.5l4 3-4 3v-6zM2 12l3.5-3L7 10.5 8.5 9l3.5 3H2zm11-.5l-4-3 4-3v6z"></path></svg> support@backhub.co</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div><!-- /.row -->
+    </div> <!-- /.container -->
+  </div><!-- /.footer -->
+
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="Constant%20Backup%20Using%20Gitwatch_files/jquery.min_92n4.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="Constant%20Backup%20Using%20Gitwatch_files/bootstrap-min_92n4.js"></script>
+
+
+<!-- Navbar -->
+
+<script type="text/javascript">
+
+
+</script>
+
+<!-- Faq filter -->
+
+<script>
+
+$("#filter").keyup(function(){
+
+    // Retrieve the input field text
+    var filter = $(this).val();
+
+    // Loop through the comment list
+    $(".panel-title").each(function(){
+
+        // If the list item does not contain the text phrase hide
+        if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+            $(this).parents(".panel").hide();
+
+        // Keep item hidden even if text matches and it's already hidden
+        } else if ($(this).is(":hidden") && $(this).text().search(new RegExp(filter, "i")) < 0) {
+            $(this).parents(".panel").show();
+
+        // Show the list item if the phrase matches
+        } else {
+            $(this).parents(".panel").show();
+        }
+    });
+});
+
+</script>
+
+<!-- Cookie Banner // Source: https://codepen.io/arnelhelja/pen/jqgGvQ -->
+
+<script type="text/javascript">
+
+var dropCookie = true;                      // false disables the Cookie, allowing you to style the banner
+var cookieDuration = 365;                   // Number of days before the cookie expires, and the banner reappears
+var cookieName = 'complianceCookie';        // Name of our cookie
+var cookieValue = 'on';                     // Value of cookie
+
+function createDiv(){
+    var bodytag = document.getElementsByTagName('body')[0];
+    var div = document.createElement('div');
+    div.setAttribute('id','cookiebanner');
+    div.innerHTML = '<p>This website uses cookies to ensure you get the best experience. <a <a class="cookiebanner__more" href="https://web.archive.org/web/20190723054907/https://backhub.co/privacy/">Learn more</a>. <a class="cookiebanner__close btn btn-default btn-sm" href="javascript:void(0);" onclick="removeMe();"><span>Ok</span></a></p>';
+
+    bodytag.insertBefore(div,bodytag.firstChild); // Adds the Cookie Law Banner just after the opening <body> tag
+
+    document.getElementsByTagName('body')[0].className+=' cookiebanner'; //Adds a class to the <body> tag when the banner is visible
+
+    createCookie(window.cookieName,window.cookieValue, window.cookieDuration); // Create the cookie
+}
+
+
+function createCookie(name,value,days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    if(window.dropCookie) {
+        document.cookie = name+"="+value+expires+"; path=/";
+    }
+}
+
+function checkCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+function eraseCookie(name) {
+    createCookie(name,"",-1);
+}
+
+window.onload = function(){
+    if(checkCookie(window.cookieName) != window.cookieValue){
+        createDiv();
+    }
+}
+
+function removeMe(){
+  var element = document.getElementById('cookiebanner');
+  element.parentNode.removeChild(element);
+}
+
+</script>
+
+    <script>
+  window.intercomSettings = {
+    app_id: "mamkc7le"
+  };
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://web.archive.org/web/20190723054907/https://widget.intercom.io/widget/mamkc7le';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+    <!-- Beginning of Profitwell Awesomeness Code (which loads totally asynchronously) -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['ProfitWellObject']=r;i[r]=i[r]||function(){  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m);  })(window,document,'script','https://web.archive.org/web/20190723054907/https://dna8twue3dlxq.cloudfront.net/js/profitwell.js','profitwell');
+
+      profitwell('auth_token', '31064a31ecaecc5cede5410e338733eb');
+      profitwell('user_email', '$REPLACE_WITH_EMAIL_OF_CURRENT_USER');
+    </script>
+    <!-- End of Profitwell Awesomeness Code. -->
+  
+
+
+
+<harper-render-box popover="manual" style="pointer-events: none; border: medium; visibility: hidden !important;"></harper-render-box><iframe id="intercom-frame" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important;" aria-hidden="true" tabindex="-1" allow="autoplay 'self'; fullscreen 'self'" tc-textcontent="true" data-tc-id="w-0.22880239509529632"></iframe><div id="intercom-css-container"><style data-emotion="intercom-global"></style><style data-emotion="intercom"></style></div><div id="intercom-container" class="intercom-namespace"><style>html.intercom-mobile-messenger-active,html.intercom-mobile-messenger-active > body,html.intercom-modal-open,#intercom-container-body{overflow:hidden !important;}html.intercom-mobile-messenger-active,html.intercom-mobile-messenger-active > body{position:static !important;}html.intercom-mobile-messenger-active > body{height:0 !important;margin:0 !important;}iframe#intercom-frame{position:absolute !important;opacity:0 !important;width:1px !important;height:1px !important;top:0 !important;left:0 !important;border:none !important;display:block !important;z-index:-1 !important;}</style><div class="intercom-app" aria-live="polite"><iframe allowfullscreen="" class="intercom-launcher-frame intercom-7f4zsm e1ur5zlj0" name="intercom-launcher-frame" title="Intercom live chat" data-intercom-frame="true" allow="autoplay 'self'; fullscreen 'self'" tc-textcontent="true" data-tc-id="w-0.5816247419414591"></iframe><div id="intercom-modal-container"></div></div></div></body></html>
+<!--
+     FILE ARCHIVED ON 05:49:07 Jul 23, 2019 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 03:31:09 Jun 26, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.521
+  exclusion.robots: 0.047
+  exclusion.robots.policy: 0.036
+  esindex: 0.011
+  cdx.remote: 61.694
+  LoadShardBlock: 53.505 (3)
+  PetaboxLoader3.datanode: 71.197 (4)
+  PetaboxLoader3.resolve: 45.63 (2)
+  load_resource: 139.912
+  nav: 0.131 (6)
+-->
