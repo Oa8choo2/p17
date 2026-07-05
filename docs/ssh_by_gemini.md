@@ -5,15 +5,15 @@
 2026-06-15 07:21:22
 
 **SSH**, which stands for **Secure Shell**, is a cryptographic network protocol
-that allows you to securely connect to and run jobs on a remote computer or server
-over an unsecured network.
+that allows you to securely connect to and run jobs on a remote computer or
+server over an unsecured network.
 
 Think of it as a secure, encrypted tunnel through the internet.
 Instead of physically sitting in front of a server, SSH lets you open a terminal
 on your local machine and run commands on the remote machine as if you were
 right there.
 
-You can compare it to HTTPS which secures your connection while browsing. 
+You can compare it to HTTPS which secures your connection while browsing.
 
 * * *
 
@@ -108,5 +108,8 @@ What kind of system or server are you trying to connect to?
 I can help you set up your specific connection or generate an SSH config file
 for it.
 
-[^1]: Since October 2018, Windows 10 has support for SSH. You might need to enable it tough. See <https://carleton.ca/scs/2024/enable-openssh-on-windows-10/> 
-[^2]: See TODO open a terminal text
+[^1]: Since October 2018, Windows 10 has support for SSH. You might need to
+    enable it tough. See
+    <https://carleton.ca/scs/2024/enable-openssh-on-windows-10/> [^2]: See TODO
+    open a terminal text
+
