@@ -38,11 +38,27 @@ You can use the standard ways on Linux to get more information on SSH:
 
 ### Why do you need this
 
+
+
 ### What is it
+
+Ssh is a tool that allows you to work on a remote system, while all your communication to and from the remote server are encrypted.
+It supports different ways to authenticate. We use the key-based authentication (not the password authentication).
+You need key pair -- a private and a public key -- to do this.
+
+Ssh is security software, it works only in a secure way if it is up-to-date and correctly configured.
+It is widely used and one can do interesting things if the key pair is obtained or if the version you use contains a bug or is wrong configured.
+ 
 
 ### Making and maintenance of SSH keys
 
-### Other commands: sftp, scp
+You must make the key pair yourself. 
+It is recommended to make a separate key pair for each remote server you connect to.
+Example a key for the VSC Gent server (login.hpc.ugent.be) and another key pair to connect to the git server of the UGent.
+The private key is private, no one else needs it and should be able to read it.
+It must be protected by a password.
+
+### Other commands: sftp, scp, rsync
 
 #### SSH suggestions by Eliza
 
