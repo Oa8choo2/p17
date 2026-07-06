@@ -215,12 +215,15 @@ Start a new ssh session with
 - explicit user@host: `vsc123456@login.hpc.ugent.be`
 - verbose session: `-v`
 - avoid using any config file: `-F /dev/null`
+- avoid using the agent: `-o IdentityAgent=none`
 
 ```bash
 ssh -F /dev/null -v -i ~/.ssh/vsckey vsc123456@login.hpc.ugent.be -o IdentitiesOnly=yes
 ```
 
 #### SSH suggestions by Eliza
+
+=> test on windows
 
 - Start with some kind of disclaimer that default access is via web portal (link
   to ‘Web portal’ page) 🗸
