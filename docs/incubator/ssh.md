@@ -1,24 +1,32 @@
 ---
-title: ssh
+title: Secure SHell (ssh)
 description: incubator version, draft
 nextreview: 20270706
 version: 2026/07/06 11:21:21
 ---
 
-## Secure Shell (SSH)
+## Secure shell (SSH)
 
 Ssh is a command you must run in a terminal:
 - start a terminal
 - type ssh
 
-## Connecting to HPC UGent with SSH
+## Connecting to High Performance Computing (HPC) with ssh
 
-You can connect to HPC UGent using the Secure Shell Protocol (SSH), which
+You can connect to HPC UGent using the Secure Shell Protocol (ssh), which
 provides a secure channel over an unsecured network.
 
-> 💡 The recommended way to connect to HPC UGent is by using the web portal.  
-> For most applications you do not need to use SSH.  
-> If you want to use SSH you'll need some basic linux knowledge. 
+> 💡 The web portal is the recommended way to connect to HPC UGent.  
+> For most applications you don't need to use ssh.
+> If you want to use ssh you'll need some basic Linux knowledge. 
+
+## Ssh is a command line tool
+
+You can use ssh on the command line.
+You get there by opening a **terminal**.
+- On Windows use the key combination windows-key + x, select **terminal**.
+- On macOS/Apple use Finder to find the terminal. [link]
+- On Linux you can use the key combination Ctrl-Alt-T
 
 
 ## SSH as a Linux command
@@ -26,7 +34,10 @@ provides a secure channel over an unsecured network.
 SSH is standard available on all Linux installations.
 You can use the standard ways on Linux to get more information on SSH:
 
-- man page: the man pages on **[ssh][ssh]**, **[ssh_config][ssh_config]** and **[ssh-keygen][ssh-keygen]** [^1]
+- man page: the man pages on 
+  -  **[ssh][ssh]**, 
+  -  **[ssh_config][ssh_config]** and 
+  -  **[ssh-keygen][ssh-keygen]** [^1]
 - help parameter: ssh has no -h or --help parameter, just start ssh without any
   parameter to get a short explanation
 
@@ -60,26 +71,27 @@ Your .ssh folder, where your key pair is stored is similar to C:\Users\%username
 You need an easy and secure way to connect to the hpc infrastructure.  
 You can compare it to HTTPS which secures your connection while browsing.
 
-With ssh you’ll get the impression that you are working directly on the hpc
+With ssh you’ll get the impression that you are working directly on the HPC
 infrastructure, as if you were right there.
 
-### What is it
+### What is ssh
 
 Ssh is a tool that allows you to work on a remote system, while all your
-communication to and from the remote server are encrypted.
-This is very important to protect your research data.  
+communication to and from the remote server is encrypted.
+This is important to protect your research data.  
 It supports different ways to authenticate.  
-We use the **key-based authentication** (not the password authentication).  
+Use the **key-based authentication** (not the password authentication).  
 You need a key pair -- a private key and a public key -- to do this.
 
 Ssh is security software, it works only in a secure way if it is up-to-date and
 correctly configured.
 
-It is widely used and one can do **[interesting][mitre]** things if the key pair is
-obtained or if the version you use [contains a bug][opensshcves] or is wrong configured.
+Ssh is widely used and one can do **[interesting][mitre]** things if the key
+pair is obtained or if the version you use [contains a bug][opensshcves] or is
+wrong configured.
 
-If you are consulting info on ssh, check if the version that is used is no more
-than one year old.
+While consulting info on ssh, check the version. 
+If the software mentioned is more than one year old, do not use that info.
 
 ### Check the version of the ssh client you are using
 
@@ -87,11 +99,14 @@ Most often you’ll use an OpenSSH client.
 Check the version with:
 
 ```bash
-$ ssh -V  # command run on July 6, 2026 on Ubuntu 26.04
+$ ssh -V # command run on July 6, 2026 on Ubuntu 26.04
 OpenSSH_10.2p1 Ubuntu-2ubuntu3.2, OpenSSL 3.5.5 27 Jan 2026
+
+$ ssh -V # comlmand run on July 6, 2026 on Windows 11, 23H2
+OpenSSH_for_Windows_9.5p1, LibreSSL 3.8.2
 ```
 
-Compare the output of your ssl client to
+Compare the output of your ssh client to
 <https://www.openssh.org/releasenotes.html>.
 On top of that page you’ll find the most recent version.  
 If your version is more than one year older than that version upgrade your
@@ -101,17 +116,20 @@ software (or ask your system administrator to do so).
 
 You must make the key pair yourself.  
 It is recommended to make a separate key pair for each remote server you connect
-to. Example a key for the VSC Gent server (login.hpc.ugent.be) and another key
+to. For example a key for the HPC UGent server (login.hpc.ugent.be) and another key
 pair to connect to the git server of the UGent.  
-The private key is private, no one else needs it and should be able to read it.  
-It must be protected by a password.  
+The private key is private, no one else needs it and should be able to read it. 
+You must protected it by a password.  
 That password is a kind of multifactor authentication (MFA).
 
 #### Making your key pair
 
+The standard location for your keys is the directory **.ssh** in your home folder.
+This is __$HOME/.ssh__ or __$HOME\.ssh on windows 
+
 ```bash
 ssh-keygen -t ed25519 \  # recommended key type anno 2026
-           -f ~/.ssh/your-key-filename \ # maybe include vsc in the filename
+           -f $HOME/.ssh/your-key-filename \ # maybe include vsc in the filename
            -C "your-key-comment"  # add the year you made the key
            # do NOT add your username or other personal information
 ```
@@ -310,8 +328,9 @@ See also https://teams.cloud.microsoft/l/message/19:586df7931cb8418ba0aeaa4870b7
 - Can link to
   <https://docs.vscentrum.be/accounts/generating_keys.html#cryptographic-keys>
   it has examples on how to create keys in windows, linux and mac.🗸
-  
-- Link to ‘WSL’ page for windows users that don’t want to use powershell.
+- Link to ‘WSL’ page for windows users that don’t want to use powershell. 🗸
+  On windows 11 WSL is not needed for ssh, ssh-keygen, sftp, scp, ssh-add, ssh-keyscan.
+  rsync is not on Windows 11 by default. In that case WSL can be an option.
 
   => unfortunately ssh and its sisters are not in https://github.com/microsoft/coreutils
 
@@ -360,6 +379,9 @@ UGent-specific stuff
 [Nist]: https://www.nist.gov/cybersecurity-and-privacy/how-do-i-create-good-password
 [bsi]: https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-4.pdf
 [ssh-keygen-best-practices]: https://security.stackexchange.com/questions/143442/what-are-ssh-keygen-best-practices
+[Terminal User Guide for Mac – Apple]: https://support.apple.com/en-gb/guide/terminal/welcome/mac
+[Open or quit Terminal on Mac – Apple]: https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/2.14/mac/15.0
+[Enabling the OpenSSH Client (SSH) on Windows :: ASK US, University of Hawaii System]: https://www.hawaii.edu/askus/1874
 
 ## list of abbreviations, used in this text
 
@@ -372,6 +394,7 @@ UGent-specific stuff
 *[scp]: Secure CoPy
 *[WSL]: Windows Subsystem for Linux
 *[man]: An interface to the system reference manuals on Linux
+*[MFA]: MultiFactor Authentication
 
 ## Footnotes
 
