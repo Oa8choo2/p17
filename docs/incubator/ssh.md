@@ -4,8 +4,12 @@ description: incubator version, draft
 nextreview: 20270706
 version: 2026/07/06 11:21:21
 ---
+
 ## Secure Shell (SSH)
 
+Ssh is a command you must run in a terminal:
+- start a terminal
+- type ssh
 
 ## Connecting to HPC UGent with SSH
 
@@ -39,7 +43,17 @@ usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface] [-b bind_address]
 ```
 
 - any place on internet where you normally get your linux information from will
-  have something on ssh.
+  have something on ssh.  
+
+### Ssh on macOS / Apple
+
+Follow the instructions for Linux.
+Your .ssh folder, where your key pair is stored is similar to /Users/macOSUsername/.ssh/
+
+### Ssh on Windows
+
+Follow the instructions for Linux.
+Your .ssh folder, where your key pair is stored is similar to C:\Users\%username%\.ssh
 
 ### Why do you need this
 
@@ -331,7 +345,7 @@ UGent-specific stuff
 - <https://richard-sebos.github.io/sebostechnology/posts/SSH-Auth-Key-Rotation/>
 - <https://grahamhelton.com/blog/ssh-cheatsheet>
 - <https://wiki.archlinux.org/title/SSH_keys>
-- menu@tty.sdf.org
+- <https://sdf.org>
 
 ## Reference style links
 
