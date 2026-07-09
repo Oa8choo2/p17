@@ -8,6 +8,7 @@ version: 2026/07/06 11:21:21
 ## Secure shell (SSH)
 
 Ssh is a command you must run in a terminal:
+
 - start a terminal
 - type ssh
 
@@ -18,26 +19,26 @@ provides a secure channel over an unsecured network.
 
 > 💡 The web portal is the recommended way to connect to HPC UGent.  
 > For most applications you don't need to use ssh.
-> If you want to use ssh you'll need some basic Linux knowledge. 
+> If you want to use ssh you'll need some basic Linux knowledge.
 
 ## Ssh is a command line tool
 
 You can use ssh on the command line.
 You get there by opening a **terminal**.
+
 - On Windows use the key combination windows-key + x, select **terminal**.
 - On macOS/Apple use Finder to find the terminal. [link]
 - On Linux you can use the key combination Ctrl-Alt-T
-
 
 ## SSH as a Linux command
 
 SSH is standard available on all Linux installations.
 You can use the standard ways on Linux to get more information on SSH:
 
-- man page: the man pages on 
-  -  **[ssh][ssh]**, 
-  -  **[ssh_config][ssh_config]** and 
-  -  **[ssh-keygen][ssh-keygen]** [^1]
+- man page: the man pages on
+  - **[ssh][ssh]**,
+  - **[ssh_config][ssh_config]** and
+  - **[ssh-keygen][ssh-keygen]** [^1]
 - help parameter: ssh has no -h or --help parameter, just start ssh without any
   parameter to get a short explanation
 
@@ -90,7 +91,7 @@ Ssh is widely used and one can do **[interesting][mitre]** things if the key
 pair is obtained or if the version you use [contains a bug][opensshcves] or is
 wrong configured.
 
-While consulting info on ssh, check the version. 
+While consulting info on ssh, check the version.
 If the software mentioned is more than one year old, do not use that info.
 
 ### Check the version of the ssh client you are using
@@ -115,17 +116,23 @@ software (or ask your system administrator to do so).
 ### Making and maintenance of SSH keys
 
 You must make the key pair yourself.  
-It is recommended to make a separate key pair for each remote server you connect
-to. For example a key for the HPC UGent server (login.hpc.ugent.be) and another key
+
+Make a separate key pair for each remote server you connect to.
+
+For example a key for the HPC UGent server (login.hpc.ugent.be) and another key
 pair to connect to the git server of the UGent.  
-The private key is private, no one else needs it and should be able to read it. 
+
+The private key is private, no one else needs it and should be able to read it.
+
 You must protected it by a password.  
+
 That password is a kind of multifactor authentication (MFA).
 
 #### Making your key pair
 
-The standard location for your keys is the directory **.ssh** in your home folder.
-This is __$HOME/.ssh__ or __$HOME\.ssh on windows 
+The standard location for your keys is the directory **.ssh** in your home
+folder.
+This is __$HOME/.ssh__ or __$HOME\.ssh__ (on windows)
 
 ```bash
 ssh-keygen -t ed25519 \  # recommended key type anno 2026
@@ -137,32 +144,39 @@ ssh-keygen -t ed25519 \  # recommended key type anno 2026
 During the generation of the keys, the keygen tool will ask for a password to
 protect the private key.
 
-Enter a new complex password with a minimum length of 15 characters (See
-[Nist]).
+Enter a new complex password with a least 15 characters (See [Nist][Nist]).
 
-Add your password to your passwordmanager (You are using a [password manager][passwordmanager],
-isn’t it?)
+Add your password to your password manager (You do use a [password
+manager][passwordmanager]?)
 
 ### Add your public key to the HPC infrastructure
 
 You can upload your public key via the [VSC account webpage][vscaccount].  
-Before you can do this, you need a VSC account.  
-Consult the [instructions to obtain a VSC account][obtainvsc] page.
+Before you can do this, you need a Vlaams Supercomputer Centrum (VSC) account.  
+Consult the [instructions to get a VSC account][obtainvsc] page.
 
 ### Maintenance of your ssh keys
 
-It is recommended to rotate your keys on regular basis or if a security issue happend.  
-In that case you should
-- make a new key pair, conform to the [latest security advice][bsi]
+Rotate your keys on regular basis or in case of a security issue.
 
+In that case you should
+
+- make a new key pair, conform to the [latest security advice][bsi]
+- add your new public key to the remote server
+- test if you can connect to the remote server with the new key
+  (use the __-i__ option on the ssh command)
+- remove your old public key from the remote server
+- remove the old key pair from your own computer
 
 ### Other commands: scp, sftp, and rsync a.k.a. sisters of ssh
 
-These commands are all commands to help you transfer to and from the HPC infrastructure.
-They all rely on ssh, as soon you can ssh to a remote server they should work too.
+These commands help you transfer to and from the HPC infrastructure.
+
+They all rely on ssh, as soon you can ssh to a remote server they should work
+too.
 
 - scp is very similar to normal copy commands
-Following command will copy a local file to the remote server in the folder /tmp
+Following command copies a local file to the remote server in the folder /tmp
 
 ```bash
 scp mylocalfile user@remote_server:/tmp
@@ -172,7 +186,7 @@ scp mylocalfile user@remote_server:/tmp
 To start an sftp session type:
 
 ```bash
-$ sftp user@remote_server
+sftp user@remote_server
 ```
 
 A command prompt is presented:
@@ -193,9 +207,12 @@ cd path                            Change remote directory to 'path'
 
 - rsync is advanced and **not interactive**
 
-Following command will sync the local folder /tmp/localdir with the remote folder /tmp/remotedir.
+Following command syncs the local folder /tmp/localdir with the remote folder
+/tmp/remotedir.
+
 If the target directory does not it exist it will be created.
-If the folders were synced before only the changes since then will be copied.
+
+If you synced the folders before only the changes since then will be copied.
 
 ```bash
 rsync -va /tmp/localdir/ user@remote_server:/tmp/remotedir/
@@ -227,25 +244,25 @@ Replace the username by your own VSC username
 
 **What happens next:**
 
-* If it’s your first time connecting, you’ll see a warning asking if you trust
-  the host.
+- If it’s your first time connecting, you’ll see a warning asking if you trust
+  the host. (the actual output can be differnt on your computer)
 
 ```bash
-  The authenticity of host 'sdf.org (205.166.94.16)' can't be established.
-ED25519 key fingerprint is: SHA256:ZjwbO7AU8rHJExYrmZS2LqGZ7WfdoELfMrF54W92PYA
+The authenticity of host 'login.hpc.ugent.be (205.166.94.16)' can't be established.
+ED25519 key fingerprint is: SHA256:ZjwbO...8rHJExYrmZS2LqGZ7WfdoELfMrF54W92PYA
 This host key is known by the following other names/addresses:
-    ~/.ssh/known_hosts:830: tty.sdf.org,205.166.94.4
+    ~/.ssh/known_hosts:830: login.hpc.ugent.be,205.166.94.4
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-If you are sure the fingerprint is identical to what you would expect, answer with 'yes'.
+If you are sure the fingerprint is identical to what you would expect, answer
+with 'yes'.
 
-
+**TOD** insert verifying fingerprints here
 
 ---
 
 To close the connection you type 'exit'.  
-
 
 ### Solving problems
 
@@ -257,7 +274,8 @@ Remove all loaded keys from the agent
 ssh-add -D
 ```
 
-Start a new ssh session with
+Start a new ssh session with[^2]
+
 - explicit identity file: `-i ~/.ssh/vsckey`
 - explicit user@host: `vsc123456@login.hpc.ugent.be`
 - verbose session: `-v`
@@ -265,7 +283,10 @@ Start a new ssh session with
 - avoid using the agent: `-o IdentityAgent=none`
 
 ```bash
-ssh -F /dev/null -v -i ~/.ssh/vsckey vsc123456@login.hpc.ugent.be -o IdentitiesOnly=yes
+ssh -F /dev/null -v \
+    -i ~/.ssh/vsckey \
+    vsc123456@login.hpc.ugent.be \
+    -o IdentitiesOnly=yes
 ```
 
 Have a close look at the output of that command, it might help you to a solution.
@@ -311,9 +332,9 @@ On July 6, 2026 the fingerprints were:
 256 SHA256:8AJg3lPN27y6i+um7rFx3xoy42U8ZgqNe4LsEycHILA login.hpc.ugent.be (ED25519)
 
 **TODO**
-Same fingerprints can be seen at https://docs.hpc.ugent.be/Windows/connecting/#winscp:~:text=Make%20sure%20the%20fingerprint%20in%20the%20alert%20matches%20one%20of%20the%20following
+Same fingerprints can be seen at <https://docs.hpc.ugent.be/Windows/connecting/#winscp:~:text=Make%20sure%20the%20fingerprint%20in%20the%20alert%20matches%20one%20of%20the%20following>
 
-See also https://teams.cloud.microsoft/l/message/19:586df7931cb8418ba0aeaa4870b7db98@thread.tacv2/1781589223792?tenantId=d7811cde-ecef-496c-8f91-a1786241b99c&groupId=e347c50e-3cbb-46a3-8dd4-7eee2fb2368e&parentMessageId=1781589223792&teamName=CA60%20Gebruikersrelatiebeheer%20GR&channelName=Onderzoek-%20en%20wetenschappelijk%20rekenen&createdTime=1781589223792
+See also <https://teams.cloud.microsoft/l/message/19:586df7931cb8418ba0aeaa4870b7db98@thread.tacv2/1781589223792?tenantId=d7811cde-ecef-496c-8f91-a1786241b99c&groupId=e347c50e-3cbb-46a3-8dd4-7eee2fb2368e&parentMessageId=1781589223792&teamName=CA60%20Gebruikersrelatiebeheer%20GR&channelName=Onderzoek-%20en%20wetenschappelijk%20rekenen&createdTime=1781589223792>92
 
 #### SSH suggestions by Eliza
 
@@ -332,7 +353,7 @@ See also https://teams.cloud.microsoft/l/message/19:586df7931cb8418ba0aeaa4870b7
   On windows 11 WSL is not needed for ssh, ssh-keygen, sftp, scp, ssh-add, ssh-keyscan.
   rsync is not on Windows 11 by default. In that case WSL can be an option.
 
-  => unfortunately ssh and its sisters are not in https://github.com/microsoft/coreutils
+  => unfortunately ssh and its sisters are not in <https://github.com/microsoft/coreutils>
 
 - Mention how to upload new key to AP (link to page ‘VSC Accountpage’) 🗸
 
@@ -357,7 +378,7 @@ UGent-specific stuff
 
 - [Github and SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
 - Man pages on SSH
-  - [ssh]: https://man.openbsd.org/ssh)
+  - [ssh]: <https://man.openbsd.org/ssh>)
   - [ssh-keygen](https://man.openbsd.org/ssh-keygen)
   - [ssh_config](https://man.openbsd.org/ssh_config)
 - <https://www.brandonchecketts.com/archives/ssh-ed25519-key-best-practices-for-2025>
@@ -392,6 +413,7 @@ UGent-specific stuff
 *[sftp]: Secure FTP
 *[ftp]: File Transfer Protocol
 *[scp]: Secure CoPy
+*[rsync]: Remote SYNC
 *[WSL]: Windows Subsystem for Linux
 *[man]: An interface to the system reference manuals on Linux
 *[MFA]: MultiFactor Authentication
@@ -399,3 +421,4 @@ UGent-specific stuff
 ## Footnotes
 
 [^1]: Here we refer to the OpenBSD manpages because these are updated first by OpenSSH.
+[^2]: Here the line continuation character __\__ is used 

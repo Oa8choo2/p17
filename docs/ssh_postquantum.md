@@ -1,6 +1,8 @@
-# ssh postquantum
+# Ssh post quantum
 
-FYI: sinds upgrade van mijn pc naar ubuntu 26.04 zie ik bij ssh (OpenSSH_10.2p1 Ubuntu-2ubuntu3.2, OpenSSL 3.5.5 27 Jan 2026) connectie naar login.hpc.ugent.be dit:
+FYI: since upgrade to Ubuntu 26.04 an 
+ssh (OpenSSH_10.2p1 Ubuntu-2ubuntu3.2, OpenSSL 3.5.5 January 28, 2026)
+connection to __login.hpc.ugent.be__ shows this:
 
 ```bash
 ** WARNING: connection is not using a post-quantum key exchange algorithm.
@@ -27,9 +29,13 @@ sntrup761x25519-sha512@openssh.com
 mlkem768x25519-sha256
 ```
 
-To check which key exchange algorithm OpenSSH uses when you connect to GitHub.com, run the following command on Linux, macOS, Git Bash, or other Unix-like environments:
-https://github.blog/engineering/platform-security/post-quantum-security-for-ssh-access-on-github/
+To check which key exchange algorithm OpenSSH uses when you connect to
+github, run the following command on Linux, macOS, Git Bash, or other
+Unix-like environments:
 
+<https://github.blog/engineering/platform-security/post-quantum-security-for-ssh-access-on-github/>
+
+```bash
 $(which ssh) -v git@github.com exit 2>&1 | grep 'kex: algorithm:'
 debug1: kex: algorithm: sntrup761x25519-sha512
 
@@ -45,6 +51,7 @@ kexalgorithms mlkem768x25519-sha256,sntrup761x25519-sha512,sntrup761x25519-sha51
 
 sudo grep mlk -n sshd_config
 147:KexAlgorithms mlkem768x25519-sha256,sntrup761x25519-sha512,sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521
+```
 
 Is it safe?
 /etc/ssh ssh $ ssh-audit localhost | grep fail 
@@ -58,7 +65,14 @@ Is it safe?
 ssh-audit --version  
 # ssh-audit v3.3.0, https://github.com/jtesta/ssh-audit
 
+## Links
 
-- [OpenSSH crypto configuration - Ubuntu Server documentation]: https://ubuntu.com/server/docs/explanation/crypto/openssh-crypto-configuration/
-- <https://blog.nashcom.de/nashcomblog.nsf/dx/update-to-a-current-openssh-client-server-to-be-post-quantum-crypto-safe.htm>
-- [OpenSSH: Post-Quantum Cryptography]: https://www.openssh.org/pq.html
+- [OpenSSH crypto configuration - Ubuntu Server documentation][OpenSSH crypto configuration - Ubuntu Server documentation]
+- [Nashcom crypto safe ssh][Nashcom crypto safe ssh]
+- [OpenSSH: Post-Quantum Cryptography][OpenSSH: Post-Quantum Cryptography]
+- [FeistyDuck on sha1][fail]
+
+[OpenSSH crypto configuration - Ubuntu Server documentation]: https://ubuntu.com/server/docs/explanation/crypto/openssh-crypto-configuration/
+[Nashcom crypto safe ssh]: https://blog.nashcom.de/nashcomblog.nsf/dx/update-to-a-current-openssh-client-server-to-be-post-quantum-crypto-safe.htm
+[OpenSSH: Post-Quantum Cryptography]: https://www.openssh.org/pq.html
+[fail]: https://www.feistyduck.com/newsletter/issue_25_sha1_is_broken

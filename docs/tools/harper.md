@@ -23,3 +23,8 @@ Options:
   -c, --count
           Whether to merely print out the number of errors encountered, without further details. Only valid with the default output format
 ```
+
+Note: **not** this harper: <https://docs.harperdb.io/>
+
+Look at <https://gribnau.dev/posts/harper-cli/>
+and <https://writewithharper.com/docs/integrations/language-server>
