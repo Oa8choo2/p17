@@ -54,13 +54,14 @@ usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface] [-b bind_address]
        ssh [-Q query_option]
 ```
 
-- any place on internet where you normally get your linux information from will
-  have something on ssh.  
+- any place on internet where you normally get your Linux information from has something on ssh.  
+
+Your .ssh folder, where your key pair is stored is similar to /home/users/username/.ssh/
 
 ### Ssh on macOS / Apple
 
 Follow the instructions for Linux.
-Your .ssh folder, where your key pair is stored is similar to /Users/macOSUsername/.ssh/
+Your .ssh folder, where your key pair is stored is similar to /Users/username/.ssh/
 
 ### Ssh on Windows
 
@@ -88,7 +89,7 @@ Ssh is security software, it works only in a secure way if it is up-to-date and
 correctly configured.
 
 Ssh is widely used and one can do **[interesting][mitre]** things if the key
-pair is obtained or if the version you use [contains a bug][opensshcves] or is
+pair is obtained or if the version you use is outdated, [contains a bug][opensshcves], or is
 wrong configured.
 
 While consulting info on ssh, check the version.
@@ -103,8 +104,11 @@ Check the version with:
 $ ssh -V # command run on July 6, 2026 on Ubuntu 26.04
 OpenSSH_10.2p1 Ubuntu-2ubuntu3.2, OpenSSL 3.5.5 27 Jan 2026
 
-$ ssh -V # comlmand run on July 6, 2026 on Windows 11, 23H2
+$ ssh -V # command run on July 6, 2026 on Windows 11, 23H2
 OpenSSH_for_Windows_9.5p1, LibreSSL 3.8.2
+
+TODO similar command on MacOS
+
 ```
 
 Compare the output of your ssh client to
@@ -134,6 +138,8 @@ The standard location for your keys is the directory **.ssh** in your home
 folder.
 This is __$HOME/.ssh__ or __$HOME\.ssh__ (on windows)
 
+Make your keys with this command:
+ 
 ```bash
 ssh-keygen -t ed25519 \  # recommended key type anno 2026
            -f $HOME/.ssh/your-key-filename \ # maybe include vsc in the filename
@@ -148,6 +154,28 @@ Enter a new complex password with a least 15 characters (See [Nist][Nist]).
 
 Add your password to your password manager (You do use a [password
 manager][passwordmanager]?)
+
+After you made your key set, the command shows you 
+
+- the location of the private key
+- the location of the public key (ends on .pub)
+- the fingerprint of your key
+- the randomart image of your key
+
+As mentioned before you need to protect your private key.  
+Check the access rights to this file and adjust if needed. 
+TODO is there a command to do this? 
+Make sure you have a safe backup of your private keys.  
+
+The fingerprint and randomart image can help you to verify if you are using the correct key.
+
+You can generate the fingerprint of any public key with following command:
+
+```bash
+ssh-keygen -l -f yourpublickey.pub
+```
+
+Add `-v` to generate the randomart in addition to the fingerprint.
 
 ### Add your public key to the HPC infrastructure
 
@@ -245,7 +273,7 @@ Replace the username by your own VSC username
 **What happens next:**
 
 - If it’s your first time connecting, you’ll see a warning asking if you trust
-  the host. (the actual output can be differnt on your computer)
+  the host. (the actual output can be different on your computer)
 
 ```bash
 The authenticity of host 'login.hpc.ugent.be (205.166.94.16)' can't be established.
@@ -403,6 +431,7 @@ UGent-specific stuff
 [Terminal User Guide for Mac – Apple]: https://support.apple.com/en-gb/guide/terminal/welcome/mac
 [Open or quit Terminal on Mac – Apple]: https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/2.14/mac/15.0
 [Enabling the OpenSSH Client (SSH) on Windows :: ASK US, University of Hawaii System]: https://www.hawaii.edu/askus/1874
+[Ssh troubleshooting]: https://medium.com/@DevSideHustle/the-ssh-key-is-correct-file-permissions-are-why-login-still-fails-8a42de8cb8c9
 
 ## list of abbreviations, used in this text
 
@@ -422,3 +451,8 @@ UGent-specific stuff
 
 [^1]: Here we refer to the OpenBSD manpages because these are updated first by OpenSSH.
 [^2]: Here the line continuation character __\__ is used 
+
+---
+TODO
+
+
