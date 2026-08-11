@@ -5,7 +5,7 @@ nextreview: 20270706
 version: 2026/07/06 11:21:21
 ---
 
-## Secure shell (SSH)
+# Secure shell (ssh)
 
 Ssh is a command you must run in a terminal:
 
@@ -24,22 +24,24 @@ provides a secure channel over an unsecured network.
 ## Ssh is a command line tool
 
 You can use ssh on the command line.
+
 You get there by opening a **terminal**.
 
-- On Windows use the key combination windows-key + x, select **terminal**.
-- On macOS/Apple use Finder to find the terminal. [link]
-- On Linux you can use the key combination Ctrl-Alt-T
+- On Windows use the key combination ++windows+x++, select **terminal**.
+- On macOS/Apple [use Finder to find the terminal][Open or quit Terminal on Mac – Apple]
+- On Linux you can use the key combination ++ctrl+alt+t++
 
 ## SSH as a Linux command
 
 SSH is standard available on all Linux installations.
+
 You can use the standard ways on Linux to get more information on SSH:
 
 - man page: the man pages on
-  - **[ssh][ssh]**,
-  - **[ssh_config][ssh_config]** and
-  - **[ssh-keygen][ssh-keygen]** [^1]
-- help parameter: ssh has no -h or --help parameter, just start ssh without any
+    - **[ssh][ssh]**,
+    - **[ssh_config][ssh_config]** and
+    - **[ssh-keygen][ssh-keygen]** [^1]
+- help parameter: ssh has no -h or --help parameter,  start ssh without any
   parameter to get a short explanation
 
 ```bash
@@ -61,12 +63,17 @@ Your .ssh folder, where your key pair is stored is similar to /home/users/userna
 ### Ssh on macOS / Apple
 
 Follow the instructions for Linux.
-Your .ssh folder, where your key pair is stored is similar to /Users/username/.ssh/
+
+Your .ssh folder, where your key pair is stored is similar to
+
+/Users/macOSUsername/.ssh/
 
 ### Ssh on Windows
 
 Follow the instructions for Linux.
-Your .ssh folder, where your key pair is stored is similar to C:\Users\%username%\.ssh
+Your .ssh folder, where your key pair is stored is similar to
+
+C:\Users\%username%\.ssh
 
 ### Why do you need this
 
@@ -88,11 +95,12 @@ You need a key pair -- a private key and a public key -- to do this.
 Ssh is security software, it works only in a secure way if it is up-to-date and
 correctly configured.
 
-Ssh is widely used and one can do **[interesting][mitre]** things if the key
-pair is obtained or if the version you use is outdated, [contains a bug][opensshcves], or is
+Ssh is widely used and one can do [interesting][mitre] things if the key
+pair is obtained or if the version you use [contains a bug][opensshcves] or is
 wrong configured.
 
 While consulting info on ssh, check the version.
+
 If the software mentioned is more than one year old, do not use that info.
 
 ### Check the version of the ssh client you are using
@@ -117,7 +125,7 @@ On top of that page you’ll find the most recent version.
 If your version is more than one year older than that version upgrade your
 software (or ask your system administrator to do so).
 
-### Making and maintenance of SSH keys
+### Making and maintenance of ssh keys
 
 You must make the key pair yourself.  
 
@@ -128,7 +136,7 @@ pair to connect to the git server of the UGent.
 
 The private key is private, no one else needs it and should be able to read it.
 
-You must protected it by a password.  
+You must protected it by a password.
 
 That password is a kind of multifactor authentication (MFA).
 
@@ -436,9 +444,12 @@ UGent-specific stuff
 ## list of abbreviations, used in this text
 
 *[SSH]: Secure SHell
+*[Ssh]: Secure SHell
+*[ssh]: Secure SHell
 *[HPC]: High Performance Computing
 *[UGent]: University of Gent
-*[linux]: Unix-like operating system made by Lunis Torvalds
+*[Linux]: Unix-like operating system made by Linus Torvalds
+*[linux]: Unix-like operating system made by Linus Torvalds
 *[sftp]: Secure FTP
 *[ftp]: File Transfer Protocol
 *[scp]: Secure CoPy

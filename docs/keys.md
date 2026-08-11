@@ -1,6 +1,10 @@
-# Keys
+# Keyboard keys
 
 ++ctrl+alt+del++
+
+Note: use only lowercase for the keys
+
+++Ctrl+Alt+Del++ does not work
 
 Via pymdown extension
 

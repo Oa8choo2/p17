@@ -69,6 +69,8 @@ How?
   - included in zensical
   - some browsers have also this functionality
         ([screenshot](abbreviations.preview_link_in_firefox.png))
+- note: Abbreviations are case-sensitive
+  See <https://michelf.ca/projects/php-markdown/extra/#abbr>
 
 ## Example APOST3D aka APOST-3D
 
