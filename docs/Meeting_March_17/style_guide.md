@@ -1,9 +1,11 @@
-## A style guide
+# A style guide
 
-What? A list of rules to make sure all docs are consistent in look,
-content and technical aspects
+## What? 
 
-How?
+A list of rules to make sure all docs are consistent in look,
+content, and technical aspects
+
+## How?
 
 - using linters and a specific config file and using these in
     pre-commits and builds
@@ -19,11 +21,12 @@ How?
 - abbreviations without dots
 - use [semantic line breaks](https://sembr.org/)
 
-Start with what is done implicitly today
+Start with we do implicitly today
 
-::: notes
-notes:
+## Notes
 
-sembr has it origins in Hints for Preparing Documents by Brian W.
-Kernighan, 1974
-:::
+- 'sembr' has it origins in _Hints for Preparing Documents_ by Brian W. Kernighan, 1974
+
+## See also
+
+- [Wikipedia Mos](https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style)
