@@ -5,6 +5,9 @@ nextreview: 20270706
 version: 2026/07/06 11:21:21
 ---
 
+[What is SSH? simply explained by sayeddev - YouTube](
+https://www.youtube.com/shorts/iEEUVtvdE4A)
+
 # Secure shell (ssh)
 
 Ssh is a command you must run in a terminal:
@@ -116,7 +119,8 @@ $ ssh -V # command run on July 6, 2026 on Windows 11, 23H2
 OpenSSH_for_Windows_9.5p1, LibreSSL 3.8.2
 
 TODO similar command on MacOS
-
+$ ssh -V # command on Mac OS X 10.15
+OpenSSH_7.9p1, LibreSSL 2.7.3
 ```
 
 Compare the output of your ssh client to
@@ -302,6 +306,15 @@ To close the connection you type 'exit'.
 
 ### Solving problems
 
+#### __Permission denied__
+
+```bash
+$ ssh user@login.hpc.ugent.be
+user@login.hpc.ugent.be: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+```
+
+One of the reaons could be that the username __user__ is not known at VSC.
+
 #### Try a connection without other configuration
 
 Remove all loaded keys from the agent
@@ -466,4 +479,8 @@ UGent-specific stuff
 ---
 TODO
 
+
+[vscuser@gligar11]$ ssh -V
+OpenSSH_8.7p1, OpenSSL 3.2.2 4 Jun 2024
+[Take fosslinux ssh quiz](https://www.fosslinux.com/159684/ssh-secure-shell-quiz.htm)
 
