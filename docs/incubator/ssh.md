@@ -298,11 +298,22 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 If you are sure the fingerprint is identical to what you would expect, answer
 with 'yes'.
 
-**TOD** insert verifying fingerprints here
+- if you connected before, you'll be logged in.
+- a message of the day (MOTD) will be displayed. Read that MOTD carefully.
+- you can then start your work on the HPC infrastructure
+- to end your session use `exit`
+ 
+**TODO** insert verifying fingerprints here
 
 ---
 
 To close the connection you type 'exit'.  
+
+## Changing the password of your private key
+
+```bash
+ssh-keygen -p -f ~/.ssh/yourprivatekey
+```
 
 ### Solving problems
 
