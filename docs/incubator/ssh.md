@@ -5,7 +5,7 @@ nextreview: 20270706
 version: 2026/07/06 11:21:21
 ---
 
-[What is SSH? simply explained by sayeddev - YouTube](
+[What is SSH? Explained by sayeddev - YouTube](
 https://www.youtube.com/shorts/iEEUVtvdE4A)
 
 # Secure shell (ssh)
@@ -19,6 +19,10 @@ Ssh is a command you must run in a terminal:
 
 You can connect to HPC UGent using the Secure Shell Protocol (ssh), which
 provides a secure channel over an unsecured network.
+
+> ⚠️  VSC account required
+> You must have an existing VSC account before using ssh.  
+> If you do not have an account already, please [request a VSC account](TODO).
 
 > 💡 The web portal is the recommended way to connect to HPC UGent.  
 > For most applications you don't need to use ssh.

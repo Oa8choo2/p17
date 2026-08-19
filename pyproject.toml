@@ -4,8 +4,8 @@ version = "0.0.1"
 description = "p17 description"
 readme = "README.md"
 requires-python = ">=3.14"
-# latest zensical at 20260609 1:22 pm is 0.0.45
+# Tue Aug 18 17:39:29 2026 +0200 is 0.0.56
 dependencies = [
-    "zensical>=0.0.45",
+    "zensical>=0.0.56",
 ]
 
