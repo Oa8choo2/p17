@@ -1,14 +1,22 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
 cff-version: 1.2.0
 title: >-
-	Documentation for the high performance computing (HPC)
-        infrastructure of the Ghent University (UGent)
-message: "If you use this docs, please cite it as below."
+  Documentation for the high performance computing (HPC)
+  infrastructure of the Ghent University (UGent)
+message: 'If you use this docs, please cite it as below.'
+type: dataset
 authors:
- - family-names: 
-   given-names: 
-   orcid: https://orcid.org/1234-5678-9101-1121
-version: 0.0.1
+  - orcid: 'https://orcid.org/1234-5678-9101-1121'
 identifiers:
   - type: doi
     value: 10.5281/zenodo.1234
-date-released: 2026-08-26
+url: 'https://docs.hpc.ugent.be'
+repository: 'https://github.com/hpcugent/vsc_user_docs'
+keywords:
+  - hpc
+  - high performance computing
+  - supercomputer
+version: 0.0.1
+date-released: '2026-08-26'
