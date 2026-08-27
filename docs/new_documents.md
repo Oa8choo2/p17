@@ -8,7 +8,7 @@ Consult the workflow text TODO
   * check first if you can find a good document  
     somewhere else
   * make a link to that location
-  * make sure it is permanent: webarchive it
+  * make sure it is permanent: [webarchive it](https://web.archive.org/save)
 
 ---
 
@@ -19,16 +19,15 @@ Consult the workflow text TODO
 * should be in mkdocs or zensical variant of markdown
 
 * avoid using abbreviations and acronyms
-* explain all abbreviations and acronyms when you first 
-  mention them
+* explain all abbreviations and acronyms when you first  mention them  
   e.g. Knowledge-based Augmented Reality for Maintenance Assistance (KARMA)
-* then add the markdown code to add the `<abbr>`-tags:
+* add the markdown code to add the `<abbr>`-tags:
 
 ```markdown
 *[KARMA]: Knowledge-based Augmented Reality for Maintenance Assistance     
 ```
 
-*[KARMA]: Knowledge-based Augmented Reality for Maintenance Assistance     
+*[KARMA]: Knowledge-based Augmented Reality for Maintenance Assistance
 
 * file and folder names:
    - all lowercase

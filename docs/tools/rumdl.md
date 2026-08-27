@@ -1,4 +1,4 @@
-# rumdl
+# Rumdl
 
 A markdown linter written in **ru**st by **Ru**ben J. Jongejan
 
@@ -13,3 +13,9 @@ Sample of the problems found
 ```
 
 Problems marked with \[\*\] can be fixed automatically
+
+[Repo: https://github.com/rvben/rumdl/](https://github.com/rvben/rumdl/)
+
+Install: cargo install rumdl
+
+Compare to flowmark
