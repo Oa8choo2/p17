@@ -1,0 +1,6 @@
+setTimeout("console.log('hello again')", 500)
+Content-Security-Policy: The page’s settings blocked assigning to an injection sink because it violates the following directive: “require-trusted-types-for ’script’“ @WeSpeakArabic:805:27
+Uncaught TypeError: Window.setTimeout: Sink type mismatch violation blocked by CSP
+    apply https://www.youtube.com/@WeSpeakArabic:805
+    <anonymous> debugger eval code:1
+@WeSpeakArabic:805:27
