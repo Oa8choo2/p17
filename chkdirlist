@@ -1,0 +1,45 @@
+#!/bin/bash
+
+usage() {
+cat << USAGEtxt
+USAGE
+
+  If in zensical.toml, use_directory_urls = true
+  then dirs will be made (in site/) with the name of the original markdown file
+  unless that dir already exists.
+
+  Then you'll get 'File exists (os error 17)' when you run 'zensical build'.
+
+  This script will check for that
+  look for lines starting with 'DIR'.
+
+  Note: other things might cause that error.
+
+  If there is an .html and an .md file with the same name is present in the
+  docs dir you'll also get this error
+  look for lines starting with 'HTM'.
+
+USAGEtxt
+}
+
+usage
+
+find docs/ -iname '*.htm*'
+
+while read -r r ; 
+do 
+	# search for directories with same name
+	v=$(basename "${r}"); 
+	k=$(find . -type d -name "${v::-3}")
+	if [[ ${#k} -gt 1 ]] ; then
+		k="DIR $k"
+	fi
+
+	# search for html files with same name
+	if [[ -f "${r::-3}.html" ]]; then
+	      echo "html version of ${r} found!"
+	      k="HTM $k"
+	fi	     
+
+	echo "${k} -- ${v::-3} -- ${v} -- ${r} -- ${k} --"  ; 
+done < <(find . -type f -iname '*.md')

@@ -1,0 +1,2 @@
+# gb: config parser assumes extension '.toml'
+site_name = "Documentation"
