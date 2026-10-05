@@ -59,3 +59,17 @@ If Tampermonkey is installed give it following script:
 
 })();
 ```
+
+## Note
+
+The title of a webpage is __microcontent__, see [Nielsen](https://www.nngroup.com/articles/microcontent-how-to-write-headlines-page-titles-and-subject-lines/). 
+
+One of the recommendations is
+> Move the keywords to the front the of the title to catch people’s attention and to support scanning
+
+We should think about this we creating a ticket in the otrs ticket.
+
+The way ticket numers are now is not optimal. How specific is having the year first? How many ticket do we have in one year?
+
+Also when a ticket gets another ticket number added to it's title, why is tacked at the beginning?
+
