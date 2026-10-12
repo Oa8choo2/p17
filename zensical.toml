@@ -1,4 +1,6 @@
 [project]
+use_directory_urls = false
+# use_directory_urls = false
 site_url = "https://www.example.com/"
 site_name = "Documentation"
 # site_description = "Your project description"
@@ -19,6 +21,8 @@ nav = [
 # extra_javascript = ["javascripts/extra.js"]
 
 [project.theme]
+# disable loading google fonts
+font = false
 # variant = "classic"
 # custom_dir = "overrides"
 # favicon = "images/favicon.png"
@@ -109,6 +113,9 @@ pymdownx.magiclink = {}
 pymdownx.mark = {}
 pymdownx.smartsymbols = {}
 # pymdownx.snippets.base_path = "includes"
+pymdownx.snippets.auto_append = [
+  "includes/abbreviations.md",
+]
 pymdownx.superfences.custom_fences = [
   { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
 ]
@@ -116,3 +123,11 @@ pymdownx.tabbed.alternate_style = true
 pymdownx.tabbed.combine_header_slug = true
 pymdownx.tasklist.custom_checkbox = true
 pymdownx.tilde = {}
+[project.plugins.table-reader]
+data_path = "tables"
+[project.plugins.toggle-sidebar]
+toggle_button = "all"
+button_toggle_both_tooltip = "Toggle Navigation and Table of Contents"
+button_toggle_nav_tooltip = "Toggle Navigation"
+button_toggle_toc_tooltip = "Toggle Table of Contents"
+enable_key_bindings = true

@@ -1,0 +1,104 @@
+#!/bin/bash
+
+set -vexo pipefail 
+
+mydate="$(date --iso-8601 "seconds")"
+
+# get things up to date
+
+command -v git
+command -v uv
+
+
+if [[ -d .git ]]; then
+	git status
+fi
+uv self version 
+if [[ -f .python-version ]]; then
+	rm .python-version
+fi
+if [[ -f .python-versions ]]; then
+	rm .python-versions
+fi
+uv self update
+python -VV
+uv python install --upgrade
+echo "recreate .python-version" 
+uv python pin "$(python -V | cut -d " " -f 2)"
+cat .python-version 
+
+uv venv --clear
+source .venv/bin/activate
+python -VV
+if [[ ! -f pyproject.toml ]]; then
+  uv init
+else  
+  uv sync 
+  cat pyproject.toml 
+fi
+uv lock --verbose --upgrade 
+uv sync --all-extras --dev 
+uv --verbose pip install zensical
+if [[ -d .git ]]; then
+	git status
+fi
+zensical --version
+uvversion=$(zensical --version)
+if [[ ! -f zensical.toml ]]; then
+	if [[ -f .github/workflows/docs.yaml ]]; then
+	  mv .github/workflows/docs.yml "old_docs.yml_${mydate}"
+	fi
+
+	if [[ -f docs/index.md ]]; then
+		rm docs/index.md
+	fi
+
+	if [[ -f docs/markdown.md ]]; then
+		rm docs/markdown.md
+	fi
+	zensical new
+	cp docs/index.md "docs/index_${uvversion}_${mydate}.md"
+	cp docs/markdown.md "docs/markdown_${uvversion}_${mydate}.md"
+fi
+if [[ -d .git ]]; then
+	git status
+fi
+if grep '^use_directory_urls = false' zensical.toml; then
+	echo "use_directory_urls = false is present in zesical.toml"
+else
+  echo "Adding use_directory_urls = false to zensical toml"	
+  TMPFILE=$(mktemp)
+  trap cleanup 1 2 3 6
+
+  cleanup()
+  {
+    echo "Removing temporary file..."
+    rm -rf "$TMPFILE"
+    exit
+  }
+  head -n 1 zensical.toml | tee "$TMPFILE"
+  echo "use_directory_urls = false" | tee -a "$TMPFILE"
+  tail -n +2 zensical.toml | tee -a "$TMPFILE" 
+  # diff gives exit code 1 if a difference is found
+  set +e
+  diff "$TMPFILE" zensical.toml
+  set -vx
+  echo cp "$TMPFILE" zensical.toml
+  cp "$TMPFILE" zensical.toml
+  cleanup
+fi
+
+zensical build --clean --strict
+
+# backup config files
+for i in \
+	uv.lock \
+	.python-version \
+	pyproject.toml \
+	zensical.toml 
+do
+	if [[ -f "${i}" ]]; then
+	       cp "${i}" "${i}.${mydate}"
+	fi
+done	
+

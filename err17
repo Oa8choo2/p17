@@ -1,0 +1,112 @@
+2026-09-01 10:57:28
+
+error 17 bij build zensical p17
+
+- geen bruikbare errormelding
+=> proberen met meer verbose pakket 'blag'
+
+blag --verbose build -i (inputdir) content2
+laten draaien
+en ondertussen files toevoegen
+user@computer:~/learn/blag$ cp content/responsum.md content2/
+
+...
+feedgenerator.django.utils.xmlutils.UnserializableContentError: Control characters are not supported in XML 1.0
+2026-09-01 10:54:26,590 INFO blag.devserver Devserver did not crash, you may continue editing.
+
+user@computer:~/learn/blag$ cat -vT content/responsum.md
+data management plan, see <https://onderzoektips.ugent.be/en/tips/00001281/>,
+the gdpr part should go to responsum
+
+M-bM-^@M-^\ live sinds 25 juni 2026M-bM-^@M-^]
+
+GDPR: Manual for GDPR records with Responsum | (re)search tips
+<https://onderzoektips.ugent.be/en/tips/00002312/> (part of library, Questions?
+Suggestions? <libservice@ugent.be>)
+
+M-bM-^@M-^\Voor niet-onderzoeksgerelateerde verwerkingsactiviteiten gebeurt dit momenteel
+nog via Sharepoint, maar dit zal volgend academiejaar ook naar Responsum
+verhuizen.M-bM-^@M-^] I think that is AY26-27? so starting september 2026?
+
+---
+
+user@computer:~/learn/blag$ sed -n l content/responsum.md | tail
+<https://onderzoektips.ugent.be/en/tips/00002312/> (part of library, \
+Questions?$
+Suggestions? <libservice@ugent.be>)$
+$
+\342\200\234Voor niet-onderzoeksgerelateerde verwerkingsactiviteiten \
+gebeurt dit momenteel$
+nog via Sharepoint, maar dit zal volgend academiejaar ook naar Respon\
+sum$
+verhuizen.\342\200\235 I think that is AY26-27? so starting september\
+ 2026?$
+
+user@computer:~/learn/blag$ flowmark content/responsum.md > content2/responsum.md
+lost het op
+
+user@computer:~/learn/blag$ diff  content/responsum.md  content2/responsum.md
+1,4c1,2
+< description: responsum
+< tags: responsum
+< date: 2026-09-01
+< title: responsum.md
+---
+> description: responsum tags: responsum date: 2026-09-01 title: responsum.md
+>
+11,12c9,10
+< In the modern era, the term describes decisions and rulings made by
+< scholars in historic religious law.
+---
+> In the modern era, the term describes decisions and rulings made by scholars in
+> historic religious law.
+20c18,19
+< ebook: ["Being a DPO in a Complex Organization - Ghent University"](https://responsum.eu/ebooks/being-a-dpo-in-a-complex-organization-ghent-university)
+---
+> ebook:
+> [“Being a DPO in a Complex Organization - Ghent University”](https://responsum.eu/ebooks/being-a-dpo-in-a-complex-organization-ghent-university)
+22c21,22
+< or here: [pdf](responsum-ebook-being-a-dpo-in-a-complex-organization-ghent-university.pdf)
+---
+> or here:
+> [pdf](responsum-ebook-being-a-dpo-in-a-complex-organization-ghent-university.pdf)
+
+--
+
+user@computer:~/learn/blag/content2$ cat responsum.md | hexdump -C
+00000000  64 61 74 65 3a 20 32 30  32 36 2d 30 39 2d 30 31  |date: 2026-09-01|
+00000010  0a 74 69 74 6c 65 3a 20  63 6f 6e 74 65 6e 74 32  |.title: content2|
+00000020  2f 72 65 73 70 6f 6e 73  75 6d 2e 6d 64 0a 64 65  |/responsum.md.de|
+00000030  73 63 72 69 70 74 69 6f  6e 3a 20 68 6f 6c 61 64  |scription: holad|
+00000040  69 65 0a 74 61 67 73 3a  20 62 72 6f 77 6e 2c 20  |ie.tags: brown, |
+00000050  79 65 6c 6c 6f 77 2c 20  d9 85 d8 b1 d9 87 d8 a8  |yellow, ........|
+00000060  d8 a7 0a 0a 23 20 72 65  73 70 6f 6e 73 75 6d 0a  |....# responsum.|
+00000070  0a 53 75 67 67 65 73 74  69 6f 6e 73 3f 20 0a 3c  |.Suggestions? .<|
+00000080  6c 69 62 73 65 72 76 69  63 65 40 75 67 65 6e 74  |libservice@ugent|
+00000090  2e 62 65 3e 0a                                    |.be>.|
+00000095
+
+user@computer:~/learn/blag/content2$ cat mail.md
+date: 2000-01-01
+title: mail
+
+mail@example.com>
+
+=> is ok
+
+user@computer:~/learn/blag/content2$ cat mail.md
+date: 2000-01-01
+title: mail
+
+<mail@example.com>
+
+=> is niet okß?!
+
+user@computer:~/learn/blag$ cat -n /home/user/learn/blag/.venv/lib/python3.14/site-packages/feedgenerator/django/utils/xmlutils.py | grep re.search -A 5
+    24          if content and re.search(r"[\x00-\x08\x0B-\x0C\x0E-\x1F]", content):
+    25              # Fail loudly when content has control chars (unsupported in XML 1.0)
+    26              # See https://www.w3.org/International/questions/qa-controls
+    27              raise UnserializableContentError(
+    28                  "Control characters are not supported in XML 1.0"
+    29              )
+
