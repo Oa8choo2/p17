@@ -31,4 +31,4 @@ Results of the homework:
     [project.markdown_extensions.zensical.extensions.glightbox]
 ```
 
-### [ai](ai.md)
+### [ai](../ai.md)

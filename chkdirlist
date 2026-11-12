@@ -24,7 +24,9 @@ USAGEtxt
 
 usage
 
-find docs/ -iname '*.htm*'
+find ./ -iname '*.htm*'
+
+echo "{k} -- basename_no_ext -- basename -- fullname -- {k} --"  ; 
 
 while read -r r ; 
 do 
@@ -43,3 +45,8 @@ do
 
 	echo "${k} -- ${v::-3} -- ${v} -- ${r} -- ${k} --"  ; 
 done < <(find . -type f -iname '*.md')
+
+echo "{k} -- basename_no_ext -- basename -- fullname -- {k} --"  ; 
+
+echo "NOTE: make sure use_directory_urls = false in zensical.toml"
+echo "NOTE: disable the nav section"

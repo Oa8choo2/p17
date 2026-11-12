@@ -53,12 +53,15 @@ If Tampermonkey is installed give it following script:
     // https://stackoverflow.com/questions/76791476/how-to-change-the-title-with-userscripts
     // https://stackoverflow.com/a/18133026/906489
     let title = document.title,
-	   newtitle = document.querySelector('h1'),
+	   newtitle = document.querySelector('h1:not(.CompanyName'),
        newtitletext = newtitle.innerText;
 	document.title = newtitletext.split(' — ').reverse().join(' -- ');
 
 })();
 ```
+
+With `not(.companyName)` we can also use this trick on the FAQ pages such as this one:
+<https://otrsdict.ugent.be/znuny/public.pl?Action=PublicFAQZoom;ItemID=751;ZoomBackLink=QWN0aW9uPVB1YmxpY0ZBUVNlYXJjaDtTdWJhY3Rpb249U2VhcmNoO0Z1bGx0ZXh0PXNwYW07U29y%0AdEJ5PUZBUUlEO09yZGVyPURvd247U3RhcnRIaXQ9MQ%3D%3D%0A;>
 
 ## Note
 

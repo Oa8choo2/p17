@@ -1,0 +1,47 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:5627cdb6-961f-400b-b3d4-3d2836c6b3eb",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-19T16:01:38+00:00",
+    "lifecycles": [
+      {
+        "phase": "design"
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "jochwacht-sbom",
+          "version": "0.15.0",
+          "publisher": "Innomatica GmbH"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "p17",
+      "version": "unspecified"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "zensical",
+      "version": "0.0.56",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "jochwacht:ecosystem",
+          "value": "pypi"
+        },
+        {
+          "name": "jochwacht:detected-by",
+          "value": "manifest"
+        }
+      ]
+    }
+  ]
+}

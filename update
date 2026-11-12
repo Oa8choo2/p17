@@ -1,18 +1,94 @@
 #!/bin/bash
 
-set -vexo pipefail 
+# vim: tabstop=2 shiftwidth=2 softtabstop=2 expandtab:
 
-mydate="$(date --iso-8601 "seconds")"
+# Note: modeline only works if ~/.vimrc has: set modeline
+ 
+# It reads:
+# 
+#     tabstop=4
+#         The width of a TAB is set to 4. Still it is a \t. 
+#         It is just that vim will interpret it to be having  width of 4.
+#     shiftwidth=4
+#         Indents will have a width of 4
+#     softtabstop=4
+#         Sets the number of columns for a TAB
+#     expandtab
+#         Expand TABs to spaces
+
+mydate="$(date +%Y%m%d_%H%M)"
+
+# backup config files
+for i in \
+	uv.lock \
+	.python-version \
+	pyproject.toml \
+	zensical.toml 
+do
+	if [[ -f "${i}" ]]; then
+    cp "${i}" "${i}.${mydate}"
+	fi
+done	
+
+# zensical new uses git 
+# provide a better config
+#
+# note: some parts are in comment on purpose
+# you need to configure them
+# when you commit you'll see this:
+# $ git commit
+# fatal: either user.signingkey or gpg.ssh.defaultKeyCommand needs to be configured
+#
+# note: the user.email and user.name are recycled in pyproject.toml
+
+read -r -d '' gitconfig <<'EOF'
+[core]
+        repositoryformatversion = 0
+        filemode = true
+        bare = false
+        logallrefupdates = true
+# [remote "origin"]
+#        url = git@github.com:org/repo.git
+#        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+        remote = origin
+        merge = refs/heads/main
+[user]
+        email = number+user@users.noreply.github.com
+        name = user
+#        signingkey = /home/user/.ssh/id_ed25519_git_signing_key.pub 
+[gpg]
+        format = ssh
+[commit]
+        gpgsign = true
+[gpg "ssh"]
+        allowedSignersFile = /home/user/.ssh/allowed_signers
+[log]
+        showSignature = true
+EOF
+
+echo "gitconfig is: ${gitconfig}"
+
+# read returns a non-zero return code when it reaches EOF.
+# that's why we set the -e option now 
+set -vexo pipefail 
 
 # get things up to date
 
 command -v git
 command -v uv
 
+cd "${PWD}" || exit
+echo "${PWD}"
 
 if [[ -d .git ]]; then
 	git status
+	# exit
+else
+  mkdir .git
+  echo "${gitconfig}" > ".git/config"  
 fi
+
 uv self version 
 if [[ -f .python-version ]]; then
 	rm .python-version
@@ -22,43 +98,76 @@ if [[ -f .python-versions ]]; then
 fi
 uv self update
 python -VV
+uv python upgrade
 uv python install --upgrade
+# catch latest version
+pv=$(uv python list \
+  | cut -d '-' -f 2 \
+  | sort -V \
+  | grep -v '\.0' \
+  | grep -v '\+.*' \
+  | sort -V \
+  | uniq \
+  | tail -n 1)
+
 echo "recreate .python-version" 
-uv python pin "$(python -V | cut -d " " -f 2)"
+# uv python pin "$(python -V | cut -d " " -f 2)"
+uv python pin "$pv"
 cat .python-version 
 
 uv venv --clear
+echo 'START source .venv/bin/activate ---------------------------'
 source .venv/bin/activate
+echo 'END   source .venv/bin/activate ---------------------------'
+
 python -VV
 if [[ ! -f pyproject.toml ]]; then
   uv init
+
 else  
   uv sync 
   cat pyproject.toml 
+  # increase version
+  # # Source - https://stackoverflow.com/a/61921674
+  # Posted by Chris Jones, modified by community. See post 'Timeline' for change history
+  # Retrieved 2026-11-09, License - CC BY-SA 4.0
+  VERSION=$(gawk -F \" '{if ($1 == "version = ") print $(NF-1)}' pyproject.toml )
+  NEXTVERSION=$(echo ${VERSION} | awk -F. -v OFS=. '{$NF += 1 ; print}')
+  echo "Nextversion $VERSION == $NEXTVERSION -"
+  gawk -F \" \
+       -v nv="$NEXTVERSION" \
+    '{
+      if ($1 == "version = ") {
+        printf("version = \"%s\"\n", nv)
+      } else {
+        print
+      }
+     }' pyproject.toml | tee pp.new 
+   cp pp.new pyproject.toml
 fi
+
 uv lock --verbose --upgrade 
 uv sync --all-extras --dev 
 uv --verbose pip install zensical
+
 if [[ -d .git ]]; then
 	git status
 fi
+
 zensical --version
-uvversion=$(zensical --version)
+
 if [[ ! -f zensical.toml ]]; then
-	if [[ -f .github/workflows/docs.yaml ]]; then
-	  mv .github/workflows/docs.yml "old_docs.yml_${mydate}"
-	fi
-
-	if [[ -f docs/index.md ]]; then
-		rm docs/index.md
-	fi
-
-	if [[ -f docs/markdown.md ]]; then
-		rm docs/markdown.md
-	fi
-	zensical new
-	cp docs/index.md "docs/index_${uvversion}_${mydate}.md"
-	cp docs/markdown.md "docs/markdown_${uvversion}_${mydate}.md"
+  zensical new
+  # at this point docs/index.md is created
+  if [[ -f docs/index.md ]]; then 
+    mv docs/index.md docs/get_started_by_zensical.md
+  fi
+  if [[ -f docs/markdown.md ]]; then 
+    mv docs/markdown.md docs/markdown_by_zensical.md
+  fi
+  if [[ -f README.md ]]; then
+    mv README.md README_by_zensical.md
+  fi
 fi
 if [[ -d .git ]]; then
 	git status
@@ -90,15 +199,19 @@ fi
 
 zensical build --clean --strict
 
-# backup config files
-for i in \
-	uv.lock \
-	.python-version \
-	pyproject.toml \
-	zensical.toml 
-do
-	if [[ -f "${i}" ]]; then
-	       cp "${i}" "${i}.${mydate}"
-	fi
-done	
 
+rv2be=$(uvx rumdl version)
+rv=$(rumdl version)
+if [[ $rv != $rv2be ]]; then
+    echo "there is a new rumdl version"
+    # this will install the latest version
+    cargo install rumdl
+fi
+
+if [[ -f '.rumdl.toml' ]]; then
+	echo ".rumdl.toml is present"
+	# TODO add HPC settings to rumdl.toml
+else
+	# add rumdl.toml (markdown lint)
+	rumdl init
+fi
