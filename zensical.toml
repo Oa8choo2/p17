@@ -1,10 +1,5 @@
 [project]
 use_directory_urls = false
-<<<<<<< HEAD
-# use_directory_urls = false
-=======
-
->>>>>>> 053786f (updates)
 site_url = "https://www.example.com/"
 site_name = "Documentation"
 # site_description = "Your project description"
@@ -135,3 +130,11 @@ button_toggle_both_tooltip = "Toggle Navigation and Table of Contents"
 button_toggle_nav_tooltip = "Toggle Navigation"
 button_toggle_toc_tooltip = "Toggle Table of Contents"
 enable_key_bindings = true
+[project.plugins.rss]
+enabled = true # Enable feed generation.
+feed_title = "site_name" # Feed title; defaults to the site name.
+length = 20 # Maximum entries in each feed.
+match_path = ".*" # Regular expression selecting page paths to include.
+abstract_chars_count = 160 # Maximum summary length; -1 includes the full content.
+# date_from_meta = "Git dates" # Metadata fields and formats for creation and update dates.
+
