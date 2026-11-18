@@ -1,6 +1,6 @@
 [project]
 name = "p17"
-version = "0.0.1"
+version = "0.0.4"
 description = "p17 description"
 readme = "README.md"
 requires-python = ">=3.14"

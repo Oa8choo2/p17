@@ -197,6 +197,12 @@ else
   cleanup
 fi
 
+# on 20261112 we get this error:
+# RuntimeError: Python error: RuntimeError: table reading requires pandas and tabulate packages
+
+uv pip install pandas
+uv pip install tabulate
+
 zensical build --clean --strict
 
 
