@@ -63,9 +63,9 @@ style = "asterisk"  # HPC Unordered list style (asterisk, plus, dash, consistent
 [MD013]
 # line-length = 100  # Line length
 line-length = 80  # HPC Line length
-# code-blocks = false  # Exclude code blocks from line length check
-# tables = false  # Exclude tables from line length check
-# headings = true  # Include headings in line length check
+code-blocks = false  # Exclude code blocks from line length check
+tables = false  # Exclude tables from line length check
+headings = true  # Include headings in line length check
 
 # [MD044]
 # names = ["rumdl", "Markdown", "GitHub"]  # Proper names that should be capitalized correctly
@@ -74,5 +74,5 @@ line-length = 80  # HPC Line length
 # Disable front matter checking (treat front matter and body separately)
 # see also https://rumdl.dev/md025/#front-matter-integration
 [MD025]
-front-matter-title = ""
+front-matter-title = "" # HPC do not consider frontmatter as an H1
 
