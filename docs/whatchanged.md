@@ -18,6 +18,8 @@ released on March 24, 2026)
 * git-quick-stats
 * palaniraja/whatchanged
 
+<https://github.com/hpcugent/docs-incubator/graphs/commit-activity>
+
 ## Online services
 
 * Wachete
